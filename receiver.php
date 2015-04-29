@@ -30,8 +30,10 @@ $end=$_POST['element_17'];
 $addressoforganisation=$_POST['element_7'];
 
 
-$sql = "INSERT INTO form(Name, Enrollment, Branch, Semester, Batch, Phone, Mobile, Email, Natureoftraining, Natureoforganisation, Addressoftheorganization, Fullname, Designation:, Contactnumber, EmailID, Durationoftraining:, StartingDate:, EndDate)
-VALUES ($name,$enrollment,$branch,$semester,$batch,$phone,$mobile,$email,$nature,$natureoforganisation,$fullnameoforganisation,$Addressoforganisation,$designation,$contact,$emailid,$duration,$start,$end)";
+$sql = "INSERT INTO form(Name, Enrollment, Branch, Semester, Batch, Phone, Mobile, Email, Natureoftraining, Natureoforganisation, Addressoftheorganization, Fullname, Designation, Contactnumber, EmailID, Durationoftraining, StartingDate, EndDate)
+VALUES (\"$name\",\"$enrollment\",\"$branch\",$semester,\"$batch\",$phone,$mobile,\"$email\",\"$nature\",\"$natureoforganisation\",\"$fullnameoforganisation\",\"$Addressoforganisation\",\"$designation\",$contact,\"$emailid\",\"$duration\",\"$start\",\"$end\")";
+
+
 if (mysqli_query($conn, $sql)) {
     echo "New record created successfully";
 } else {
