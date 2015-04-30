@@ -1,11 +1,11 @@
 <?PHP
 
-$user_name = "root";
+/*$user_name = "root";
 $password = "root";
 $database = "mydb";
-$server = "localhost";
+$server = "localhost";*/
 
-
+require_once('/var/www/html/form/admin.php'); 
   $conn=mysqli_connect($server, $user_name, $password, $database);
 
 print "Connection to the Server opened";
