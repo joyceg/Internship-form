@@ -7,38 +7,34 @@ require_once('/var/www/html/form/admin.php');
   $conn=mysqli_connect($server, $user_name, $password, $database);
 
   /*print "Connection to the Server opened";*/
+$sql = "CREATE TABLE IF NOT EXISTS RegistrationForm (
 
-function createDatabaseTables() {
-$sqlRegistrationTable = <<<EOSQL
-
-  CREATE TABLE IF NOT EXISTS form													
+													
 	Name varchar(30) NOT NULL,
 	Enrollment varchar(30) NOT NULL PRIMARY KEY,
 	Branch varchar(255) NOT NULL,
 	Semester int(30) NOT NULL,
 	Batch varchar(20) NOT NULL,
-	
 	Phone int(20) NOT NULL,
 	Mobile int(20) NOT NULL,
 	Email varchar(30) NOT NULL,
 	Nature varchar(255) NOT NULL,
 	Natureoforganisation varchar( 400 ) NOT NULL,
-	Fullnameoforganisation varchar( 400 ) NOT NULL,
+	Fullname varchar( 400 ) NOT NULL,
 	Designation varchar( 50 ) NOT NULL,
 	Contact int( 20 ) NOT NULL,	
 	Emailid varchar( 50 ) NOT NULL,
-	Duration varchar( 20 )NOT  NULL,
+	Duration varchar( 20 ) NOT  NULL,
 	Start date NOT  NULL,
 	EndDate date NOT NULL,
 	Addressoforganisation varchar( 200 ) NOT  NULL
-);
-EOSQL;
-	if ( !mysql_query( $sqlRegistrationTable ) ) {
-	
-		die( mysql_error());
-	}
-}
+)";
 
+if ($conn->query($sql) === TRUE) {
+    echo "Table MyGuests created successfully";
+} else {
+    echo "Error creating table: " . $conn->error;
+}
 
 
 $name=$_POST['element_1'];
@@ -60,7 +56,7 @@ $start=$_POST['element_16'];
 $End=$_POST['element_17'];
 $addressoforganisation=$_POST['element_7'];
 
-$sql = "INSERT INTO form(Name,Enrollment,Branch,Semester, Batch, Phone, Mobile, Email, Natureoftraining, Natureoforganisation, Addressoftheorganization, Fullname, Designation, Contactnumber, EmailID, Durationoftraining, StartingDate, EndDate)
+$sql = "INSERT INTO RegistrationForm(Name,Enrollment,Branch,Semester, Batch, Phone, Mobile, Email, Nature, Natureoforganisation, Addressoforganisation, Fullname, Designation, Contact, Emailid, Duration, Start, EndDate)
 VALUES (\"$name\",\"$enrollment\",\"$branch\",$semester,\"$batch\",$phone,$mobile,\"$email\",\"$nature\",\"$natureoforganisation\",\"$fullnameoforganisation\",\"$Addressoforganisation\",\"$designation\",$contact,\"$emailid\",\"$duration\",\"$start\",\"$End\")";
 if (mysqli_query($conn, $sql)) {
     echo "Thank You,Your Application has been recoreded";
