@@ -10,24 +10,25 @@ require_once('/var/www/html/form/admin.php');
 $sql = "CREATE TABLE IF NOT EXISTS RegistrationForm (
 
 													
-	Name varchar(30) NOT NULL,
-	Enrollment varchar(30) NOT NULL PRIMARY KEY,
-	Branch varchar(255) NOT NULL,
-	Semester int(30) NOT NULL,
-	Batch varchar(20) NOT NULL,
-	Phone int(20) NOT NULL,
+	Name varchar(50) NOT NULL,
+	Enrollment varchar(50) NOT NULL PRIMARY KEY,
+	Branch varchar(20) NOT NULL,
+	Semester varchar(30) NOT NULL,
+	Batch varchar(35) NOT NULL,
+	Phone int(30) NOT NULL,
 	Mobile int(20) NOT NULL,
 	Email varchar(30) NOT NULL,
 	Nature varchar(255) NOT NULL,
 	Natureoforganisation varchar( 400 ) NOT NULL,
 	Fullname varchar( 400 ) NOT NULL,
 	Designation varchar( 50 ) NOT NULL,
+	Addressoforganisation varchar( 200 ) NOT  NULL,
 	Contact int( 20 ) NOT NULL,	
 	Emailid varchar( 50 ) NOT NULL,
 	Duration varchar( 20 ) NOT  NULL,
 	Start date NOT  NULL,
-	EndDate date NOT NULL,
-	Addressoforganisation varchar( 200 ) NOT  NULL
+	EndDate date NOT NULL
+	
 )";
 
 if ($conn->query($sql) === TRUE) {
