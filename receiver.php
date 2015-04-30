@@ -38,24 +38,24 @@ if ($conn->query($sql) === TRUE) {
 }
 
 
-$name=$_POST['element_1'];
-$enrollment=$_POST['element_2'];
-$branch=$_POST['element_8']; 
-$semester=$_POST['element_9'];
-$batch=$_POST['element_10'];
-$phone=$_POST['element_3'];
-$mobile=$_POST['element_4'];
-$email=$_POST['element_5'];
-$nature=$_POST['element_11'];
-$natureoforganisation=$_POST['element_6'];
-$fullnameoforganisation=$_POST['element_12'];
-$designation=$_POST['element_13'];
-$contact=$_POST['element_14'];
-$emailid=$_POST['element_15'];
-$duration=$_POST['element_19'];
-$start=$_POST['element_16'];
-$End=$_POST['element_17'];
-$addressoforganisation=$_POST['element_7'];
+$name=$_POST['name'];
+$enrollment=$_POST['enrollment'];
+$branch=$_POST['branch']; 
+$semester=$_POST['semester'];
+$batch=$_POST['batch'];
+$phone=$_POST['phone'];
+$mobile=$_POST['mobile'];
+$email=$_POST['email'];
+$nature=$_POST['nature'];
+$natureoforganisation=$_POST['natureoforganisation'];
+$fullnameoforganisation=$_POST['fullname'];
+$designation=$_POST['designation'];
+$contact=$_POST['contact'];
+$emailid=$_POST['emailid'];
+$duration=$_POST['duration'];
+$start=$_POST['start'];
+$End=$_POST['end'];
+$addressoforganisation=$_POST['address'];
 
 $sql = "INSERT INTO RegistrationForm(Name,Enrollment,Branch,Semester, Batch, Phone, Mobile, Email, Nature, Nature_of_organisation, Full_name_of_the_official_addresse, Address_of_organisation, Designation, Contact, Email_id, Duration, Start_date, End_date)
 VALUES (\"$name\",\"$enrollment\",\"$branch\",$semester,\"$batch\",$phone,$mobile,\"$email\",\"$nature\",\"$natureoforganisation\",\"$fullnameoforganisation\",\"$addressoforganisation\",\"$designation\",$contact,\"$emailid\",\"$duration\",\"$start\",\"$End\")";
