@@ -6,7 +6,6 @@ $server = "localhost";*/
 require_once('/var/www/html/form/admin.php'); 
   $conn=mysqli_connect($server, $user_name, $password, $database);
 
-  /*print "Connection to the Server opened";*/
 $sql = "CREATE TABLE IF NOT EXISTS RegistrationForm (
 
 	Registration_Id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,												
