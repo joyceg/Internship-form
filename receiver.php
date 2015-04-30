@@ -21,8 +21,9 @@ $sql = "CREATE TABLE IF NOT EXISTS RegistrationForm (
 	Nature varchar(255) NOT NULL,
 	Natureoforganisation varchar( 400 ) NOT NULL,
 	Fullname varchar( 400 ) NOT NULL,
-	Designation varchar( 50 ) NOT NULL,
 	Addressoforganisation varchar( 200 ) NOT  NULL,
+
+	Designation varchar( 50 ) NOT NULL,
 	Contact int( 20 ) NOT NULL,	
 	Emailid varchar( 50 ) NOT NULL,
 	Duration varchar( 20 ) NOT  NULL,
@@ -47,7 +48,7 @@ $phone=$_POST['element_3'];
 $mobile=$_POST['element_4'];
 $email=$_POST['element_5'];
 $nature=$_POST['element_11'];
-$natureoforganisation=$_POST['element_11'];
+$natureoforganisation=$_POST['element_6'];
 $fullnameoforganisation=$_POST['element_12'];
 $designation=$_POST['element_13'];
 $contact=$_POST['element_14'];
@@ -57,8 +58,8 @@ $start=$_POST['element_16'];
 $End=$_POST['element_17'];
 $addressoforganisation=$_POST['element_7'];
 
-$sql = "INSERT INTO RegistrationForm(Name,Enrollment,Branch,Semester, Batch, Phone, Mobile, Email, Nature, Natureoforganisation, Addressoforganisation, Fullname, Designation, Contact, Emailid, Duration, Start, EndDate)
-VALUES (\"$name\",\"$enrollment\",\"$branch\",$semester,\"$batch\",$phone,$mobile,\"$email\",\"$nature\",\"$natureoforganisation\",\"$fullnameoforganisation\",\"$Addressoforganisation\",\"$designation\",$contact,\"$emailid\",\"$duration\",\"$start\",\"$End\")";
+$sql = "INSERT INTO RegistrationForm(Name,Enrollment,Branch,Semester, Batch, Phone, Mobile, Email, Nature, Natureoforganisation, Fullname, Addressoforganisation, Designation, Contact, Emailid, Duration, Start, EndDate)
+VALUES (\"$name\",\"$enrollment\",\"$branch\",$semester,\"$batch\",$phone,$mobile,\"$email\",\"$nature\",\"$natureoforganisation\",\"$fullnameoforganisation\",\"$addressoforganisation\",\"$designation\",$contact,\"$emailid\",\"$duration\",\"$start\",\"$End\")";
 if (mysqli_query($conn, $sql)) {
     echo "Thank You,Your Application has been recoreded";
 } else {
