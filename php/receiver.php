@@ -1,9 +1,6 @@
 <?PHP
-/*$user_name = "root";
-$password = "root";
-$database = "mydb";
-$server = "localhost";*/
-require_once('/var/www/html/form/admin.php'); 
+
+require_once('/var/www/html/form/Internship-form/php/admin.php'); 
   $conn=mysqli_connect($server, $user_name, $password, $database);
 
 $sql = "CREATE TABLE IF NOT EXISTS RegistrationForm (
