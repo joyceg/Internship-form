@@ -17,7 +17,8 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 		Date_of_Registration date NOT NULL,
 		Name varchar(50) NOT NULL,
 		Enrollment varchar(50) NOT NULL,
-		Branch varchar(20) NOT NULL,
+		School varchar(100) NOT NULL,
+		Course varchar(100) NOT NULL,
 		Semester varchar(30) NOT NULL,
 		Batch int(35) NOT NULL,
 		Phone varchar(15) NOT NULL,
@@ -57,7 +58,8 @@ function checkIfInValidPost() {
 function insertIntoDatabase( $conn ) {
 	$name= $conn->real_escape_string( $_POST['name'] );
 	$enrollment= $conn->real_escape_string( $_POST['enrollment'] );
-	$branch= $conn->real_escape_string( $_POST['branch'] );
+	$school= $conn->real_escape_string( $_POST['school'] );
+	$course= $conn->real_escape_string( $_POST['course'] );
 	$semester= $conn->real_escape_string( $_POST['semester']);
 	$batch= $conn->real_escape_string($_POST['batch'] );
 	$phone= $conn->real_escape_string( $_POST['phone'] );
@@ -74,9 +76,9 @@ function insertIntoDatabase( $conn ) {
 	$end = $conn->real_escape_string( $_POST['end'] );
 	$addressoforganisation = $conn->real_escape_string( $_POST['address'] );
         $DateAdded = date("Y/m/d");
-	$sql = "INSERT INTO RegistrationForm(Name,Date_of_Registration,Enrollment,Branch,Semester, Batch, Phone, Mobile, Email, Nature,
+	$sql = "INSERT INTO RegistrationForm(Name,Date_of_Registration,Enrollment,School,Course,Semester, Batch, Phone, Mobile, Email, Nature,
  	Nature_of_organisation, Full_name_of_the_official_addresse, Address_of_organisation, Designation, Contact,
- 	Email_id, Duration, Start_date, End_date) VALUES (\"$name\",\"$DateAdded\",\"$enrollment\",\"$branch\",$semester,
+ 	Email_id, Duration, Start_date, End_date) VALUES (\"$name\",\"$DateAdded\",\"$enrollment\",\"$school\",\"$course\",$semester,
  	\"$batch\",$phone,$mobile,\"$email\",\"$nature\",\"$natureoforganisation\",\"$fullnameoforganisation\",
  	\"$addressoforganisation\",\"$designation\",$contact,\"$emailid\",\"$duration\",\"$start\",\"$end\")";
 
