@@ -18,7 +18,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 		Enrollment varchar(50) NOT NULL,
 		Branch varchar(20) NOT NULL,
 		Semester varchar(30) NOT NULL,
-		Batch varchar(35) NOT NULL,
+		Batch int(35) NOT NULL,
 		Phone varchar(15) NOT NULL,
 		Mobile varchar(15) NOT NULL,
 		Email varchar(30) NOT NULL,
