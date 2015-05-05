@@ -14,6 +14,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 	}
 	$sql = "CREATE TABLE IF NOT EXISTS RegistrationForm (
 		Registration_Id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+		Date_of_Registration date NOT NULL,
 		Name varchar(50) NOT NULL,
 		Enrollment varchar(50) NOT NULL,
 		Branch varchar(20) NOT NULL,
@@ -72,10 +73,10 @@ function insertIntoDatabase( $conn ) {
 	$start = $conn->real_escape_string( $_POST['start'] );
 	$end = $conn->real_escape_string( $_POST['end'] );
 	$addressoforganisation = $conn->real_escape_string( $_POST['address'] );
-
-	$sql = "INSERT INTO RegistrationForm(Name,Enrollment,Branch,Semester, Batch, Phone, Mobile, Email, Nature,
+        $DateAdded = date("Y/m/d");
+	$sql = "INSERT INTO RegistrationForm(Name,Date_of_Registration,Enrollment,Branch,Semester, Batch, Phone, Mobile, Email, Nature,
  	Nature_of_organisation, Full_name_of_the_official_addresse, Address_of_organisation, Designation, Contact,
- 	Email_id, Duration, Start_date, End_date) VALUES (\"$name\",\"$enrollment\",\"$branch\",$semester,
+ 	Email_id, Duration, Start_date, End_date) VALUES (\"$name\",\"$DateAdded\",\"$enrollment\",\"$branch\",$semester,
  	\"$batch\",$phone,$mobile,\"$email\",\"$nature\",\"$natureoforganisation\",\"$fullnameoforganisation\",
  	\"$addressoforganisation\",\"$designation\",$contact,\"$emailid\",\"$duration\",\"$start\",\"$end\")";
 
@@ -89,3 +90,5 @@ function insertIntoDatabase( $conn ) {
 
 
 }
+
+?>
