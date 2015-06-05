@@ -2,12 +2,11 @@
 <title>Application for Internship/Industrial training</title>
 <body>
 <div id="Content" align="center"> 
-<img src="../images/Amrita-university.jpg"  style="width:60px;height:60px;"  align="center;" />
+<img src="../images/Amrita-university.jpg"  style="width:40px;height:40px;"  align="center;" />
 </div>
 
-
-<h3 align="center">Application for Internship/Industrial training</h1>
-<table border="2" style="width:60%" align="center">
+<h3 align="center">Application for Internship/Industrial training</h3>
+<table border="1" style="width:60%" align="center">
 <?php
 require_once('admin.php');
 $conn=mysqli_connect($server, $user_name, $password, $database);
@@ -18,7 +17,6 @@ if ($conn->connect_error) {
 $sql = "SELECT * FROM RegistrationForm WHERE Registration_Id=(SELECT max(Registration_Id) FROM RegistrationForm)";
 $result = $conn->query($sql);
     while($row = $result->fetch_assoc()) {
-	
         echo "<h3><tr><td>Registration Id:</td>"."<td>" . $row["Registration_Id"]."</td>";
         echo "</tr>";
         
@@ -88,7 +86,7 @@ $result = $conn->query($sql);
 	echo "</tr>";
 	
 	echo "<tr>";
-	echo "<td>Email Id: </td><td> " . $row["Email_id"]."<td>";
+	echo "<td>Email id: </td><td> " . $row["Email_id"]."<td>";
         echo "</tr>";
         
         echo "<tr>";
@@ -119,7 +117,6 @@ $conn->close();
 </tr>
     <td>Signature of Head-CIR:</td><td></td>	
 </tr>
-
 </table>
 </body>
 </html>
