@@ -1,126 +1,125 @@
 <html>
 <title>Application for Internship/Industrial training</title>
-<body >
-<h1 align="center">Application for Internship/Industrial training</h1>
-<table border="10" style="width:80%">
+<body>
+<div id="Content" align="center"> 
+<img src="../images/Amrita-university.jpg"  style="width:60px;height:60px;"  align="center;" />
+</div>
+
+
+<h3 align="center">Application for Internship/Industrial training</h1>
+<table border="2" style="width:60%" align="center">
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "root";
-$dbname = "mydb";
-$conn = new mysqli($servername, $username, $password, $dbname);
+require_once('admin.php');
+$conn=mysqli_connect($server, $user_name, $password, $database);
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    header('Location: '.'failure.html');
+		return false;
 } 
 $sql = "SELECT * FROM RegistrationForm WHERE Registration_Id=(SELECT max(Registration_Id) FROM RegistrationForm)";
 $result = $conn->query($sql);
-if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
 	
-        echo "<h3><tr>";
-        echo "<td>Registration Id:</td>"."<td>" . $row["Registration_Id"]."</td><br>";
+        echo "<h3><tr><td>Registration Id:</td>"."<td>" . $row["Registration_Id"]."</td>";
         echo "</tr>";
         
         echo "<tr>";
-        echo "<td>Name of the Applicant:</td>" ."<td>". $row["Name"]."</td><br>";
+        echo "<td>Name of the Applicant:</td>" ."<td>". $row["Name"]."</td>";
         echo "</tr>";
         
         echo "<tr>";
-        echo "<td>Date of Registration:</td> "."<td>" . $row["Date_of_Registration"]."</td><br>";
+        echo "<td>Date of Registration:</td> "."<td>" . $row["Date_of_Registration"]."</td>";
         echo "</tr>";
         
         echo "<tr>";
-        echo "<td>Enrollment No:</td><td> " . $row["Enrollment"]."</td><br>";
+        echo "<td>Enrollment No:</td><td> " . $row["Enrollment"]."</td>";
         echo "</tr>";
         
         echo "<tr>";
-       echo "<td>School:</td><td> " . $row["School"]."<td><br>";
+       echo "<td>School:</td><td> " . $row["School"]."<td>";
        echo "</tr>";
        
 	echo "<tr>";
-        echo "<td>Course:</td><td>  " . $row["Course"]."<td><br>";
+        echo "<td>Course:</td><td>  " . $row["Course"]."<td>";
         echo "</tr>";
         
         echo "<tr>";
-        echo "<td>Semester:</td><td>  " . $row["Semester"]."<td><br>";
+        echo "<td>Semester:</td><td>  " . $row["Semester"]."<td>";
         echo "</tr>";
         
         echo "<tr>";
-        echo "<td>Batch:</td><td> " . $row["Batch"]."<td><br>";
+        echo "<td>Batch:</td><td> " . $row["Batch"]."<td>";
         echo "</tr>";
         
         echo "<tr>";
-        echo "<td>Phone Number(Residence):</td><td> " . $row["Phone"]."<td><br>";
+        echo "<td>Phone Number(Residence):</td><td> " . $row["Phone"]."<td>";
         echo "</tr>";
         
         echo "<tr>";
-        echo "<td>Mobile: </td><td> " . $row["Mobile"]."<td><br>";
+        echo "<td>Mobile: </td><td> " . $row["Mobile"]."<td>";
         echo "</tr>";
         
         echo "<tr>";
-        echo "<td>Email:</td><td> " . $row["Email"]."<td><br>";
+        echo "<td>Email:</td><td> " . $row["Email"]."<td>";
         echo "</tr>";
         
        echo "<tr>";
-        echo "<td>Nature of Training:</td><td>  " . $row["Nature"]."<td><br>";
+        echo "<td>Nature of Training:</td><td>  " . $row["Nature"]."<td>";
         echo "</tr>";
         
         echo "<tr>";
-        echo "<td>Nature of the  organisation:</td><td> " . $row["Nature_of_organisation"]."<td><br>";
+        echo "<td>Nature of the  organisation:</td><td> " . $row["Nature_of_organisation"]."<td>";
 	echo "</tr>";
 	
 	echo "<tr>";
 	
-	echo "<td>Full name of the official addresse:</td><td> " . $row["Full_name_of_the_official_addresse"]."<td><br>";
+	echo "<td>Full name of the official addresse:</td><td> " . $row["Full_name_of_the_official_addresse"]."<td>";
 	echo "</tr>";
 	
 	echo "<tr>";
-	echo "<td>Address of organisation:</td><td> " . $row["Address_of_organisation"]."<td><br>";
+	echo "<td>Address of organisation:</td><td> " . $row["Address_of_organisation"]."<td>";
 	echo "</tr>";
 	
 	echo "<tr>";
-	echo "<td>Designation:</td><td> " . $row["Designation"]."<td><br>";
+	echo "<td>Designation:</td><td> " . $row["Designation"]."<td>";
 	echo "</tr>";
 	
 	echo "<tr>";
-	echo "<td>Contact:</td><td> " . $row["Contact"]."<td><br>";
+	echo "<td>Contact:</td><td> " . $row["Contact"]."<td>";
 	echo "</tr>";
 	
 	echo "<tr>";
-	echo "<td>Email_id: </td><td> " . $row["Email_id"]."<td><br>";
+	echo "<td>Email Id: </td><td> " . $row["Email_id"]."<td>";
         echo "</tr>";
         
         echo "<tr>";
-        echo "<td>Duration of training:</td><td>  " . $row["Duration"]."</td><br>";
+        echo "<td>Duration of training:</td><td>  " . $row["Duration"]."</td>";
         echo "</tr>";
         
         echo "<tr>";
-        echo "<td>Staring t_date:</td><td> " . $row["Start_date"]."</td><br>";
+        echo "<td>Staring date:</td><td> " . $row["Start_date"]."</td>";
         echo "</tr>";
         
         echo "<tr>";
-        echo "<td>End Date:</td><td> " . $row["End_date"] ."</td><br></h3>" ;
+        echo "<td>End Date:</td><td> " . $row["End_date"] ."</td></h3>" ;
         echo "</tr>";
 	
       }
-} 
+  
    	
 $conn->close();
 ?>
 <tr>
-    <td><h3>Signature of student:<td><td></td></h3></td>
+    <td>Signature of student:</td><td></td>
 </tr>
 
 </tr>
-    <td><h3>Signature of HOD:<td><td></td></h3></td>
+    <td>Signature of HOD:</td><td></td>
 </tr>
 
 </tr>
-    <td><h3>Signature of Head-CIR:<td><td></td></h3></td>
+    <td>Signature of Head-CIR:</td><td></td>	
 </tr>
 
 </table>
 </body>
 </html>
-
-	
