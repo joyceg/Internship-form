@@ -110,9 +110,6 @@ $result = $conn->query($sql);
 	echo "<td>Email id: </td><td> " . $row["Email_id"]."</td>";
         echo "</tr>";
         
-        echo "<tr class=alt>";
-        echo "<td>Duration of training:</td><td>  " . $row["Duration"]."</td>";
-        echo "</tr>";
         
         echo "<tr>";
         echo "<td>Staring date:</td><td> " . $row["Start_date"]."</td>";

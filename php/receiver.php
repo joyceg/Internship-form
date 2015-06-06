@@ -31,7 +31,6 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 		Designation varchar( 50 ) NOT NULL,
 		Contact varchar( 25 ) NOT NULL,
 		Email_id varchar( 50 ) NOT NULL,
-		Duration varchar( 20 ) NOT  NULL,
 		Start_date date NOT  NULL,
 		End_date date NOT NULL
 	)";
@@ -71,16 +70,15 @@ function insertIntoDatabase( $conn ) {
 	$designation= $conn->real_escape_string( $_POST['designation'] );
 	$contact = $conn->real_escape_string( $_POST['contact'] );
 	$emailid = $conn->real_escape_string( $_POST['emailid'] );
-	$duration= $conn->real_escape_string( $_POST['duration'] );
 	$start = $conn->real_escape_string( $_POST['start'] );
 	$end = $conn->real_escape_string( $_POST['end'] );
 	$addressoforganisation = $conn->real_escape_string( $_POST['address'] );
         $DateAdded = date("Y/m/d");
 	$sql = "INSERT INTO RegistrationForm(Name,Date_of_Registration,Enrollment,School,Course,Semester, Batch, Phone, Mobile, Email, Nature,
  	Nature_of_organisation, Full_name_of_the_official_addresse, Address_of_organisation, Designation, Contact,
- 	Email_id, Duration, Start_date, End_date) VALUES (\"$name\",\"$DateAdded\",\"$enrollment\",\"$school\",\"$course\",$semester,
+ 	Email_id,Start_date, End_date) VALUES (\"$name\",\"$DateAdded\",\"$enrollment\",\"$school\",\"$course\",$semester,
  	\"$batch\",$phone,$mobile,\"$email\",\"$nature\",\"$natureoforganisation\",\"$fullnameoforganisation\",
- 	\"$addressoforganisation\",\"$designation\",$contact,\"$emailid\",\"$duration\",\"$start\",\"$end\")";
+ 	\"$addressoforganisation\",\"$designation\",$contact,\"$emailid\",\"$start\",\"$end\")";
 
 	if ( mysqli_query( $conn, $sql ) == false ) {
 		header('Location: '.'failure.html');
