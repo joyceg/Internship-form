@@ -6,19 +6,29 @@ table, td, th {
     border: 1px solid black;
 }
 td{
-padding:1%;
+padding:0.8%;
 }
 
+#customers tr.alt td {
+    color: #000000;
+    background-color: #EAF2D3;
+}
+#customers tr.table_size td{
+   
+    padding:2.5%;
+}
 
 </style>
 </head>
 <body>
 <div id="Content" align="center"> 
-<img src="../images/Amrita-university.jpg"  style="width:200px;height:60px;"  align="center;" />
+<img src="../images/header.png"  style="width:1000px;height:140px;"  align="center;" />
 </div>
-
-<h3 align="center">Application for Internship/Industrial training</h3>
-<table border="5" style="width:80%" align="center">
+<hr>
+<br>
+<h2 align="center">Application for Internship/Industrial training</h2>
+<br>
+<table id="customers" border="5" style="width:80%" align="center">
 <?php
 require_once('admin.php');
 $conn=mysqli_connect($server, $user_name, $password, $database);
@@ -32,14 +42,14 @@ $result = $conn->query($sql);
         echo "<h3><tr><td>Registration Id:</td>"."<td>" . $row["Registration_Id"]."</td>";
         echo "</tr>";
         
-        echo "<tr>";
+        echo "<tr class=alt>";
         echo "<td>Name of the Applicant:</td>" ."<td>". $row["Name"]."</td>";
         echo "</tr>";
         
         echo "<tr>";
         echo "<td>Date of Registration:</td> "."<td>" . $row["Date_of_Registration"]."</td>";
         echo "</tr>";
-        echo "<tr>";
+        echo "<tr class=alt>";
         echo "<td>Enrollment No:</td><td> " . $row["Enrollment"]."</td>";
         echo "</tr>";
         
@@ -47,7 +57,7 @@ $result = $conn->query($sql);
        echo "<td>School:</td><td> " . $row["School"]."</td>";
        echo "</tr>";
        
-	echo "<tr>";
+	echo "<tr class=alt>";
         echo "<td>Course:</td><td>  " . $row["Course"]."</td>";
         echo "</tr>";
         
@@ -55,7 +65,7 @@ $result = $conn->query($sql);
         echo "<td>Semester:</td><td>  " . $row["Semester"]."</td>";
         echo "</tr>";
         
-        echo "<tr>";
+        echo "<tr class=alt>";
         echo "<td>Batch:</td><td> " . $row["Batch"]."</td>";
         echo "</tr>";
         
@@ -63,7 +73,7 @@ $result = $conn->query($sql);
         echo "<td>Phone Number(Residence):</td><td> " . $row["Phone"]."</td>";
         echo "</tr>";
         
-        echo "<tr>";
+        echo "<tr class=alt>";
         echo "<td>Mobile: </td><td> " . $row["Mobile"]."</td>";
         echo "</tr>";
         
@@ -71,11 +81,11 @@ $result = $conn->query($sql);
         echo "<td>Email:</td><td> " . $row["Email"]."</td>";
         echo "</tr>";
         
-       echo "<tr>";
+       echo "<tr class=alt>";
         echo "<td>Nature of Training:</td><td>  " . $row["Nature"]."</td>";
         echo "</tr>";
         
-        echo "<tr>";
+        echo "<tr class=alt>";
         echo "<td>Nature of the  organisation:</td><td> " . $row["Nature_of_organisation"]."</td>";
 	echo "</tr>";
 	
@@ -84,7 +94,7 @@ $result = $conn->query($sql);
 	echo "<td>Full name of the official addresse:</td><td> " . $row["Full_name_of_the_official_addresse"]."</td>";
 	echo "</tr>";
 	
-	echo "<tr>";
+	echo "<tr class=alt>";
 	echo "<td>Address of organisation:</td><td> " . $row["Address_of_organisation"]."</td>";
 	echo "</tr>";
 	
@@ -92,7 +102,7 @@ $result = $conn->query($sql);
 	echo "<td>Designation:</td><td> " . $row["Designation"]."</td>";
 	echo "</tr>";
 	
-	echo "<tr>";
+	echo "<tr class=alt>";
 	echo "<td>Contact:</td><td> " . $row["Contact"]."</td>";
 	echo "</tr>";
 	
@@ -100,7 +110,7 @@ $result = $conn->query($sql);
 	echo "<td>Email id: </td><td> " . $row["Email_id"]."</td>";
         echo "</tr>";
         
-        echo "<tr>";
+        echo "<tr class=alt>";
         echo "<td>Duration of training:</td><td>  " . $row["Duration"]."</td>";
         echo "</tr>";
         
@@ -108,7 +118,7 @@ $result = $conn->query($sql);
         echo "<td>Staring date:</td><td> " . $row["Start_date"]."</td>";
         echo "</tr>";
         
-        echo "<tr>";
+        echo "<tr class=alt>";
         echo "<td>End Date:</td><td> " . $row["End_date"] ."</td></h3>" ;
         echo "</tr>";
 	
@@ -117,15 +127,15 @@ $result = $conn->query($sql);
    	
 $conn->close();
 ?>
-<tr>
+<tr class=table_size>
     <td>Signature of student:</td><td></td>
 </tr>
 
-</tr>
+<tr class=table_size >
     <td>Signature of HOD:</td><td></td>
 </tr>
 
-</tr>
+<tr class=table_size  >
     <td>Signature of Head-CIR:</td><td></td>	
 </tr>
 </table>
