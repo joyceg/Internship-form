@@ -1,4 +1,4 @@
-                <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+         <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -6,6 +6,24 @@
 <link rel="stylesheet" type="text/css" href="css/view.css" media="all">
 <script type="text/javascript" src="js/view.js"></script>
 <script type="text/javascript" src="js/calendar.js"></script>
+
+<script src="js/jquery-1.6.2.min.js"></script>
+<script src="js/jquery-ui-1.8.15.custom.min.js"></script>
+<link rel="stylesheet" href="js/jqueryCalendar.css">
+<script>
+                jQuery(function() {
+                $("#start").datepicker({ dateFormat: 'yy-mm-dd' });
+                                jQuery( "#start" ).datepicker();
+                });
+                </script>
+                <script>
+                jQuery(function() {
+                $("#end").datepicker({ dateFormat: 'yy-mm-dd' });
+                                jQuery( "#end" ).datepicker();
+                });
+                </script>
+  
+  
 </head>
 <body id="main_body" >
 	
@@ -170,15 +188,13 @@
 		<input type="radio" name="duration" value="1 month">1 month
 		 
 		</li>		<li id="li_16" >
-		<label class="description" for="start">Starting Date: </label>
-		
-		                                    <input class="text" type="date"  name="start" id="start" value="" placeholder="" />
-
+		<label class="description" for="start">Start Date </label>
+		<input class="text" id="start" name="start"/>
 		
 		<p class="guidelines" id="guide_16"><small>Enter the starting date of the training</small></p> 
 		</li>		<li id="li_17" >
 		<label class="description" for="end">End Date </label>
-		<input class="text" type="date"  name="end" id="end" value="" placeholder="" />
+		<input class="text"  id="end" name="end"/>
 
 		
 		<p class="guidelines" id="guide_17"><small>Please enter the end date</small></p> 

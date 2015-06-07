@@ -32,19 +32,15 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 		Contact varchar( 25 ) NOT NULL,
 		Email_id varchar( 50 ) NOT NULL,
 		Start_date date NOT  NULL,
-		End_date date NOT NULL
+		End_date date NOT NULL,
+		Duration int(4)
 	)";
-
 	if ( $conn->query($sql) === false ) {
 		header('Location: '.'failure.html');
 		return false;
 	}
-
 	insertIntoDatabase($conn);
-
-
 }
-
 function checkIfInValidPost() {
 	foreach( $_POST as $key => $value ) {
 		if ( $value === "" ) {
@@ -53,7 +49,6 @@ function checkIfInValidPost() {
 	}
 	return false;
 }
-
 function insertIntoDatabase( $conn ) {
 	$name= $conn->real_escape_string( $_POST['name'] );
 	$enrollment= $conn->real_escape_string( $_POST['enrollment'] );
@@ -74,12 +69,22 @@ function insertIntoDatabase( $conn ) {
 	$end = $conn->real_escape_string( $_POST['end'] );
 	$addressoforganisation = $conn->real_escape_string( $_POST['address'] );
         $DateAdded = date("Y/m/d");
+       
+	  #function datedifference()
+	  #{
+	  #global $Duration;
+#	
+#	  $Duration = $start->diff($end)->format("%d");
+#	  return $Duration;
+#	  }
+#	  
+#	  $Duration=datedifference();
 	$sql = "INSERT INTO RegistrationForm(Name,Date_of_Registration,Enrollment,School,Course,Semester, Batch, Phone, Mobile, Email, Nature,
  	Nature_of_organisation, Full_name_of_the_official_addresse, Address_of_organisation, Designation, Contact,
  	Email_id,Start_date, End_date) VALUES (\"$name\",\"$DateAdded\",\"$enrollment\",\"$school\",\"$course\",$semester,
  	\"$batch\",$phone,$mobile,\"$email\",\"$nature\",\"$natureoforganisation\",\"$fullnameoforganisation\",
  	\"$addressoforganisation\",\"$designation\",$contact,\"$emailid\",\"$start\",\"$end\")";
-
+ 	
 	if ( mysqli_query( $conn, $sql ) == false ) {
 		header('Location: '.'failure.html');
 		return false;
@@ -87,8 +92,5 @@ function insertIntoDatabase( $conn ) {
 		header('Location: '.'success.html');
 		return true;
 	}
-
-
 }
-
 ?>
