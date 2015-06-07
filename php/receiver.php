@@ -71,7 +71,7 @@ function insertIntoDatabase( $conn ) {
         $DateAdded = date("Y/m/d");
        
   
-	$Duration = ((strtotime($end)- strtotime($start))/24/3600).
+	$Duration = ((strtotime($end)- strtotime($start))/24/3600)."days";
 
 	  
 	$sql = "INSERT INTO RegistrationForm(Name,Date_of_Registration,Enrollment,School,Course,Semester, Batch, Phone, Mobile, Email, Nature,
