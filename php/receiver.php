@@ -16,13 +16,14 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 		Registration_Id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
 		Date_of_Registration date NOT NULL,
 		Name varchar(50) NOT NULL,
+		Gender varchar(10) NOT NULL,
 		Enrollment varchar(50) NOT NULL,
 		School varchar(100) NOT NULL,
 		Course varchar(100) NOT NULL,
 		Semester varchar(30) NOT NULL,
 		Batch int(35) NOT NULL,
-		Phone varchar(15)NULL,
-		Mobile varchar(15) NULL,
+		Phone varchar(15) NOT NULL,
+		Mobile varchar(15) NOT NULL,
 		Email varchar(30) NOT NULL,
 		Nature varchar(255) NOT NULL,
 		Nature_of_organisation varchar( 400 ) NOT NULL,
@@ -51,6 +52,7 @@ function checkIfInValidPost() {
 }
 function insertIntoDatabase( $conn ) {
 	$name= $conn->real_escape_string( $_POST['name'] );
+	$Gender= $conn->real_escape_string( $_POST['Gender'] );
 	$enrollment= $conn->real_escape_string( $_POST['enrollment'] );
 	$school= $conn->real_escape_string( $_POST['school'] );
 	$course= $conn->real_escape_string( $_POST['course'] );
@@ -74,9 +76,9 @@ function insertIntoDatabase( $conn ) {
 	$Duration = ((strtotime($end)- strtotime($start))/24/3600)."days";
 
 	  
-	$sql = "INSERT INTO RegistrationForm(Name,Date_of_Registration,Enrollment,School,Course,Semester, Batch, Phone, Mobile, Email, Nature,
+	$sql = "INSERT INTO RegistrationForm(Registration_Id,Name,Gender,Date_of_Registration,Enrollment,School,Course,Semester, Batch, Phone, Mobile, Email, Nature,
  	Nature_of_organisation, Full_name_of_the_official_addresse, Address_of_organisation, Designation, Contact,
- 	Email_id,Start_date, End_date,Duration) VALUES (\"$name\",\"$DateAdded\",\"$enrollment\",\"$school\",\"$course\",$semester,
+ 	Email_id,Start_date, End_date,Duration) VALUES (\"$Registration_Id\",\"$name\",\"$Gender\",\"$DateAdded\",\"$enrollment\",\"$school\",\"$course\",$semester,
  	\"$batch\",$phone,$mobile,\"$email\",\"$nature\",\"$natureoforganisation\",\"$fullnameoforganisation\",
  	\"$addressoforganisation\",\"$designation\",$contact,\"$emailid\",\"$start\",\"$end\",\"$Duration\")";
  	

@@ -48,6 +48,9 @@ $result = $conn->query($sql);
         echo "</tr>";
         
         
+        echo "<tr class=alt>";
+        echo "<td>Gender:</td> "."<td>" . $row["Gender"]."</td>";
+        echo "</tr>";
         
         echo "<tr class=alt>";
         echo "<td>Date of Registration:</td> "."<td>" . $row["Date_of_Registration"]."</td>";
