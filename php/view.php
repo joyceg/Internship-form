@@ -70,6 +70,10 @@ $result = $conn->query($sql);
         echo "<td>Course:</td><td>  " . $row["Course"]."</td>";
         echo "</tr>";
         
+          echo "<tr>";
+       
+        echo "<td>Specialization:</td><td>  " . $row["Specialization"]."</td>";
+        echo "</tr>";
        
         echo "<tr class=alt>";;
         echo "<td>Semester:</td><td>  " . $row["Semester"]."</td>";

@@ -28,7 +28,7 @@
 <body id="main_body" >
 	
 	<img id="top" src="images/top.png" alt="">
-	<img src="images/Amrita-university.jpg" style="width:640px;height:140px;"  >
+	<img src="images/Amrita-university.jpg" style="width:640px;height:150px;"  >
 	<div id="form_container">
 	
 		<h1><a>Application for Internship/Industrial Training</a></h1>
@@ -69,7 +69,7 @@
 		<input type="radio" name="school" value="Amrita school of Arts and sciences" required>Amrita school of Arts and sciences<br>
 		<input type="radio" name="school" value="Amrita school of Engineering" required>Amrita school of Engineering<br>
 
-		  
+	  
 	
 		</li>	
 		
@@ -79,26 +79,110 @@
 		
 		<label class="description" for="course">Course: </label>
 		<div>
-		<select class="element select medium" id="course" name="course" required> 
-			<option value="" selected="selected"></option>
-<option value="B.Tech" >B.Tech<required /option>
-<option value="BBA" >BBA</option>
-<option value="BCA" >BCA</option>
-<option value="B.Com">B.Com</option>
-<option value="Integrated">Integrated</option>
-<option value="MCA" >MCA</option>
-<option value="M.Tech" >M.Tech</option>
-<option value="M.Com" >M.Com</option>
-<option value="MSW" >MSW</option>
-
-
-		</select>
-				<p class="guidelines" id="guide_20"><small> Enter the course you are enrolled in</small></p> 
+		
+		<select id='courses' onchange='courseChanged(this.value);' name="course">
+    <option value=''>Select Course</option>
+    <option value='Btech'>Btech</option>
+    <option value='MTech'>MTech</option>
+    <option value='BCA'>BCA</option>
+    <option value='MCA'>MCA</option>
+    <option value='BSC'>BSC</option>
+    <option value='MSC'>MSC</option>
+    <option value='BCOM'>BCOM</option>
+    <option value='MCOM'>MCOM</option>
+    <option value='BBM'>BBM</option>
+    <option value='MA'>MA</option>
+  
+ </select>
+  &nbsp;&nbsp;
+  
+  </div>
+  </li>
+  
+  <li id="li_180" >
+		<label class="description" for="specialization">Specialization: </label>
+		<div>
+  <select id='specialization' onchange='SpecializationChanged(this.value);' name="specialization">
+    <option value=''>Select specialization</option>
+  </select>
+&nbsp;&nbsp;
+				<p class="guidelines" id="guide_20"><small> Enter the area of specialization</small></p> 
 
 		</div></li>
+ 
+ <script type="text/javascript"> 
+   var statesBtech=["CSE", "ECE", "EEE","ME"];
+   var statesMTech=["CIN", "CSE", "CSN","ELT", "PR", "RAU","TF","VLSI","WNA"];
+   var statesMCA=["Not Applicable", "Other"];
+   var statesBCA=["Not Applicable", "Other"];
+   var statesBCOM=["Not Applicable", "Other"];
+   var statesBBM=["Not Applicable", "Other"];
+   var statesMCOM=["Not Applicable", "Other"];
+   var statesBSC=["Chemistry", "CS", "Maths","Physics"];
+   var statesMSC=["Chemistry", "CS", "Maths","Physics"];
+   var statesMA=["Not Applicable", "Other"];
+   
+   
+   function courseChanged(courses)
+   { 
+      var selectSpecialization = document.getElementById('specialization');
+      var ln = selectSpecialization.length - 1;
+      while (ln > 0)
+      {
+        selectSpecialization.remove(1); 
+        ln--;
+      }
+     
+      var stateArray;
+     
+      switch(courses)
+      {
+        case "Btech":
+            stateArray=statesBtech;
+            break;
+        case "MTech":
+            stateArray=statesMTech;
+            break;
+        
+        case "BCA":
+            stateArray=statesBCA;
+            break;
+        case "MCA":
+            stateArray=statesMCA;
+            break;
+        
+        case "BBM":
+            stateArray=statesBBM;
+            break;
+        case "MSC":
+            stateArray=statesMSC;
+            break;
+        
+        case "BSC":
+            stateArray=statesBSC;
+            break;
+        case "BCOM":
+            stateArray=statesBCOM;
+            break;
+        case "MCOM":
+            stateArray=statesMCOM;
+            break;
+        case "MA":
+            stateArray=statesMA;
+            break;        
+        default:
+      }     
+         
+      for (i = 0; i < stateArray.length; i++)
+      {
+        var option = document.createElement('option');
+        option.text = stateArray[i];
+        option.value = stateArray[i];
+        selectSpecialization.add(option);
+      }     
+  }
 		
-			
-		
+</script>		
 		
 		<li id="li_9" >
 		

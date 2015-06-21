@@ -20,6 +20,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 		Enrollment varchar(50) NOT NULL,
 		School varchar(100) NOT NULL,
 		Course varchar(100) NOT NULL,
+		Specialization varchar(100) NOT NULL,
 		Semester varchar(30) NOT NULL,
 		Batch int(35) NOT NULL,
 		Phone varchar(15) NOT NULL,
@@ -56,6 +57,7 @@ function insertIntoDatabase( $conn ) {
 	$enrollment= $conn->real_escape_string( $_POST['enrollment'] );
 	$school= $conn->real_escape_string( $_POST['school'] );
 	$course= $conn->real_escape_string( $_POST['course'] );
+	$specialization= $conn->real_escape_string( $_POST['specialization'] );
 	$semester= $conn->real_escape_string( $_POST['semester']);
 	$batch= $conn->real_escape_string($_POST['batch'] );
 	$phone= $conn->real_escape_string( $_POST['phone'] );
@@ -73,12 +75,12 @@ function insertIntoDatabase( $conn ) {
         $DateAdded = date("Y/m/d");
        
   
-	$Duration = ((strtotime($end)- strtotime($start))/24/3600)."days";
+	$Duration = (1+(strtotime($end)- strtotime($start))/24/3600) ." days";
 
 	  
-	$sql = "INSERT INTO RegistrationForm(Registration_Id,Name,Gender,Date_of_Registration,Enrollment,School,Course,Semester, Batch, Phone, Mobile, Email, Nature,
+	$sql = "INSERT INTO RegistrationForm(Registration_Id,Name,Gender,Date_of_Registration,Enrollment,School,Course,Specialization,Semester, Batch, Phone, Mobile, Email, Nature,
  	Nature_of_organisation, Full_name_of_the_official_addresse, Address_of_organisation, Designation, Contact,
- 	Email_id,Start_date, End_date,Duration) VALUES (\"$Registration_Id\",\"$name\",\"$Gender\",\"$DateAdded\",\"$enrollment\",\"$school\",\"$course\",$semester,
+ 	Email_id,Start_date, End_date,Duration) VALUES (\"$Registration_Id\",\"$name\",\"$Gender\",\"$DateAdded\",\"$enrollment\",\"$school\",\"$course\",\"$specialization\",$semester,
  	\"$batch\",$phone,$mobile,\"$email\",\"$nature\",\"$natureoforganisation\",\"$fullnameoforganisation\",
  	\"$addressoforganisation\",\"$designation\",$contact,\"$emailid\",\"$start\",\"$end\",\"$Duration\")";
  	
