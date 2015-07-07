@@ -22,9 +22,8 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 		Course varchar(100)  NOT NULL,
 		Specialization varchar(100) NOT NULL,
 		Semester varchar(30) NOT NULL,
-		Batch int(35) NULL,
-		Phone varchar(15) NOT  NULL,
-		Mobile varchar(15) NOT NULL,
+		Batch int(35) NOT NULL,
+		Phone varchar(15) NOT NULL,
 		Email varchar(30)  NOT NULL,
 		Nature varchar(255)  NOT NULL,
 		Nature_of_organisation varchar( 400 ) NOT NULL,
@@ -43,6 +42,8 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 	}
 	insertIntoDatabase($conn);
 }
+
+
 function checkIfInValidPost() {
 	foreach( $_POST as $key => $value ) {
 		if ( $value === "" ) {
@@ -51,6 +52,9 @@ function checkIfInValidPost() {
 	}
 	return false;
 }
+
+
+
 function insertIntoDatabase( $conn ) {
 	$name= $conn->real_escape_string( $_POST['name'] );
 	$Gender= $conn->real_escape_string( $_POST['Gender'] );
@@ -78,10 +82,10 @@ function insertIntoDatabase( $conn ) {
 	$Duration = (1+(strtotime($end)- strtotime($start))/24/3600) ." days";
 
 	  
-	$sql = "INSERT INTO RegistrationForm(Registration_Id,Name,Gender,Date_of_Registration,Enrollment,School,Course,Specialization,Semester, Batch, Phone, Mobile, Email, Nature,
+	$sql = "INSERT INTO RegistrationForm(Registration_Id,Name,Gender,Date_of_Registration,Enrollment,School,Course,Specialization,Semester, Batch, Phone, Email, Nature,
  	Nature_of_organisation, Full_name_of_the_official_addresse, Address_of_organisation, Designation, Contact,
  	Email_id,Start_date, End_date,Duration) VALUES (\"$Registration_Id\",\"$name\",\"$Gender\",\"$DateAdded\",\"$enrollment\",\"$school\",\"$course\",\"$specialization\",$semester,
- 	\"$batch\",$phone,$mobile,\"$email\",\"$nature\",\"$natureoforganisation\",\"$fullnameoforganisation\",
+ 	\"$batch\",\"$phone\",\"$email\",\"$nature\",\"$natureoforganisation\",\"$fullnameoforganisation\",
  	\"$addressoforganisation\",\"$designation\",$contact,\"$emailid\",\"$start\",\"$end\",\"$Duration\")";
  	
 	if ( mysqli_query( $conn, $sql ) == false ) {
@@ -92,4 +96,6 @@ function insertIntoDatabase( $conn ) {
 		return true;
 	}
 }
+
+
 ?>

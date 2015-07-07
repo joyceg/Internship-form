@@ -89,11 +89,7 @@ $result = $conn->query($sql);
         echo "<td>Phone Number(Residence):</td><td> " . $row["Phone"]."</td>";
         echo "</tr>";
         
-          echo "<tr>";
-        
-        echo "<td>Mobile: </td><td> " . $row["Mobile"]."</td>";
-        echo "</tr>";
-        
+     
         
         echo "<tr class=alt>";
         echo "<td>Email:</td><td> " . $row["Email"]."</td>";
