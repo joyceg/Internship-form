@@ -108,7 +108,7 @@
   <li id="li_180" >
 		<label class="description" for="specialization">Specialization: </label>
 		<div>
-  <select id='specialization' onchange='SpecializationChanged(this.value);' name="specialization">
+  <select id='specialization' onchange='SpecializationChanged(this.value);' name="specialization" required>
     <option value=''>Select specialization</option>
   </select>
 &nbsp;&nbsp;
@@ -196,7 +196,7 @@
 
 		<label class="description" for="semester">Semester:</label>
 		<div>
-		<select class="element select medium" id="semester" name="semester" required>
+		<select class="element select medium" id="semester" name="semester" required/>
 			<option value="semester" selected="selected"></option>
 <option value="1" >1</option>
 <option value="2" >2</option>
@@ -250,7 +250,7 @@
 		<li id="li_3" >
 		<label class="description" for="phone">Phone Number: </label>
 		<div>
-			<input id="phone" name="phone" class="element text medium" type="text" maxlength="255" value=""/>
+			<input id="phone" name="phone" class="element text medium" type="text" maxlength="255" value="" required/>
 		</div><p class="guidelines" id="guide_3"><small>Enter Your Phone Number</small></p>
 		</li>		<li id="li_5" >
 		<label class="description" for="email">Email </label>
