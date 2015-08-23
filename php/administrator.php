@@ -32,5 +32,11 @@ Registration ID: <input type="text" name="test_reg" value=""><br>
 <form method="post" action="PrintApplication.php">
 Registration ID: <input type="text" name="application_id" value=""><br>
 <br><input type="submit" value="Submit">
+</form>
+<h2>Print Application-Letter</h2>
+<form method="post" action="PrintLetter.php">
+Registration ID: <input type="text" name="letter_id" value=""><br>
+<br><input type="submit" value="Submit">
+</form>
 </body>
 </html>
