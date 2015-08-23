@@ -1,5 +1,5 @@
-         <!DOCTYPE html >
-<html >
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Application for Internship/Industrial Training</title>
@@ -127,8 +127,6 @@
    var statesBSC=["Chemistry", "CS", "Maths","Physics"];
    var statesMSC=["Chemistry", "CS", "Maths","Physics"];
    var statesMA=["Not Applicable", "Other"];
-
-
    function courseChanged(courses)
    {
       var selectSpecialization = document.getElementById('specialization');
@@ -138,9 +136,7 @@
         selectSpecialization.remove(1);
         ln--;
       }
-
       var stateArray;
-
       switch(courses)
       {
         case "Btech":
@@ -149,21 +145,18 @@
         case "MTech":
             stateArray=statesMTech;
             break;
-
         case "BCA":
             stateArray=statesBCA;
             break;
         case "MCA":
             stateArray=statesMCA;
             break;
-
         case "BBM":
             stateArray=statesBBM;
             break;
         case "MSC":
             stateArray=statesMSC;
             break;
-
         case "BSC":
             stateArray=statesBSC;
             break;
@@ -178,7 +171,6 @@
             break;
         default:
       }
-
       for (i = 0; i < stateArray.length; i++)
       {
         var option = document.createElement('option');
@@ -187,7 +179,6 @@
         selectSpecialization.add(option);
       }
   }
-
 </script>
 
 		<li id="li_9" >
@@ -314,7 +305,6 @@
   .conditional_form_part {
     display: none;
   }
-
   .conditional_form_part_activator:checked + .conditional_form_part {
     display: block;
   }
