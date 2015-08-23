@@ -45,19 +45,38 @@ $result = $conn->query($sql);
                       echo " contribute substantially to their learning process.";
                     }
                     echo "<br><br>";
-                    if($row["Gender"]=="Male")
-                    echo 'Mr. ';
-                    else
-                    echo 'Mrs. ';
-                    echo $row["Name"]." wishes to do internship in your esteemed organization.";
-                    echo " Your acceptance of this";
-                    echo "request will encourage him greatly, and help in enhancing his";
-                    echo " academic performance.";
-                    echo "<br>Course:".$row["Course"]."  Semester: ".$row["Semester"];
-                    echo "<br>".$row["Nature"]." Duraton:";
-                    echo $row["Start_date"];
-                    echo " to ";
-                    echo $row["End_date"];
+                    if(($row["member2"])=="")
+                      {
+                            if($row["Gender"]=="Male")
+                            echo 'Mr. ';
+                            else
+                            echo 'Mrs. ';
+                            echo $row["Name"]." wishes to do internship in your esteemed organization.";
+                            echo " Your acceptance of this";
+                            echo "request will encourage him greatly, and help in enhancing his";
+                            echo " academic performance.";
+                        }
+                        else
+                          {
+                            echo "The following students wish to do Internship in your";
+                            echo "esteemed organization. Your acceptance of this request";
+                             echo "will encourage them greatly, and help in enhancing their";
+                              echo "academic performance.";
+                              echo "<br>1.".$row["Name"];
+                              echo "<br>2.".$row["member2"];
+                              if($row["member3"]!='')
+                                echo "<br>3.".$row["member3"];
+                                if($row["member4"]!='')
+                                  echo "<br>4.".$row["member4"];
+                                  if($row["member5"]!='')
+                                    echo "<br>5.".$row["member5"];
+                          }
+                            echo "<br>Course:".$row["Course"]."  Semester: ".$row["Semester"];
+                            echo "<br>".$row["Nature"]." Duraton:";
+                            echo $row["Start_date"];
+                            echo " to ";
+                            echo $row["End_date"];
+
 
                     echo"<br><br>Thanking you,";
                     echo "<br>Ever in Amma's service,";
