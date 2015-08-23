@@ -7,6 +7,7 @@
 <?php
 echo "<div align=right>";
 $id=$_POST['letter_id'];
+
 $now = new DateTime();
 echo $now->format('d-m-Y');
 echo "</div>";
@@ -17,7 +18,6 @@ if ($conn->connect_error) {
    return false;
 }
 $sql = "SELECT * FROM RegistrationForm WHERE Registration_Id=$id";
-
 $result = $conn->query($sql);
     while($row = $result->fetch_assoc()) {
         echo "<br>".$row["Full_name_of_the_official_addresse"];
@@ -53,7 +53,7 @@ $result = $conn->query($sql);
                     echo " Your acceptance of this";
                     echo "request will encourage him greatly, and help in enhancing his";
                     echo " academic performance.";
-                    echo "<br>Course:".$row["Course"];
+                    echo "<br>Course:".$row["Course"]."  Semester: ".$row["Semester"];
                     echo "<br>".$row["Nature"]." Duraton:";
                     echo $row["Start_date"];
                     echo " to ";
