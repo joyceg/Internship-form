@@ -25,7 +25,6 @@
             border-radius: 3px;
             border: 1px solid #ccc;
             box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
-
         }
         form {
             margin: 0 auto;
@@ -131,15 +130,16 @@
             background-image: linear-gradient(top left 90deg, #6ec2e8 0%, #b6e2ff 100%);
         }
         </style>
-
         </head>
-
         <body>
+<br>
+<br>
           <h1 align="center">ADMINISTRATOR LOGIN</h1>
             <!-- Begin Page Content -->
             <div id="container">
                 <form action="php/login_check.php" method="post">
-                    <label for="loginmsg" style="color:hsla(0,100%,50%,0.5); font-family:"Helvetica Neue",Helvetica,sans-serif;"><?php  echo @$_GET['msg'];?></label>
+                    <label for="loginmsg" style="color:hsla(0,100%,50%,0.5); font-family:"Helvetica 
+Neue",Helvetica,sans-serif;"><?php echo @$_GET['msg'];?></label>
                     <label for="username">Username:</label>
                     <input type="text" id="username" name="username">
                     <label for="password">Password:</label>
