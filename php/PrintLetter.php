@@ -71,7 +71,7 @@ $result = $conn->query($sql);
                                   if($row["member5"]!='')
                                     echo "<br>5.".$row["member5"];
                           }
-                            echo "<br>Course:".$row["Course"]."  Semester: ".$row["Semester"];
+                            echo "<br>Course:".$row["Course"]." Specialization: ".$row["Specialization"]."     Semester: ".$row["Semester"];
                             echo "<br>".$row["Nature"]." Duraton:";
                             echo $row["Start_date"];
                             echo " to ";
