@@ -47,7 +47,7 @@ $result = $conn->query($sql);
                     echo "<br><br>";
                     if(($row["member2"])=="")
                       {
-                            if($row["Gender"]=="Male")
+                            if($row["Gender"]=="male")
                             echo 'Mr. ';
                             else
                             echo 'Mrs. ';
