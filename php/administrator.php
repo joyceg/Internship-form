@@ -67,6 +67,6 @@ Registration ID: <input type="text" name="letter_id" value=""><br>
 </form>
 
 <a href="printall.php">PRINT CONDENSED DATA</a>
-
+<a href="printDept.php">Print Department Wise Registration</a>
 </body>
 </html>
