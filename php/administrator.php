@@ -1,9 +1,33 @@
 <html>
 <title>Administrator</title>
+<head>
+<style>
+.logout
+  {
+    float:right;
+    display:inline-block;
+    padding:2px 5px;
+    background:#ccc;
+    color:#fff;
+
+    
+  }
+
+
+</style>
+
+
+</head>
 <body>
 <br>
 <div align="center" style="color:#D90026">
 <h1 >WELCOME TO THE ADMINISTRATOR ACCOUNTS</h1>
+</div>
+
+<div class="logout" align="right">
+
+<a href="logout.html"  style="text-decoration:none">Logout</a>
+
 </div>
 <br>
 <br>
@@ -39,7 +63,10 @@ Registration ID: <input type="text" name="letter_id" value=""><br>
 <br><input type="submit" value="Submit">
 <br>
 <br>
-<a href="printall.php">PRINT CONDENSED DATA</a>
+
 </form>
+
+<a href="printall.php">PRINT CONDENSED DATA</a>
+
 </body>
 </html>
