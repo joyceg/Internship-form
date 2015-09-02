@@ -60,6 +60,7 @@ function checkIfInValidPost() {
 
 
 function insertIntoDatabase( $conn ) {
+
 	$name= $conn->real_escape_string( $_POST['name'] );
 	$Gender= $conn->real_escape_string( $_POST['Gender'] );
 	$enrollment= $conn->real_escape_string( $_POST['enrollment'] );
@@ -88,7 +89,7 @@ function insertIntoDatabase( $conn ) {
         $DateAdded = date("Y/m/d");
 
 	$Duration = (1+(strtotime($end)- strtotime($start))/24/3600) ." days";
-
+	
 		$sql = "INSERT INTO RegistrationForm(Registration_Id,Name,Gender,Date_of_Registration,Enrollment,School,Course,Specialization,Semester, Batch, Phone, Email, Nature,
  	Nature_of_organisation, Full_name_of_the_official_addresse, Address_of_organisation, Designation, Contact,
  	Email_id,Start_date, End_date,Duration,member2,member3,member4,member5) VALUES (\"$Registration_Id\",\"$name\",\"$Gender\",\"$DateAdded\",\"$enrollment\",\"$school\",\"$course\",\"$specialization\",$semester,

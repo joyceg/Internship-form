@@ -37,6 +37,9 @@ Registration ID: <input type="text" name="application_id" value=""><br>
 <form method="post" action="PrintLetter.php">
 Registration ID: <input type="text" name="letter_id" value=""><br>
 <br><input type="submit" value="Submit">
+<br>
+<br>
+<a href="printall.php">PRINT CONDENSED DATA</a>
 </form>
 </body>
 </html>
