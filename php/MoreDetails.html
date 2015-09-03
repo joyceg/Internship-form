@@ -1,0 +1,117 @@
+
+<html>
+<body>
+
+<div align="center" style="color:#D90026">
+<h1 >WELCOME TO THE ADMINISTRATOR ACCOUNTS</h1>
+</div>
+
+<p><h2><a href="printall.php"  style="text-decoration:none">Print condensed data</a></h2></p>
+
+
+<p><h2><a href="printDept.php" style="text-decoration:none">Print Department Wise Registration</a></h2></p>
+
+<h2>Print Records from specialization</h2>
+		<li id="li_80" >
+<form method="post" action="DisplayMore.php">
+		<div>
+
+		<select id='courses' onchange='courseChanged(this.value);' name="course" required>
+    <option value=''>Select Course</option>
+    <option value='Btech'>Btech</option>
+    <option value='MTech'>MTech</option>
+    <option value='BCA'>BCA</option>
+    <option value='MCA'>MCA</option>
+    <option value='BSC'>BSC</option>
+    <option value='MSC'>MSC</option>
+    <option value='BCOM'>BCOM</option>
+    <option value='MCOM'>MCOM</option>
+    <option value='BBM'>BBM</option>
+    <option value='MA'>MA</option>
+
+ </select>
+  &nbsp;&nbsp;
+
+  </div>
+  </li>
+
+  <li id="li_180" >
+		
+		<div>
+  <select id='specialization' onchange='SpecializationChanged(this.value);' name="specialization" required>
+    <option value=''>Select specialization</option>
+  </select>
+&nbsp;&nbsp;
+			
+
+		</div></li>
+
+ <script type="text/javascript">
+   var statesBtech=["CSE", "ECE", "EEE","ME"];
+   var statesMTech=["CIN", "CSE", "CSN","ELT", "PR", "RAU","TF","VLSI","WNA"];
+   var statesMCA=["Not Applicable", "Other"];
+   var statesBCA=["Not Applicable", "Other"];
+   var statesBCOM=["Not Applicable", "Other"];
+   var statesBBM=["Not Applicable", "Other"];
+   var statesMCOM=["Not Applicable", "Other"];
+   var statesBSC=["Chemistry", "CS", "Maths","Physics"];
+   var statesMSC=["Chemistry", "CS", "Maths","Physics"];
+   var statesMA=["Not Applicable", "Other"];
+   function courseChanged(courses)
+   {
+      var selectSpecialization = document.getElementById('specialization');
+      var ln = selectSpecialization.length - 1;
+      while (ln > 0)
+      {
+        selectSpecialization.remove(1);
+        ln--;
+      }
+      var stateArray;
+      switch(courses)
+      {
+        case "Btech":
+            stateArray=statesBtech;
+            break;
+        case "MTech":
+            stateArray=statesMTech;
+            break;
+        case "BCA":
+            stateArray=statesBCA;
+            break;
+        case "MCA":
+            stateArray=statesMCA;
+            break;
+        case "BBM":
+            stateArray=statesBBM;
+            break;
+        case "MSC":
+            stateArray=statesMSC;
+            break;
+        case "BSC":
+            stateArray=statesBSC;
+            break;
+        case "BCOM":
+            stateArray=statesBCOM;
+            break;
+        case "MCOM":
+            stateArray=statesMCOM;
+            break;
+        case "MA":
+            stateArray=statesMA;
+            break;
+        default:
+      }
+      for (i = 0; i < stateArray.length; i++)
+      {
+        var option = document.createElement('option');
+        option.text = stateArray[i];
+        option.value = stateArray[i];
+        selectSpecialization.add(option);
+      }
+  }
+ 
+</script>
+ <p><input type="submit" value="Submit"></p>
+</form>
+</body>
+</html>
