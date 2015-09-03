@@ -1,4 +1,4 @@
-<?php
+`<?php
 if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 	if ( checkIfInValidPost() ) {
 		header('Location: '.'failure.html');
@@ -47,15 +47,27 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 
 	insertIntoDatabase($conn);
 }
-
-
 function checkIfInValidPost() {
-	foreach( $_POST as $key => $value ) {
+	/*foreach( $_POST as $key => $value ) {
 		if ( $value === "" ) {
 			return false;
 		}
 	}
 	return false;
+	*/
+	if(!eregi ('[a-zA-Z]',$_POST['name']))
+	  {
+	  return true;
+	  
+	  }
+	  if(!eregi ('[0-9]',$_POST['phone']))
+	    {
+	    return true;
+	    }
+	     if(!eregi ('[0-9]',$_POST['mobile']))
+	    {
+	    return true;
+	    }
 }
 
 
