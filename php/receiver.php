@@ -64,10 +64,11 @@ function checkIfInValidPost() {
 	    {
 	    return true;
 	    }
-	     if(!eregi ('[0-9]',$_POST['mobile']))
+	     if(!eregi ('[0-9]',$_POST['contact']))
 	    {
 	    return true;
 	    }
+	    
 }
 
 
@@ -82,7 +83,7 @@ function insertIntoDatabase( $conn ) {
 	$semester= $conn->real_escape_string( $_POST['semester']);
 	$batch= $conn->real_escape_string($_POST['batch'] );
 	$phone= $conn->real_escape_string( $_POST['phone'] );
-	$mobile= $conn->real_escape_string( $_POST['mobile'] );
+	//$mobile= $conn->real_escape_string( $_POST['mobile'] );
 	$email = $conn->real_escape_string( $_POST['email'] );
 	$nature = $conn->real_escape_string( $_POST['nature'] );
 	$natureoforganisation = $conn->real_escape_string( $_POST['natureoforganisation'] );
