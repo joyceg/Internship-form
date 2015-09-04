@@ -39,9 +39,11 @@ if ($conn->connect_error) {
 }
 $sql = "SELECT Registration_Id FROM RegistrationForm WHERE Registration_Id=(SELECT max(Registration_Id) FROM RegistrationForm)";
 $result = $conn->query($sql);
+echo "<div align='center'>";
     while($row = $result->fetch_assoc()) {
         echo "<button><tr class=alt><td>Total Number of Applications received: </td>"."<td>" . $row["Registration_Id"]."</td></h3></button>";
         }
+        echo "</div>";
 $conn->close();
 ?>
 <br>
