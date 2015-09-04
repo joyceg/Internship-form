@@ -32,13 +32,14 @@ padding:0.8%;
 <?php
 $course= $_POST['course'];
 $specialization= $_POST['specialization'];
+$sem=$_POST['semester'];
 require_once('admin.php');
 $conn=mysqli_connect($server, $user_name, $password, $database);
 if ($conn->connect_error) {
     header('Location: '.'failure.html');
 		return false;
 } 
-$sql="select * from RegistrationForm where Course like '$course' and specialization like '$specialization'";
+$sql="select * from RegistrationForm where Course like '$course' and specialization like '$specialization' and semester like '$sem'";
 $result=$conn->query($sql);
 $row=$result->num_rows;
 if($row)

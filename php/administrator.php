@@ -13,15 +13,14 @@
     
   }
 
-
 </style>
 
 
 </head>
-<body>
+<body bgcolor="#E6E6FA">
 <br>
-<div align="center" style="color:#D90026">
-<h1 >WELCOME TO THE ADMINISTRATOR ACCOUNTS</h1>
+<div align="center" style="color:#D90026" >
+<button><h1 >WELCOME TO THE ADMINISTRATOR ACCOUNTS</h1></button>
 </div>
 
 <div class="logout" align="right">
@@ -48,18 +47,19 @@ $conn->close();
 <br>
 <br>
 <form method="post" action="single_application_view.php">
-Registration ID: <input type="text" name="test_reg" value=""><br>
+Registration ID: <input type="text" name="test_reg" value="" required placeholder="Enter registration Id" /><br>
 <br><input type="submit" value="Submit">
 
 </form>
+
 <h2>Print Application</h2>
 <form method="post" action="PrintApplication.php">
-Registration ID: <input type="text" name="application_id" value=""><br>
+Registration ID: <input type="text" name="application_id" value="" required placeholder="Enter registraion Id"/><br>
 <br><input type="submit" value="Submit">
 </form>
 <h2>Print Application-Letter</h2>
 <form method="post" action="PrintLetter.php">
-Registration ID: <input type="text" name="letter_id" value=""><br>
+Registration ID: <input type="text" name="letter_id" value="" required placeholder="Enter registration Id"/><br>
 <br><input type="submit" value="Submit">
 <br>
 <br>

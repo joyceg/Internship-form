@@ -36,9 +36,13 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 		End_date date  NOT NULL,
 		Duration varchar(20) NOT  NULL,
 		member2 varchar(20)   NULL,
+		Gender2 varchar(8) NULL,
 		member3 varchar(20) NULL,
+		Gender3 varchar(8) NULL,
 		member4 varchar(20)  NULL,
-		member5 varchar(20)  NULL
+		Gender4 varchar(8) NULL,
+		member5 varchar(20)  NULL,
+		Gender5 varchar(8) NULL
 	)";
 	if ( $conn->query($sql) === false ) {
 		header('Location: '.'failure.html');
@@ -95,19 +99,23 @@ function insertIntoDatabase( $conn ) {
 	$end = $conn->real_escape_string( $_POST['end'] );
 	$addressoforganisation = $conn->real_escape_string( $_POST['address'] );
 	$member2=$conn->real_escape_string( $_POST['member2'] );
+	$Gender2=$conn->real_escape_string( $_POST['Gender2'] );
         $member3=$conn->real_escape_string( $_POST['member3'] );
 		//		$member2=((is_null($member2))?"lah":$member2);
+        $Gender3=$conn->real_escape_string( $_POST['Gender3'] );
         $member4=$conn->real_escape_string( $_POST['member4'] );
+        $Gender4=$conn->real_escape_string( $_POST['Gender4'] );
         $member5=$conn->real_escape_string( $_POST['member5'] );
+        $Gender5=$conn->real_escape_string( $_POST['Gender5'] );
         $DateAdded = date("Y/m/d");
 
 	$Duration = (1+(strtotime($end)- strtotime($start))/24/3600) ." days";
 	
 		$sql = "INSERT INTO RegistrationForm(Registration_Id,Name,Gender,Date_of_Registration,Enrollment,School,Course,Specialization,Semester, Batch, Phone, Email, Nature,
  	Nature_of_organisation, Full_name_of_the_official_addresse, Address_of_organisation, Designation, Contact,
- 	Email_id,Start_date, End_date,Duration,member2,member3,member4,member5) VALUES (\"$Registration_Id\",\"$name\",\"$Gender\",\"$DateAdded\",\"$enrollment\",\"$school\",\"$course\",\"$specialization\",$semester,
+ 	Email_id,Start_date, End_date,Duration,member2,Gender2,member3,Gender3,member4,Gender4,member5,Gender5) VALUES (\"$Registration_Id\",\"$name\",\"$Gender\",\"$DateAdded\",\"$enrollment\",\"$school\",\"$course\",\"$specialization\",$semester,
  	\"$batch\",\"$phone\",\"$email\",\"$nature\",\"$natureoforganisation\",\"$fullnameoforganisation\",
- 	\"$addressoforganisation\",\"$designation\",$contact,\"$emailid\",\"$start\",\"$end\",\"$Duration\",\"$member2\",\"$member3\",\"$member4\",\"$member5\")";
+ 	\"$addressoforganisation\",\"$designation\",$contact,\"$emailid\",\"$start\",\"$end\",\"$Duration\",\"$member2\",\"$Gender2\",\"$member3\",\"$Gender3\",\"$member4\",\"$Gender4\",\"$member5\",\"$Gender5\")";
 
 	if ( mysqli_query( $conn, $sql ) == false ) {
 		header('Location: '.'failure.html');

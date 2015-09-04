@@ -23,14 +23,19 @@ $result = $conn->query($sql);
         echo "<br>".$row["Full_name_of_the_official_addresse"];
                 echo "<br>".$row["Designation"];
                 echo "<br>".$row["Address_of_organisation"];
-                echo "<br><h3>Sub-</h3>";
+                echo "<br><h3>Subject-Request for ".$row['Nature']." for ".$row['Course'];
+                if($row['member2']!='')
+                echo " students";
+                else
+                echo " student";
+                echo " </h3>"; 
                 echo "Dear madam/sir,<br>";
                 if($row["School"]=='Amrita school of Engineering')
                   {
-                    echo "Amrita School of Engineering (ASE) is one of the several professional" ;
+                    echo "Amrita School of Engineering (ASE) is one of the several professional " ;
                     echo"institutions under Amrita Vishwa Vidyapeetham, established under section 3";
-                    echo " of the UGC Act, 1956. Engineering (B. Tech) students studying in ASE are advised";
-                    echo  "do Internship in reputed organizations. This will give them some practical experience";
+                    echo " of the UGC Act, 1956. Engineering (B. Tech) students studying in ASE are advised to" ;
+                    echo  " do Internship in reputed organizations. This will give them some practical experience";
                     echo " which will contribute substantially to their learning process.";
                   }
                   else
@@ -47,7 +52,7 @@ $result = $conn->query($sql);
                     echo "<br><br>";
                     if(($row["member2"])=="")
                       {
-                            if($row["Gender"]=="male")
+                            if($row["Gender"]=="Male")
                             echo 'Mr. ';
                             else
                             echo 'Mrs. ';
@@ -58,18 +63,48 @@ $result = $conn->query($sql);
                         }
                         else
                           {
-                            echo "The following students wish to do Internship in your";
+                            echo "The following students wish to do Internship in your ";
                             echo "esteemed organization. Your acceptance of this request";
-                             echo "will encourage them greatly, and help in enhancing their";
+                             echo " will encourage them greatly, and help in enhancing their";
                               echo "academic performance.";
-                              echo "<br>1.".$row["Name"];
-                              echo "<br>2.".$row["member2"];
+                              echo "<br>1.";
+				    if($row["Gender"]=='Male')
+				      echo 'Mr.';
+				      else
+				      echo 'Mrs.';
+					echo $row["Name"];
+                              
+                              echo "<br>2.";
+				    if($row["Gender2"]=='Male')
+				      echo 'Mr.';
+				      else
+				      echo 'Mrs.';
+					echo $row["member2"];
                               if($row["member3"]!='')
-                                echo "<br>3.".$row["member3"];
+                               { echo "<br>3.";
+				    if($row["Gender3"]=='Male')
+				      echo 'Mr.';
+				      else
+				      echo 'Mrs.';
+					echo $row["member3"];
+					}
                                 if($row["member4"]!='')
-                                  echo "<br>4.".$row["member4"];
+                                 { echo "<br>4.";
+				    if($row["Gender4"]=='Male')
+				      echo 'Mr.';
+				      else
+				      echo 'Mrs.';
+					echo $row["member4"];
+					}
                                   if($row["member5"]!='')
-                                    echo "<br>5.".$row["member5"];
+                                    {
+                                    echo "<br>5.";
+				    if($row["Gender5"]=='Male')
+				      echo 'Mr.';
+				      else
+				      echo 'Mrs.';
+					echo $row["member5"];
+					}
                           }
                             echo "<br>Course:".$row["Course"]." Specialization: ".$row["Specialization"]."     Semester: ".$row["Semester"];
                             echo "<br>".$row["Nature"]." Duraton:";
