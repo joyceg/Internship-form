@@ -69,13 +69,13 @@ for( $i = 0; $i <= $strlen; $i++ ) {
                             echo 'Mrs. ';
                             echo $row["Name"]." wishes to do internship in your esteemed organization.";
                             echo " Your acceptance of this";
-                            echo "request will encourage him greatly, and help in enhancing his";
+                            echo " request will encourage him greatly, and help in enhancing his";
                             echo " academic performance.";
                         }
                         else
                           {
                             echo "The following students wish to do Internship in your ";
-                            echo "esteemed organization. Your acceptance of this request";
+                            echo "esteemed organization. Your acceptance of this request ";
                              echo " will encourage them greatly, and help in enhancing their";
                               echo "academic performance.";
                               echo "<br>1.";
