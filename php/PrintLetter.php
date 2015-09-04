@@ -22,7 +22,18 @@ $result = $conn->query($sql);
     while($row = $result->fetch_assoc()) {
         echo "<br>".$row["Full_name_of_the_official_addresse"];
                 echo "<br>".$row["Designation"];
-                echo "<br>".$row["Address_of_organisation"];
+                echo '<br>';
+                $str = $row['Address_of_organisation'];
+$strlen = strlen( $str );
+for( $i = 0; $i <= $strlen; $i++ ) {
+    $char = substr( $str, $i, 1 );
+    if($char == ',')
+    echo "<br>";
+    else
+    echo $char;
+    // $char contains the current character, so do your processing here
+}
+                
                 echo "<br><h3>Subject-Request for ".$row['Nature']." for ".$row['Course'];
                 if($row['member2']!='')
                 echo " students";
