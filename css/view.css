@@ -13,7 +13,7 @@ body
 
 	margin:0 auto;
 	text-align:left;
-	width:640px;
+	width:800px;
 }
 
 #top
@@ -109,7 +109,7 @@ form li
 {
 	display:block;
 	margin:0;
-	padding:4px 5px 2px 9px;
+	padding:30px 5px 2px 9px;
 	position:relative;
 }
 
@@ -386,7 +386,7 @@ input.checkbox
 	height:13px;
 	line-height:1.4em;
 	margin:6px 0 0 3px;
-	width:13px;
+	width:130px;
 }
 
 input.radio
@@ -395,7 +395,7 @@ input.radio
 	height:13px;
 	line-height:1.4em;
 	margin:6px 0 0 3px;
-	width:13px;
+	width:130px;
 }
 
 label.choice
@@ -560,7 +560,7 @@ form .guidelines
 
 form .guidelines small
 {
-	font-size:105%;
+	font-size:115%;
 }
 
 form li.highlighted .guidelines

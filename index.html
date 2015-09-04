@@ -29,7 +29,7 @@
 
 <div id="main_body">
 	<img id="top" src="images/top.png" alt="">
-	<img src="images/Amrita-university.jpg" style="width:640px;height:150px;">
+	<img src="images/Amrita-university.jpg" style="width:800px;height:150px;">
 
 	<div id="form_container">
   
@@ -57,8 +57,8 @@
 		<li id="li_1.2" >
 		<label class="description" for="Gender">Gender: </label>
 	<div>
-		<input type="radio" name="Gender" value="male" required >Male
-		<input type="radio" name="Gender" value="female" required>Female<br>
+		<input type="radio" name="Gender" value="Male" required >Male
+		<input type="radio" name="Gender" value="Female" required>Female<br>
 
 	</div>
 
@@ -90,7 +90,7 @@
 
 		<select id='courses' onchange='courseChanged(this.value);' name="course">
     <option value=''>Select Course</option>
-    <option value='Btech'>Btech</option>
+    <option value='BTech'>BTech</option>
     <option value='MTech'>MTech</option>
     <option value='BCA'>BCA</option>
     <option value='MCA'>MCA</option>
@@ -119,7 +119,7 @@
 		</div></li>
 
  <script type="text/javascript">
-   var statesBtech=["CSE", "ECE", "EEE","ME"];
+   var statesBTech=["CSE", "ECE", "EEE","ME"];
    var statesMTech=["CIN", "CSE", "CSN","ELT", "PR", "RAU","TF","VLSI","WNA"];
    var statesMCA=["Not Applicable", "Other"];
    var statesBCA=["Not Applicable", "Other"];
@@ -141,8 +141,8 @@
       var stateArray;
       switch(courses)
       {
-        case "Btech":
-            stateArray=statesBtech;
+        case "BTech":
+            stateArray=statesBTech;
             break;
         case "MTech":
             stateArray=statesMTech;
@@ -324,7 +324,15 @@
 			<input id="member2" name="member2" class="element text medium" type="text" maxlength="255" value="" />
 		</div><p class="guidelines" id="guide_15"><small>Enter name of the team member</small></p>
 		</li>
+	    	<li id="li_1.2" >
+		<label class="description" for="Gender">Gender: </label>
+	<div>
+		<input type="radio" name="Gender2" value="Male"  >Male
+		<input type="radio" name="Gender2" value="Female" >Female<br>
 
+	</div>
+
+		</li>
 
 
 		 <li id="li_35" >
@@ -334,6 +342,15 @@
 		</div><p class="guidelines" id="guide_15"><small>Enter name of the team member</small></p>
 		</li>
 
+		    	<li id="li_1.2" >
+		<label class="description" for="Gender">Gender: </label>
+	<div>
+		<input type="radio" name="Gender3" value="Male" >Male
+		<input type="radio" name="Gender3" value="Female">Female<br>
+
+	</div>
+
+		</li>
 
 		 <li id="li_35" >
 		<label class="description" for="member4">Team member 4</label>
@@ -341,16 +358,34 @@
 			<input id="member4" name="member4" class="element text medium" type="text" maxlength="255" value="" />
 		</div><p class="guidelines" id="guide_15"><small>Enter name of the team member</small></p>
 		</li>
+		 
+		     	<li id="li_1.2" >
+		<label class="description" for="Gender">Gender: </label>
+	<div>
+		<input type="radio" name="Gender4" value="Male"  >Male
+		<input type="radio" name="Gender4" value="Female" >Female<br>
+
+	</div>
+
+		</li>
+		
 		 <li id="li_35" >
 		<label class="description" for="member5">Team member 5</label>
 		<div>
-			<input id="member5" name="member5" class="element text medium" type="text" maxlength="255" value=""/>
+			<input id="member5" name="member5" class="element text medium" type="text" maxlength="255" value="" />
 		</div><p class="guidelines" id="guide_15"><small>Enter name of the team member</small></p>
 		</li>
+		 
+		     	<li id="li_1.2" >
+		<label class="description" for="Gender">Gender: </label>
+	<div>
+		<input type="radio" name="Gender5" value="Male"  >Male
+		<input type="radio" name="Gender5" value="Female" >Female<br>
+</li>
+	</div>
 
-    </div>
-
-
+		
+		
 					<li class="buttons">
 			    <input type="hidden" name="form_id" value="1003621" />
 
