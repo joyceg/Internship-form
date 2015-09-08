@@ -14,11 +14,8 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
    // What happens when the CAPTCHA was entered incorrectly
    die ("The reCAPTCHA wasn't entered correctly. Go back and try it again." .
         "(reCAPTCHA said: " . $resp->error . ")");
- } else {
-   // Your code here to handle a successful verification
  }
- 
-	if ( !require_once('admin.php') ) {
+ 	if ( !require_once('admin.php') ) {
 		return false;
 	}
 	$conn=mysqli_connect($server, $user_name, $password, $database);
