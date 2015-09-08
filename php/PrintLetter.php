@@ -124,7 +124,7 @@ for( $i = 0; $i <= $strlen; $i++ ) {
                             echo $row["End_date"];
 
 
-                    echo"<br><br>Thanking you,";
+                    echo"<br><br><br><br>Thanking you,";
                     echo "<br>Ever in Amma's service,";
                     echo "<br>Biju Kumar<br>Head-Corporate & Industry Relations";
                     echo "<br>Amritapuri Campus";
