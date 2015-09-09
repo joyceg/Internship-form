@@ -12,6 +12,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 		header('Location: '.'failure.html');
 		return false;
 	}
+	
 	$sql = "CREATE TABLE IF NOT EXISTS RegistrationForm (
 		Registration_Id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
 		Date_of_Registration date NOT NULL,
