@@ -4,18 +4,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 		header('Location: '.'failure.html');
 		return;
 	}
-	 require_once('recaptchalib.php');
- $privatekey = "6LfGgQwTAAAAAP60NYz0p9irXUQDR0tpJbHxDpqP";
- $resp = recaptcha_check_answer ($privatekey,
-                                 $_SERVER["REMOTE_ADDR"],
-                                 $_POST["recaptcha_challenge_field"],
-                                 $_POST["recaptcha_response_field"]);
- if (!$resp->is_valid) {
-   // What happens when the CAPTCHA was entered incorrectly
-   die ("The reCAPTCHA wasn't entered correctly. Go back and try it again." .
-        "(reCAPTCHA said: " . $resp->error . ")");
- }
- 	if ( !require_once('admin.php') ) {
+	if ( !require_once('admin.php') ) {
 		return false;
 	}
 	$conn=mysqli_connect($server, $user_name, $password, $database);
