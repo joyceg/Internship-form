@@ -19,6 +19,13 @@
  }
 
  </style>
+ <style >
+ @media print {
+     #printbtn {
+         display :  none;
+     }
+ }
+ </style>
  </head>
  <body>
  <div id="Content" align="center">
@@ -28,6 +35,11 @@
  <br>
  <h2 align="center">Application for Internship/Industrial training</h2>
  <br>
+ <div id="printbtn">
+<button><a href="administrator.php" style="text-decoration:none">Go back</a></button>
+</div>
+ <div align="right"><input id ="printbtn" type="button" value="Print this page" onclick="window.print();" >
+ </div>
  <table id="customers" border="5" style="width:80%" align="center">
  <?php
  $id=$_POST['application_id'];

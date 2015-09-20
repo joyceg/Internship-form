@@ -1,7 +1,26 @@
 <html>
+<head><style type="text/css">
+@media print {
+    #printbtn {
+        display :  none;
+    }
+}
+</style>
 <title>Print Letter</title>
-
+</head>
 <body>
+  <div id="printbtn">
+ <button><a href="administrator.php" style="text-decoration:none">Go back</a></button>
+ </div>
+  <div align="right"><input id ="printbtn" type="button" value="Print this page" onclick="window.print();" >
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <br>
 <h3 align="center">Aum Amriteswaryai Namah</h3>
 <?php
@@ -33,13 +52,13 @@ for( $i = 0; $i <= $strlen; $i++ ) {
     echo $char;
     // $char contains the current character, so do your processing here
 }
-                
+
                 echo "<br><h3>Subject-Request for ".$row['Nature']." for ".$row['Course'];
                 if($row['member2']!='')
                 echo " students";
                 else
                 echo " student";
-                echo " </h3>"; 
+                echo " </h3>";
                 echo "Dear madam/sir,<br>";
                 if($row["School"]=='Amrita school of Engineering')
                   {
@@ -84,7 +103,7 @@ for( $i = 0; $i <= $strlen; $i++ ) {
 				      else
 				      echo 'Mrs.';
 					echo $row["Name"];
-                              
+
                               echo "<br>2.";
 				    if($row["Gender2"]=='Male')
 				      echo 'Mr.';
@@ -131,6 +150,7 @@ for( $i = 0; $i <= $strlen; $i++ ) {
 
 
         }
+
   ?>
 </body>
 </html>

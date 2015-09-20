@@ -1,6 +1,5 @@
 <?php
-		checkuser();
-
+checkuser();
 		function checkuser()
 		{
 echo "fsdf";
