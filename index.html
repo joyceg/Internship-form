@@ -75,6 +75,14 @@
                 speed: 1000
             } );
         </script>
+				<style>
+				  .conditional_form_part {
+				    display: none;
+				  }
+				  .conditional_form_part_activator:checked + .conditional_form_part {
+				    display: block;
+				  }
+				</style>
 	</head>
 	<body>
 
@@ -329,9 +337,65 @@
 					<div class="6u 12u(mobilep)">
 						<label class="description" for="end">End Date </label>
 						<input class="text"  id="end" name="end" required placeholder="Enter ending date"/>
-<p></p>
-</div>
+						</div>
 
+<div>
+						If you want to register the other members of the team,please click here
+				    <input class="conditional_form_part_activator" type="checkbox">
+
+				    <div class="conditional_form_part">
+							<div class="row">
+
+																	<div class="6u 12u(mobilep)">
+																			<label class="description" for="member2">Team member 2</label>
+																				<input id="member2" name="member2" class="element text medium" type="text" maxlength="255" value="" />
+																			</div>
+
+																			<div class="6u 12u(mobilep)">
+																				<label class="description" for="Gender">Gender: </label>
+																					<input type="radio" name="Gender2" value="Male"  >Male
+																					<input type="radio" name="Gender2" value="Female" >Female<br>
+
+																				</div>
+<p></p>
+															<div class="6u 12u(mobilep)">
+																<label class="description" for="member3">Team member 3</label>
+																<input id="member3" name="member3" class="element text medium" type="text" maxlength="255" value="" />
+															</div>
+
+														<div class="6u 12u(mobilep)">
+															<label class="description" for="Gender">Gender: </label>
+																<input type="radio" name="Gender3" value="Male" >Male
+																	<input type="radio" name="Gender3" value="Female">Female<br>
+
+																	</div>
+
+<p></p>
+																	<div class="6u 12u(mobilep)">
+																		<label class="description" for="member4">Team member 4</label>
+																		<input id="member4" name="member4" class="element text medium" type="text" maxlength="255" value="" />
+																	</div>
+																	<div class="6u 12u(mobilep)">
+																		<label class="description" for="Gender">Gender: </label>
+																		<input type="radio" name="Gender4" value="Male"  >Male
+																		<input type="radio" name="Gender4" value="Female" >Female<br>
+
+																	</div>
+
+<p></p>
+																	<div class="6u 12u(mobilep)">
+																		<label class="description" for="member5">Team member 5</label>
+																		<input id="member5" name="member5" class="element text medium" type="text" maxlength="255" value="" />
+																		</div>
+																		<div class="6u 12u(mobilep)">
+																			<label class="description" for="Gender">Gender: </label>
+																			<input type="radio" name="Gender5" value="Male"  >Male
+																			<input type="radio" name="Gender5" value="Female" >Female<br>
+																		</div>
+
+				</div>
+			</div>
+</div>
 <ul>
 	<li>
 							<input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" />
