@@ -12,7 +12,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 		header('Location: '.'failure.html');
 		return false;
 	}
-	
+
 	$sql = "CREATE TABLE IF NOT EXISTS RegistrationForm (
 		Registration_Id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
 		Date_of_Registration date NOT NULL,
@@ -27,7 +27,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 		Phone varchar(15) NOT NULL,
 		Email varchar(30)  NOT NULL,
 		Nature varchar(255)  NOT NULL,
-		Nature_of_organisation varchar( 400 ) NOT NULL,
+		Name_of_organisation varchar( 400 ) NOT NULL,
 		Full_name_of_the_official_addresse varchar( 400 ) NOT NULL,
 		Address_of_organisation varchar( 200 )  NOT NULL,
 		Designation varchar( 50 )  NOT NULL,
@@ -63,7 +63,7 @@ function checkIfInValidPost() {
 	if(!eregi ('[a-zA-Z]',$_POST['name']))
 	  {
 	  return true;
-	  
+
 	  }
 	  if(!eregi ('[0-9]',$_POST['phone']))
 	    {
@@ -73,7 +73,7 @@ function checkIfInValidPost() {
 	    {
 	    return true;
 	    }
-	    
+
 }
 
 
@@ -91,7 +91,7 @@ function insertIntoDatabase( $conn ) {
 	//$mobile= $conn->real_escape_string( $_POST['mobile'] );
 	$email = $conn->real_escape_string( $_POST['email'] );
 	$nature = $conn->real_escape_string( $_POST['nature'] );
-	$natureoforganisation = $conn->real_escape_string( $_POST['natureoforganisation'] );
+	$nameoforganisation = $conn->real_escape_string( $_POST['nameoforganisation'] );
 	$fullnameoforganisation = $conn->real_escape_string( $_POST['fullname'] );
 	$designation= $conn->real_escape_string( $_POST['designation'] );
 	$contact = $conn->real_escape_string( $_POST['contact'] );
@@ -111,11 +111,11 @@ function insertIntoDatabase( $conn ) {
         $DateAdded = date("Y/m/d");
 
 	$Duration = (1+(strtotime($end)- strtotime($start))/24/3600) ." days";
-	
+
 		$sql = "INSERT INTO RegistrationForm(Registration_Id,Name,Gender,Date_of_Registration,Enrollment,School,Course,Specialization,Semester, Batch, Phone, Email, Nature,
- 	Nature_of_organisation, Full_name_of_the_official_addresse, Address_of_organisation, Designation, Contact,
+ 	Name_of_organisation, Full_name_of_the_official_addresse, Address_of_organisation, Designation, Contact,
  	Email_id,Start_date, End_date,Duration,member2,Gender2,member3,Gender3,member4,Gender4,member5,Gender5) VALUES (\"$Registration_Id\",\"$name\",\"$Gender\",\"$DateAdded\",\"$enrollment\",\"$school\",\"$course\",\"$specialization\",$semester,
- 	\"$batch\",\"$phone\",\"$email\",\"$nature\",\"$natureoforganisation\",\"$fullnameoforganisation\",
+ 	\"$batch\",\"$phone\",\"$email\",\"$nature\",\"$nameoforganisation\",\"$fullnameoforganisation\",
  	\"$addressoforganisation\",\"$designation\",$contact,\"$emailid\",\"$start\",\"$end\",\"$Duration\",\"$member2\",\"$Gender2\",\"$member3\",\"$Gender3\",\"$member4\",\"$Gender4\",\"$member5\",\"$Gender5\")";
 
 	if ( mysqli_query( $conn, $sql ) == false ) {

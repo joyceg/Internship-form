@@ -112,7 +112,7 @@ $result = $conn->query($sql);
 
 
         echo "<tr class=alt>";
-        echo "<td>Nature of the  organisation:</td><td> " . $row["Nature_of_organisation"]."</td>";
+        echo "<td>Name of the  organisation:</td><td> " . $row["Name_of_organisation"]."</td>";
 	echo "</tr>";
 
 	  echo "<tr>";
