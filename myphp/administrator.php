@@ -336,20 +336,16 @@
 	</script>
 
 
-		<div>
-	<br><li>		<select class="element select medium" id="semester" name="semester" required />
-	 <option value=" ">Select semester</option>
-	<option value="1" >1</option>
-	<option value="2" >2</option>
-	<option value="3" >3</option>
-	<option value="4" >4</option>
-	<option value="5" >5</option>
-	<option value="6" >6</option>
-	<option value="7" >7</option>
-	<option value="8" >8</option>
+	<div class="6u 12u(mobilep)">
 
-		</select>
-		</div>
+	<input class="text" id="start" name="start" required placeholder="From"/>
+
+</div>
+<div class="6u 12u(mobilep)">
+	<br>
+	<input class="text"  id="end" name="end" required placeholder="To"/>
+	</div>
+
 		</li><br><input type="submit" value="Submit">
 
 </div>
