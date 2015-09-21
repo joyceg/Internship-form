@@ -41,7 +41,7 @@ $result = $conn->query($sql);
     while($row = $result->fetch_assoc()) {
         echo "<br>".$row["Full_name_of_the_official_addresse"];
                 echo "<br>".$row["Designation"];
-                echo '<br>';
+                echo '<br>'.$row['Name_of_organisation'].'<br>';
                 $str = $row['Address_of_organisation'];
 $strlen = strlen( $str );
 for( $i = 0; $i <= $strlen; $i++ ) {
