@@ -33,7 +33,7 @@ padding:0.8%;
 </div>
 <hr>
 <div id="printbtn">
-<button><a href="administrator.php" style="text-decoration:none">Go back</a></button>
+<a href="administrator.php" style="text-decoration:none"><button>Go back</button></a>
 </div>
 <div align="right"><input id ="printbtn" type="button" value="Print this page" onclick="window.print();" >
 </div>

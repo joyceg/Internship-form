@@ -117,8 +117,8 @@
 								<a  href="printall.php" class="button">Print condensed data</a>
 								<br><br>
 								<a  href="printDept.php" class="button">Department wise data</a>  &nbsp
+								<a  href="company.php" class="button">Companies enrolled</a>  &nbsp
 								<a data-scroll href="#filter" class="button">Filter</a>  &nbsp
-
 								<a  href="logout.html" class="button">LOGOUT</a>
 
 
