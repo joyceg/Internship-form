@@ -55,7 +55,8 @@ $sql = "SELECT * FROM RegistrationForm where Course like 'Btech' ";
 	$row=$result->num_rows;
 	$serial_number=1;
 	if($row)
-	{   echo "<h2 >Course:B.Tech</h2>";
+	{ echo "<br><br><hr><br><br>";
+    echo "<h2 align='center'>B.Tech</h2>";
 	    echo "<tr><td><b>S.No</b></td><td><b>Registration ID</b></td><td><b>Date of Registration</b></td><td><b>Enrollment Number</b></td><td><b>Name</td></b>";
 	    while($row = $result->fetch_assoc()) {
 		echo "<tr><td>".$serial_number."</td>";
@@ -79,7 +80,8 @@ $sql = "SELECT * FROM RegistrationForm where Course like 'Btech' ";
 	$row=$result->num_rows;
 	$serial_number=1;
 	if($row)
-	{   echo "<h2>Course:M.Tech</h2>";
+	{ echo "<br><br><hr><br><br>";
+    echo "<h2 align='center'>M.Tech</h2>";
 	    echo "<tr><td><b>S.No</b></td><td><b>Registration ID</b></td><td><b>Date of Registration</b></td><td><b>Enrollment Number</b></td><td><b>Name</td></b>";
 	    while($row = $result->fetch_assoc()) {
 		echo "<tr><td>".$serial_number."</td>";
@@ -91,7 +93,6 @@ $sql = "SELECT * FROM RegistrationForm where Course like 'Btech' ";
 	      }
 		echo "</tr>";
       }
-
 	?>
 	</table>
 
@@ -105,7 +106,8 @@ $sql = "SELECT * FROM RegistrationForm where Course like 'Btech' ";
 	$row=$result->num_rows;
 	$serial_number=1;
 	if($row)
-	{   echo "<h2>Course:MCA</h2>";
+	{echo "<br><br><hr><br><br>";
+    echo "<h2 align='center'>MCA</h2>";
 	    echo "<tr><td><b>S.No</b></td><td><b>Registration ID</b></td><td><b>Date of Registration</b></td><td><b>Enrollment Number</b></td><td><b>Name</td></b>";
 	    while($row = $result->fetch_assoc()) {
 		echo "<tr><td>".$serial_number."</td>";
@@ -132,7 +134,8 @@ $sql = "SELECT * FROM RegistrationForm where Course like 'Btech' ";
 	$row=$result->num_rows;
 	$serial_number=1;
 	if($row)
-	{   echo "<h2>Course:BSC</h2>";
+	{ echo "<br><br><hr><br><br>";
+      echo "<h2 align='center'>BSC</h2>";
 	    echo "<tr><td><b>S.No</b></td><td><b>Registration ID</b></td><td><b>Date of Registration</b></td><td><b>Enrollment Number</b></td><td><b>Name</td></b>";
 	    while($row = $result->fetch_assoc()) {
 		echo "<tr><td>".$serial_number."</td>";
@@ -159,7 +162,8 @@ $sql = "SELECT * FROM RegistrationForm where Course like 'Btech' ";
 	$row=$result->num_rows;
 	$serial_number=1;
 	if($row)
-	{   echo "<h2>Course:MSC</h2>";
+	{ echo "<br><br><hr><br><br>";
+     echo "<h2 align='center'>MSC</h2>";
 	    echo "<tr><td><b>S.No</b></td><td><b>Registration ID</b></td><td><b>Date of Registration</b></td><td><b>Enrollment Number</b></td><td><b>Name</td></b>";
 	    while($row = $result->fetch_assoc()) {
 		echo "<tr><td>".$serial_number."</td>";
@@ -186,7 +190,8 @@ $sql = "SELECT * FROM RegistrationForm where Course like 'Btech' ";
 	$row=$result->num_rows;
 	$serial_number=1;
 	if($row)
-	{   echo "<h2>Course:BCOM</h2>";
+	{ echo "<br><br><hr><br><br>";
+    echo "<h2 align='center'>BCOM</h2>";
 	    echo "<tr><td><b>S.No</b></td><td><b>Registration ID</b></td><td><b>Date of Registration</b></td><td><b>Enrollment Number</b></td><td><b>Name</td></b>";
 	    while($row = $result->fetch_assoc()) {
 		echo "<tr><td>".$serial_number."</td>";
@@ -213,7 +218,8 @@ $sql = "SELECT * FROM RegistrationForm where Course like 'Btech' ";
 	$row=$result->num_rows;
 	$serial_number=1;
 	if($row)
-	{   echo "<h2>Course:MCOM</h2>";
+	{  echo "<br><br><hr><br><br>";
+     echo "<h2 align='center'>MCOM</h2>";
 	    echo "<tr><td><b>S.No</b></td><td><b>Registration ID</b></td><td><b>Date of Registration</b></td><td><b>Enrollment Number</b></td><td><b>Name</td></b>";
 	    while($row = $result->fetch_assoc()) {
 		echo "<tr><td>".$serial_number."</td>";
@@ -240,7 +246,8 @@ $sql = "SELECT * FROM RegistrationForm where Course like 'Btech' ";
 	$row=$result->num_rows;
 	$serial_number=1;
 	if($row)
-	{   echo "<h2>Course:BBM</h2>";
+	{ echo "<br><br><hr><br><br>";
+    echo "<h2 align='center'>BBM</h2>";
 	    echo "<tr><td><b>S.No</b></td><td><b>Registration ID</b></td><td><b>Date of Registration</b></td><td><b>Enrollment Number</b></td><td><b>Name</td></b>";
 	    while($row = $result->fetch_assoc()) {
 		echo "<tr><td>".$serial_number."</td>";
@@ -266,7 +273,8 @@ $sql = "SELECT * FROM RegistrationForm where Course like 'Btech' ";
 	$row=$result->num_rows;
 	$serial_number=1;
 	if($row)
-	{   echo "<h2>Course:MA</h2>";
+	{   echo "<br><br><hr><br><br>";
+      echo "<h2>Course:MA</h2>";
 	    echo "<tr><td><b>S.No</b></td><td><b>Registration ID</b></td><td><b>Date of Registration</b></td><td><b>Enrollment Number</b></td><td><b>Name</td></b>";
 	    while($row = $result->fetch_assoc()) {
 		echo "<tr><td>".$serial_number."</td>";
