@@ -223,46 +223,6 @@
 </div>
 
 
-
-
-
-
-<div class="container box">
-<section>
-	<header id="printLetter">
-		</header>
-<h3>Print Letter</h3>
-
-<form id="form_1003621" class="appnitro"  method="post" action="PrintLetter.php">
-	<div class="form_description">
-
-<ul >
-
-<div class="row">
-
-<div class="6u 12u(mobilep)">
-<input type="text" name="letter_id" value="" required placeholder="Enter registraion Id"/><br>
-<br><input type="submit" value="Submit">
-
-</div>
-</div>
-</div>
-</ul>
-</form>
-
-
-</section>
-</div>
-
-
-
-
-
-
-
-
-
-
 <div class="container box">
 <section>
 	<header id="filter">
