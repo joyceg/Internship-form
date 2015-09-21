@@ -30,7 +30,7 @@ padding:0.8%;
 </head>
 <body>
 <div id="Content" align="center">
-<!--
+
 <img src="../images/header.png"  style="width:1000px;height:140px;"  align="center;" />
 </div>
 <hr>
