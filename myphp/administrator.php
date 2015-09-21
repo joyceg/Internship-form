@@ -110,7 +110,7 @@
                 <br>
                 <br>
                 <br>
-
+								<br>
                 <a data-scroll href="#application" class="button">Application</a>  &nbsp
 								<a data-scroll href="#printApplication" class="button">Print Application</a>  &nbsp
 								<a data-scroll href="#printLetter" class="button">Print Letter</a>  &nbsp
@@ -120,7 +120,9 @@
 								<a  href="company.php" class="button">Companies enrolled</a>  &nbsp
 								<a data-scroll href="#filter" class="button">Filter</a>  &nbsp
 								<a  href="logout.html" class="button">LOGOUT</a>
-
+								<br>
+								<br>
+								<br>
 
 
 
