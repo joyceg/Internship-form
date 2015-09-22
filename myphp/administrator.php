@@ -106,7 +106,7 @@
 								<a  href="printall.php" class="button">Print condensed data</a>
 								<br><br>
 								<a  href="printDept.php" class="button">Department wise data</a>  &nbsp
-								<a  href="company.php" class="button">Companies enrolled</a>  &nbsp
+								<a  href="#company" class="button">Companies enrolled</a>  &nbsp
 								<a data-scroll href="#filter" class="button">Filter</a>  &nbsp
 								<a  href="logout.html" class="button">LOGOUT</a>
 								<br>
@@ -229,6 +229,54 @@
 
 </section>
 </div>
+
+
+
+
+
+<div class="container box">
+<section>
+	<header id="company">
+		</header>
+<h3>Companies Enrolled</h3>
+
+<form id="form_1003621" class="appnitro"  method="post" action="company.php">
+	<div class="form_description">
+
+<ul >
+
+<div class="row">
+
+<div class="6u 12u(mobilep)">
+
+	<input class="text" id="start" name="start" required placeholder="From"/>
+
+</div>
+<div class="6u 12u(mobilep)">
+	<input class="text"  id="end" name="end" required placeholder="To"/>
+	</div>
+<br><br>
+		</li><br><input type="submit" value="Submit">
+
+</div>
+</div>
+</div>
+</ul>
+</form>
+
+
+</section>
+</div>
+
+
+
+
+
+
+
+
+
+
 
 
 <div class="container box">
