@@ -89,24 +89,13 @@
 		<!-- Header -->
 			<div id="header">
 
+				<IMG STYLE="position:absolute; TOP:35px; LEFT:170px; WIDTH:100px; HEIGHT:110px" SRC="images/logo.png">
 
-				<?php
-				require_once('admin.php');
-				$conn=mysqli_connect($server, $user_name, $password, $database);
-				if ($conn->connect_error) {
-				    header('Location: '.'failure.html');
-						return false;
-				}
-				$sql = "SELECT Registration_Id FROM RegistrationForm WHERE Registration_Id=(SELECT max(Registration_Id) FROM RegistrationForm)";
-				$result = $conn->query($sql);
-				    while($row = $result->fetch_assoc()) {
-				        echo "<div class='button'>" . "Total Number of Applications received:" . $row["Registration_Id"];
-				        }
-				        echo "</div>";
-				$conn->close();
-				?>
+				<div STYLE="position:absolute; TOP:35px; LEFT:190px; WIDTH:1000px; HEIGHT:110px"><font size='7' color="red"> Online Internship Regsitration Portal</font></div>
+				<div STYLE="position:absolute; TOP:55px; LEFT:1150px; WIDTH:200px; HEIGHT:210px"><font face="catull" color="blue">Corporate & Industry Relations(CIR),Amritapuri
+				</font></div>
 
-                <br>
+			<br>
                 <br>
                 <br>
                 <br>
@@ -123,6 +112,23 @@
 								<br>
 								<br>
 								<br>
+								<?php
+								require_once('admin.php');
+								$conn=mysqli_connect($server, $user_name, $password, $database);
+								if ($conn->connect_error) {
+										header('Location: '.'failure.html');
+										return false;
+								}
+								$sql = "SELECT Registration_Id FROM RegistrationForm WHERE Registration_Id=(SELECT max(Registration_Id) FROM RegistrationForm)";
+								$result = $conn->query($sql);
+										while($row = $result->fetch_assoc()) {
+												echo "<a href='#' class='button'>" . "Total Number of Applications received:" . $row["Registration_Id"];
+												}
+												echo "</a>";
+								$conn->close();
+								?>
+
+
 
 
 
