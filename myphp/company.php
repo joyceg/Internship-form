@@ -38,7 +38,7 @@ padding:0.8%;
 <div align="right"><input id ="printbtn" type="button" value="Print this page" onclick="window.print();" >
 </div>
 <br>
-<h2 align="center">Application for Internship/Industrial training</h2>
+<h2 align="center">Companies Enrolled</h2>
 <br>
 <table id="customers" border="5" style="width:80%" align="center">
 <?php
@@ -50,7 +50,7 @@ if ($conn->connect_error) {
     header('Location: '.'failure.html');
 		return false;
 }
-echo "<h2>From:$start<br>To     :$end<br><br><br></h2>";
+echo "$start to  $end<br><br><br>";
 $sql = "SELECT * FROM RegistrationForm where (Date_of_Registration >= '$start' && Date_of_Registration <= '$end') ";
 $result = $conn->query($sql);
 $row=$result->num_rows;

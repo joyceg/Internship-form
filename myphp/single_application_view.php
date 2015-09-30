@@ -114,7 +114,7 @@ else
 
 
                 echo "<tr class=alt>";
-                echo "<td>Phone Number(Residence):</td><td> " . $row["Phone"]."</td>";
+                echo "<td>Phone Number:</td><td> " . $row["Phone"]."</td>";
                 echo "</tr>";
 
 

@@ -28,7 +28,8 @@ echo "<div align=right>";
 $id=$_POST['letter_id'];
 
 $now = new DateTime();
-echo $now->format('d-m-Y');
+#echo $now->format('d-m-Y');
+echo $now->format('Y-m-d');
 echo "</div>";
 require_once('admin.php');
 $conn=mysqli_connect($server, $user_name, $password, $database);
