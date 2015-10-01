@@ -44,8 +44,8 @@ padding:0.8%;
 <?php
 $course= $_POST['course'];
 $specialization= $_POST['specialization'];
-$start=$_POST['start'];
-$end=$_POST['end'];
+$start=$_POST['from'];
+$end=$_POST['to'];
 require_once('admin.php');
 $conn=mysqli_connect($server, $user_name, $password, $database);
 if ($conn->connect_error) {

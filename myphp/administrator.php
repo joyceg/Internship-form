@@ -48,16 +48,28 @@
 			<link rel="stylesheet" href="js/jqueryCalendar.css">
 			<script>
 			                jQuery(function() {
-			                $("#start").datepicker({ dateFormat: 'yy-mm-dd' });
+			                $("#start").datepicker({ dateFormat: 'dd-mm-yy' });
 			                                jQuery( "#start" ).datepicker();
 			                });
 			                </script>
 			                <script>
 			                jQuery(function() {
-			                $("#end").datepicker({ dateFormat: 'yy-mm-dd' });
+			                $("#end").datepicker({ dateFormat: 'dd-mm-yy' });
 			                                jQuery( "#end" ).datepicker();
 			                });
 			                </script>
+											<script>
+																			jQuery(function() {
+																			$("#from").datepicker({ dateFormat: 'dd-mm-yy' });
+																											jQuery( "#from" ).datepicker();
+																			});
+																			</script>
+																			<script>
+																			jQuery(function() {
+																			$("#to").datepicker({ dateFormat: 'dd-mm-yy' });
+																											jQuery( "#to" ).datepicker();
+																			});
+																			</script>
 
         <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -249,16 +261,15 @@
 
 <div class="6u 12u(mobilep)">
 
-	<input class="text" id="start" name="start" required placeholder="From"/>
+	<input class="text" id="start" name="start1" required placeholder="From"/>
 
 </div>
 <div class="6u 12u(mobilep)">
-	<input class="text"  id="end" name="end" required placeholder="To"/>
+	<input class="text"  id="end" name="end1" required placeholder="To"/>
 	</div>
 <br><br>
 		</li><br><input type="submit" value="Submit">
 
-</div>
 </div>
 </div>
 </ul>
@@ -394,17 +405,15 @@
 
 	<div class="6u 12u(mobilep)">
 
-	<input class="text" id="start" name="start" required placeholder="From"/>
+		<input class="text" id="from" name="from" required placeholder="From"/>
 
-</div>
-<div class="6u 12u(mobilep)">
-	<br>
-	<input class="text"  id="end" name="end" required placeholder="To"/>
 	</div>
+	<div class="6u 12u(mobilep)">
+		<input class="text"  id="to" name="to" required placeholder="To"/>
+		</div>
 
 		</li><br><input type="submit" value="Submit">
 
-</div>
 </div>
 </div>
 </ul>
@@ -413,7 +422,6 @@
 
 </section>
 </div>
-
 
 
 

@@ -15,7 +15,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 
 	$sql = "CREATE TABLE IF NOT EXISTS RegistrationForm (
 		Registration_Id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-		Date_of_Registration date NOT NULL,
+		Date_of_Registration text NOT NULL ,
 		Name varchar(50)  NOT NULL,
 		Gender varchar(10)  NOT NULL,
 		Enrollment varchar(50) NOT NULL,
@@ -33,8 +33,8 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 		Designation varchar( 50 )  NOT NULL,
 		Contact varchar( 25 )  NOT NULL,
 		Email_id varchar( 50 ) NOT NULL,
-		Start_date date  NOT NULL,
-		End_date date  NOT NULL,
+		Start_date text  NOT NULL,
+		End_date text  NOT NULL ,
 		Duration varchar(20) NOT  NULL,
 		member2 varchar(20)   NULL,
 		Gender2 varchar(8) NULL,
@@ -108,7 +108,7 @@ function insertIntoDatabase( $conn ) {
         $Gender4=$conn->real_escape_string( $_POST['Gender4'] );
         $member5=$conn->real_escape_string( $_POST['member5'] );
         $Gender5=$conn->real_escape_string( $_POST['Gender5'] );
-        $DateAdded = date("Y/m/d");
+        $DateAdded = date("d-m-Y");
 
 	$Duration = (1+(strtotime($end)- strtotime($start))/24/3600) ." days";
 

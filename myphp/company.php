@@ -42,8 +42,8 @@ padding:0.8%;
 <br>
 <table id="customers" border="5" style="width:80%" align="center">
 <?php
-$start=$_POST['start'];
-$end=$_POST['end'];
+$start=$_POST['start1'];
+$end=$_POST['end1'];
 require_once('admin.php');
 $conn=mysqli_connect($server, $user_name, $password, $database);
 if ($conn->connect_error) {
