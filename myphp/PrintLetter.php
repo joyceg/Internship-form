@@ -95,7 +95,7 @@ for( $i = 0; $i <= $strlen; $i++ ) {
                           {
                             echo "The following students wish to do Internship in your ";
                             echo "esteemed organization. Your acceptance of this request ";
-                             echo " will encourage them greatly, and help in enhancing their";
+                             echo " will encourage them greatly, and help in enhancing their ";
                               echo "academic performance.";
                               echo "<br>1.";
 				    if($row["Gender"]=='Male')
