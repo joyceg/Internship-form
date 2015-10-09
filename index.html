@@ -27,6 +27,7 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="CIR" />
 		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script type=text/javascript src="js/check.js"></script>
 		<script src="js/jquery.min.js"></script>
 		<script src="js/skel.min.js"></script>
 		<script src="js/init.js"></script>
@@ -109,39 +110,39 @@
 						<header id="register">
 							<h3>REGISTER NOW</h3>
 						</header>
-						<form id="form_1003621" class="appnitro"  method="post" action="myphp/receiver.php">
+						<form name="myForm" class="appnitro" onsubmit="return validateForm()"  method="post" action="myphp/receiver.php">
 									<div class="form_description">
 
 							<ul >
 
-									<li id="li_1" >
+								 <li id="li_1" >
 
 <div class="row">
 
 												 <div class="6u 12u(mobilep)">
 
 						<label class="description" for="name">Name of the Applicant </label>
-							<input id="name" name="name" class="element text medium" type="text" maxlength="255" value="" required placeholder="Enter name" />
+							<input id="name" name="name" class="element text medium" type="text" maxlength="255" value="" placeholder="Enter name" />
 </div>
 <div class="6u 12u(mobilep)">
 						<label class="description" for="Gender">Gender: </label>
 
-						<input type="radio" name="Gender" value="Male" required >Male
-						<input type="radio" name="Gender" value="Female" required>Female
+						<input type="radio" name="Gender" value="Male"  >Male
+						<input type="radio" name="Gender" value="Female" >Female
 </div>
 <p></p>
 <div class="6u 12u(mobilep)">
 
 						<label class="description" for="enrollment">Enrollment No: </label>
-													<input id="enrollment" name="enrollment" class="element text medium" type="text" maxlength="255" value="" required placeholder="Enter Enrollment ID"/>
+													<input id="enrollment" name="enrollment" class="element text medium" type="text" maxlength="255" value=""  placeholder="Enter Enrollment ID"/>
 
 				</div>
 
 				<div class="6u 12u(mobilep)">
 					<label class="description" for="school">School: </label>
 
-					<input type="radio" name="school" value="Amrita school of Arts and sciences" required>Amrita school of Arts and sciences<br>
-					<input type="radio" name="school" value="Amrita school of Engineering" required>Amrita school of Engineering<br>
+					<input type="radio" name="school" value="Amrita school of Arts and sciences"  >Amrita school of Arts and sciences<br>
+					<input type="radio" name="school" value="Amrita school of Engineering" >Amrita school of Engineering<br>
 
 
 
@@ -170,7 +171,7 @@
 </div>
 <div class="6u 12u(mobilep)">
 						<label class="description" for="specialization">Specialization: </label>
-					<select id='specialization' onchange='SpecializationChanged(this.value);' name="specialization" required>
+					<select id='specialization' onchange='SpecializationChanged(this.value);' name="specialization"  >
 						<option value=''>Select specialization</option>
 					</select>
 				&nbsp;&nbsp;
@@ -243,8 +244,8 @@
 				<div class="6u 12u(mobilep)">
 
 						<label class="description" for="semester">Semester:</label>
-						<select class="element select medium" id="semester" name="semester" required >
-							<option value="semester" selected="selected"></option>
+						<select class="element select medium" id="semester"  name="semester">
+							<option value="" selected="selected"></option>
 				<option value="1" >1</option>
 				<option value="2" >2</option>
 				<option value="3" >3</option>
@@ -258,7 +259,7 @@
 					</div>
 					<div class="6u 12u(mobilep)">
 						<label class="description" for="batch">Batch: </label>
-						<select class="element select medium" id="batch" name="batch" required>
+						<select class="element select medium" id="batch" name="batch" >
 							<option value="" selected="selected" ></option>
 				<option value="2012" >2012</option>
 				<option value="2013" >2013</option>
@@ -285,41 +286,41 @@
 						</div>
 						<div class="6u 12u(mobilep)">
 						<label class="description" for="phone">Phone Number: </label>
-							<input id="phone" name="phone" class="element text medium" type="text" maxlength="255" value="" required placeholder="Enter phone number"/>
+							<input id="phone" name="phone" class="element text medium" type="text" maxlength="255" value=""  placeholder="Enter phone number"/>
 						</div>
 
 						<div class="6u 12u(mobilep)">
 						<label class="description" for="email">Email </label>
-							<input id="email" name="email" class="element text medium" type="text" maxlength="255" value="" required placeholder="Enter Email-Id"/>
+							<input id="email" name="email" class="element text medium" type="text" maxlength="255" value=""  placeholder="Enter Email-Id"/>
 						</div>
 
 						<div class="6u 12u(mobilep)">
 						<label class="description" for="nature">Nature of training: </label>
 
-						<input type="radio" name="nature" value="Internship" required>Internship<br>
-						<input type="radio" name="nature" value="In-plant training" required>In-plant training<BR>
-						<input type="radio" name="nature" value="Industrial training" required>Industrial training<BR>
-						<input type="radio" name="nature" value="Project" required>Project<br>
-						<input type="radio" name="nature" value="Any other" required>Any other
+						<input type="radio" name="nature"   value="Internship">Internship<br>
+						<input type="radio" name="nature"  value="In-plant training" >In-plant training<BR>
+						<input type="radio" name="nature" value="Industrial training" >Industrial training<BR>
+						<input type="radio" name="nature"  value="Project">Project<br>
+						<input type="radio" name="nature" value="Any other">Any other
 
 					</div>
 
 					<div class="6u 12u(mobilep)">
 						<label class="description" for="nameoforganisation">Name of the organization: </label>
-							<input id="nameoforganisation" name="nameoforganisation" class="element text medium" type="text" maxlength="255" value="" required placeholder="Enter name of the organisation"/>
+							<input id="nameoforganisation" name="nameoforganisation" class="element text medium" type="text" maxlength="255" value=""   placeholder="Enter name of the organisation"/>
 						</div>
 					<div class="6u 12u(mobilep)">
 						<label class="description" for="address">Address of the organization: </label>
-							<textarea id="address" name="address" class="element textarea medium" required placeholder="Enter the complete address of the organisation,Separate by commas"></textarea>
+							<textarea id="address" name="address" class="element textarea medium"  placeholder="Enter the complete address of the organisation,Separate by commas"></textarea>
 						</div>
 
 						<div class="6u 12u(mobilep)">
 						<label class="description" for="fullname">Full name of the Official Addresse: </label>
-							<input id="fullname" name="fullname" class="element text medium" type="text" maxlength="255" value="" required placeholder="Enter name of the official addresse"/>
+							<input id="fullname" name="fullname" class="element text medium" type="text" maxlength="255" value=""   placeholder="Enter name of the official addresse"/>
 						</div>
 					<div class="6u 12u(mobilep)">
 						<label class="description" for="designation">Designation: </label>
-							<input id="designation" name="designation" class="element text medium" type="text" maxlength="255" value="" required placeholder="Enter Designation"/>
+							<input id="designation" name="designation" class="element text medium" type="text" maxlength="255" value=""  placeholder="Enter Designation"/>
 						</div>
 
 
@@ -334,12 +335,12 @@
 						<div class="6u 12u(mobilep)">
 
 						<label class="description" for="start">Start Date </label>
-						<input class="text" id="start" name="start" required placeholder="Enter starting Date"/>
+						<input class="text" id="start" name="start"  placeholder="Enter starting Date"/>
 
 					</div>
 					<div class="6u 12u(mobilep)">
 						<label class="description" for="end">End Date </label>
-						<input class="text"  id="end" name="end" required placeholder="Enter ending date"/>
+						<input class="text"  id="end" name="end" placeholder="Enter ending date"/>
 						</div>
 
 <div>

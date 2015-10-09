@@ -133,7 +133,10 @@ $result = $conn->query($sql);
 
 
         echo "<tr class=alt>";
-	echo "<td>Contact:</td><td> " . $row["Contact"]."</td>";
+          if($row["Contact"]==0)
+	{echo "<td>Contact:</td><td> --</td>";}
+  else
+    {echo "<td>Contact:</td><td> " . $row["Contact"]."</td>";}
 	echo "</tr>";
 
 	  echo "<tr>";

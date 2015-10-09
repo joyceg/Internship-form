@@ -63,7 +63,10 @@ if($row)
               echo "<td>".$row["Full_name_of_the_official_addresse"]."</td>";
               echo  "<td>".$row["Designation"]."</td>";
               echo  "<td>".$row["Email_id"]."</td>";
-              echo  "<td>".$row["Contact"]."</td>";
+              if($row["Contact"]==0)
+              {echo  "<td>--</td>";}
+              else
+              {echo  "<td>".$row["Contact"]."</td>";}
 
             }
          	echo "</tr>";

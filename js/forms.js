@@ -1,6 +1,3 @@
-/**
- * Created by rishi on 6/7/15.
- */
 function formhash(form, password) {
     // Create a new element input, this will be our hashed password field.
     var p = document.createElement("input");

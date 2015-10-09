@@ -65,14 +65,6 @@ function checkIfInValidPost() {
 	  return true;
 
 	  }
-	  if(!eregi ('[0-9]',$_POST['phone']))
-	    {
-	    return true;
-	    }
-	     if(!eregi ('[0-9]',$_POST['contact']))
-	    {
-	    return true;
-	    }
 
 }
 
@@ -110,6 +102,10 @@ function insertIntoDatabase( $conn ) {
         $Gender5=$conn->real_escape_string( $_POST['Gender5'] );
         $DateAdded = date("d-m-Y");
 
+if($contact == '')
+$contact='0';
+if($emailid== '')
+$emailid='--';
 	$Duration = (1+(strtotime($end)- strtotime($start))/24/3600) ." days";
 
 		$sql = "INSERT INTO RegistrationForm(Registration_Id,Name,Gender,Date_of_Registration,Enrollment,School,Course,Specialization,Semester, Batch, Phone, Email, Nature,
