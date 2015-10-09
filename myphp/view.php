@@ -32,6 +32,9 @@ padding:0.8%;
 <img src="../images/header.png"  style="width:1000px;height:140px;"  align="center;" />
 </div>
 <hr>
+<div id="printbtn">
+<a href="../index.html" style="text-decoration:none"><button>Home</button></a>
+</div>
 <br>
 <h2 align="center">Application for Internship/Industrial training</h2>
 <br>
