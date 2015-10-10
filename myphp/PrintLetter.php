@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(!($_SESSION["newsession"])){
+	header("location:../login.html");
+	exit;
+}
+?>
 <html>
 <head><style type="text/css">
 @media print {

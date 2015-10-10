@@ -1,4 +1,10 @@
-
+<?php
+session_start();
+if(!($_SESSION["newsession"])){
+	header("location:../login.html");
+	exit;
+}
+?>
 <html>
 <title>View Application</title>
 <head>

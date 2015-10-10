@@ -1,4 +1,5 @@
 <?php
+session_start();
 checkuser();
 		function checkuser()
 		{
@@ -13,7 +14,7 @@ if($UserName == $test1)
 	{
 			if($Passowrd == $test2)
 
-		{
+		{	$_SESSION["newsession"]="1";
 	 header("Location:administrator.php");
 
 		}

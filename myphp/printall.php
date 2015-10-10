@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(!($_SESSION["newsession"])){
+	header("location:../login.html");
+	exit;
+}
+?> 
 <html>
 <title>Application for Internship/Industrial training</title>
 <head>

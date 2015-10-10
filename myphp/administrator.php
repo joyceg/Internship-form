@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(!($_SESSION["newsession"])){
+	header("location:../login.html");
+	exit;
+}
+?>
 <!DOCTYPE HTML>
 
 <html>
@@ -120,7 +127,7 @@
 								<a  href="printDept.php" class="button">Department wise data</a>  &nbsp
 								<a  href="#company" class="button">Companies enrolled</a>  &nbsp
 								<a data-scroll href="#filter" class="button">Filter</a>  &nbsp
-								<a  href="logout.html" class="button">LOGOUT</a>
+								<a  href="logout.php" class="button">LOGOUT</a>
 								<br>
 								<br>
 								<br>
