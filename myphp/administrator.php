@@ -34,6 +34,7 @@ if(!($_SESSION["newsession"])){
 		<meta name="description" content="" />
 		<meta name="keywords" content="CIR" />
 		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script type=text/javascript src="js/check.js"></script>
 		<script src="js/jquery.min.js"></script>
 		<script src="js/skel.min.js"></script>
 		<script src="js/init.js"></script>
@@ -48,7 +49,6 @@ if(!($_SESSION["newsession"])){
                 text-align: center;
             }
 	    </style>
-
 			<script type="text/javascript" src="js/calendar.js"></script>
 			<script src="js/jquery-1.6.2.min.js"></script>
 			<script src="js/jquery-ui-1.8.15.custom.min.js"></script>
@@ -65,18 +65,6 @@ if(!($_SESSION["newsession"])){
 			                                jQuery( "#end" ).datepicker();
 			                });
 			                </script>
-											<script>
-																			jQuery(function() {
-																			$("#from").datepicker({ dateFormat: 'dd-mm-yy' });
-																											jQuery( "#from" ).datepicker();
-																			});
-																			</script>
-																			<script>
-																			jQuery(function() {
-																			$("#to").datepicker({ dateFormat: 'dd-mm-yy' });
-																											jQuery( "#to" ).datepicker();
-																			});
-																			</script>
 
         <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -102,23 +90,60 @@ if(!($_SESSION["newsession"])){
 				    display: block;
 				  }
 				</style>
+				<link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
+				<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+
+				<!-- Slider
+				================================================== -->
+				<link href="css/owl.carousel.css" rel="stylesheet" media="screen">
+				<link href="css/owl.theme.css" rel="stylesheet" media="screen">
+
+				<!-- Stylesheet
+				================================================== -->
+				<link rel="stylesheet" type="text/css"  href="css/style.css">
+				<link rel="stylesheet" type="text/css" href="css/responsive.css">
+
+				<link href='https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+				<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400' rel='stylesheet' type='text/css'>
+
+				<script type="text/javascript" src="js/modernizr.custom.js"></script>
 	</head>
 	<body>
+		<nav id="tf-menu" class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" data-scroll href="#">Home<span class="color"></span></a>
+        </div>
 
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+
+            <li><a href="logout.php" class="page-scroll">Logout</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+<br>
 		<!-- Header -->
 			<div id="header">
 
 				<IMG STYLE="position:absolute; TOP:35px; LEFT:170px; WIDTH:100px; HEIGHT:110px" SRC="images/logo.png">
 
-				<div STYLE="position:absolute; TOP:35px; LEFT:190px; WIDTH:1000px; HEIGHT:110px"><font size='7' color="red"> Online Internship Registration Portal</font></div>
-				<div STYLE="position:absolute; TOP:55px; LEFT:1100px; WIDTH:200px; HEIGHT:210px"><font face="catull" color="blue">Corporate & Industry Relations(CIR),Amritapuri
+				<div STYLE="position:absolute; TOP:55px; LEFT:190px; WIDTH:1000px; HEIGHT:110px"><font size='7' color="red"> Online Internship Registration Portal</font></div>
+				<div STYLE="position:absolute; TOP:55px; LEFT:1070px; WIDTH:200px; HEIGHT:210px"><font face="catull" size="3"color="blue">Corporate & Industry Relations(CIR),Amritapuri
 				</font></div>
 
 			<br>
                 <br>
                 <br>
-                <br>
-								<br>
                 <a data-scroll href="#application" class="button">Application</a>  &nbsp
 								<a data-scroll href="#printApplication" class="button">Print Application</a>  &nbsp
 								<a data-scroll href="#printLetter" class="button">Print Letter</a>  &nbsp
@@ -127,33 +152,10 @@ if(!($_SESSION["newsession"])){
 								<a  href="printDept.php" class="button">Department wise data</a>  &nbsp
 								<a  href="#company" class="button">Companies enrolled</a>  &nbsp
 								<a data-scroll href="#filter" class="button">Filter</a>  &nbsp
-								<a  href="logout.php" class="button">LOGOUT</a>
-								<br>
-								<br>
-								<br>
-								<?php
-								require_once('admin.php');
-								$conn=mysqli_connect($server, $user_name, $password, $database);
-								if ($conn->connect_error) {
-										header('Location: '.'failure.html');
-										return false;
-								}
-								$sql = "SELECT Registration_Id FROM RegistrationForm WHERE Registration_Id=(SELECT max(Registration_Id) FROM RegistrationForm)";
-								$result = $conn->query($sql);
-										while($row = $result->fetch_assoc()) {
-												echo "<a href='#' class='button'>" . "Total Number of Applications received:" . $row["Registration_Id"];
-												}
-												echo "</a>";
-								$conn->close();
-								?>
-
-
-
-
 
 			</div>
 			<header id="application">
-				</header>
+			</header>-->
 
                 <div class="container box">
 					<section>
