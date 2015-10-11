@@ -119,6 +119,7 @@ if(!($_SESSION["newsession"])){
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
+					<IMG STYLE="position:absolute; TOP:3px; LEFT:30px; WIDTH:40px; HEIGHT:40px" SRC="images/logo.png">
           <a class="navbar-brand" data-scroll href="#">Home<span class="color"></span></a>
         </div>
 
@@ -135,7 +136,7 @@ if(!($_SESSION["newsession"])){
 		<!-- Header -->
 			<div id="header">
 
-				<IMG STYLE="position:absolute; TOP:35px; LEFT:170px; WIDTH:100px; HEIGHT:110px" SRC="images/logo.png">
+<!--				<IMG STYLE="position:absolute; TOP:35px; LEFT:170px; WIDTH:100px; HEIGHT:110px" SRC="images/logo.png">-->
 
 				<div STYLE="position:absolute; TOP:55px; LEFT:190px; WIDTH:1000px; HEIGHT:110px"><font size='7' color="red"> Online Internship Registration Portal</font></div>
 				<div STYLE="position:absolute; TOP:55px; LEFT:1070px; WIDTH:200px; HEIGHT:210px"><font face="catull" size="3"color="blue">Corporate & Industry Relations(CIR),Amritapuri
