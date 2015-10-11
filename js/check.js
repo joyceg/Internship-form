@@ -148,6 +148,7 @@ function validateForm() {
 
                         //to check start date
                         var x = document.myForm.start.value;
+                        var y = document.myForm.start.value;
                         if (x == null || (x == '') )
                           {  alert("Enter a valid starting date");
                             document.myForm.start.focus();
@@ -160,4 +161,8 @@ function validateForm() {
                               document.myForm.end.focus();
                               return false;
                             }
+                            if(y>x){ alert("Enter valid starting and  ending date of the internship");
+                              document.myForm.start.focus();
+                              return false;
+                          }
 }
