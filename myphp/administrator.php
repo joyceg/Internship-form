@@ -327,14 +327,14 @@ if(!($_SESSION["newsession"])){
 
 		<select id='courses' onchange='courseChanged(this.value);' name="course" required>
 		<option value=''>Select Course</option>
-		<option value='Btech'>Btech</option>
-		<option value='MTech'>MTech</option>
+		<option value='B.Tech'>B.Tech</option>
+		<option value='M.Tech'>M.Tech</option>
 		<option value='BCA'>BCA</option>
 		<option value='MCA'>MCA</option>
 		<option value='BSC'>BSC</option>
 		<option value='MSC'>MSC</option>
-		<option value='BCOM'>BCOM</option>
-		<option value='MCOM'>MCOM</option>
+		<option value='B.COM'>B.COM</option>
+		<option value='M.COM'>M.COM</option>
 		<option value='BBM'>BBM</option>
 		<option value='MA'>MA</option>
 
@@ -378,10 +378,10 @@ if(!($_SESSION["newsession"])){
 			var stateArray;
 			switch(courses)
 			{
-				case "Btech":
+				case "B.Tech":
 						stateArray=statesBtech;
 						break;
-				case "MTech":
+				case "M.Tech":
 						stateArray=statesMTech;
 						break;
 				case "BCA":
@@ -399,10 +399,10 @@ if(!($_SESSION["newsession"])){
 						break;
 				case "BSC":
 						stateArray=statesBSC;
-				case "BCOM":
+				case "B.COM":
 						stateArray=statesBCOM;
 						break;
-				case "MCOM":
+				case "M.COM":
 						stateArray=statesMCOM;
 						break;
 				case "MA":
