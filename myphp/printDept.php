@@ -55,7 +55,7 @@ if ($conn->connect_error) {
     header('Location: '.'failure.html');
 		return false;
 }
-$sql = "SELECT * FROM RegistrationForm where Course like 'Btech' ";
+$sql = "SELECT * FROM RegistrationForm where Course like 'B.Tech' ";
 
 
 	$result = $conn->query($sql);
@@ -80,7 +80,7 @@ $sql = "SELECT * FROM RegistrationForm where Course like 'Btech' ";
       <table id="customers" border="5" style="width:80%" align="center">
       <?php
       //MTEch
-      $sql = "SELECT * FROM RegistrationForm where Course like 'MTech' ";
+      $sql = "SELECT * FROM RegistrationForm where Course like 'M.Tech' ";
 
 
 	$result = $conn->query($sql);
@@ -190,7 +190,7 @@ $sql = "SELECT * FROM RegistrationForm where Course like 'Btech' ";
       <table id="customers" border="5" style="width:80%" align="center">
       <?php
       //MTEch
-      $sql = "SELECT * FROM RegistrationForm where Course like 'BCOM' ";
+      $sql = "SELECT * FROM RegistrationForm where Course like 'B.COM' ";
 
 
 	$result = $conn->query($sql);
@@ -218,7 +218,7 @@ $sql = "SELECT * FROM RegistrationForm where Course like 'Btech' ";
       <table id="customers" border="5" style="width:80%" align="center">
       <?php
       //MTEch
-      $sql = "SELECT * FROM RegistrationForm where Course like 'MCOM' ";
+      $sql = "SELECT * FROM RegistrationForm where Course like 'M.COM' ";
 
 
 	$result = $conn->query($sql);
