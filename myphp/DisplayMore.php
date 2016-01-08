@@ -62,7 +62,7 @@ if ($conn->connect_error) {
 $sql="select * from RegistrationForm where Course like '$course' and specialization like '$specialization' and (Date_of_Registration >= '$start' && Date_of_Registration <= '$end') ";
 $result=$conn->query($sql);
 $row=$result->num_rows;
-echo "<b>Course:$course<br>Specialization:$specialization<br>From:$start<br>To:$end<br><br></b>";
+echo "<b>Course: $course   Specialization: $specialization   From: $start   To: $end<br><br></b>";
 if($row)
 {
     echo "<tr><td><b>Registration ID</b></td><td><b>Date of Registration</b></td><td><b>Enrollment Number</b></td><td><b>Name</td></b>";
