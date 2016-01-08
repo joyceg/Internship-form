@@ -89,9 +89,9 @@ for( $i = 0; $i <= $strlen; $i++ ) {
                     {
                       echo "Amrita School of Arts and Sciences (ASAS) is one of the several";
                       echo" professional institutions";
-                      echo " under Amrita Vishwa Vidyapeetham, established under section 3";
+                      echo " under Amrita Vishwa Vidyapeetham, established under section 3 ";
                       echo "of the UGC Act, 1956.";
-                      echo " Management (" .$row["Course"]. ") students studying in ASAS are advised do";
+                      echo " Management (" .$row["Course"]. ") students studying in ASAS are advised do ";
                       echo "Internship in reputed organizations.";
                       echo " This will give them some practical experience which will";
                       echo " contribute substantially to their learning process.";
@@ -152,8 +152,9 @@ for( $i = 0; $i <= $strlen; $i++ ) {
 				      echo 'Mrs.';
 					echo $row["member5"];
 					}
+			echo "<br>";		
                           }
-                            echo "<br><br>Course: ".$row["Course"]." Specialization: ".$row["Specialization"]."     Semester: ".$row["Semester"];
+                            echo "<br>Course: ".$row["Course"]." Specialization: ".$row["Specialization"]."     Semester: ".$row["Semester"];
                             echo "<br><br>".$row["Nature"]." Duraton: ";
                             echo $row["Start_date"];
                             echo " to ";
