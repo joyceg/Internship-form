@@ -16,7 +16,7 @@ div.margin{
 	margin-right:2.54cm;
     margin-left:2.54cm;
     font-size:13;
-    font-family:Cambria;
+    font-family: Cambria, serif;
     text-align: justify;
 }
 </style>
