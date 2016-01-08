@@ -53,7 +53,7 @@ if ($conn->connect_error) {
    return false;
 }
 else
-$sql = "SELECT * FROM RegistrationForm WHERE Registration_Id=1";
+$sql = "SELECT * FROM RegistrationForm WHERE Registration_Id=$id";
 $result = $conn->query($sql);
     while($row = $result->fetch_assoc()) {
         echo "<br>".$row["Full_name_of_the_official_addresse"];
@@ -106,14 +106,14 @@ for( $i = 0; $i <= $strlen; $i++ ) {
                             echo $row["Name"]." wishes to do internship in your esteemed organization.";
                             echo " Your acceptance of this";
                             echo " request will encourage him greatly, and help in enhancing his";
-                            echo " academic performance.<br><br>";
+                            echo " academic performance.<br>";
                         }
                         else
                           {
                             echo "The following students wish to do Internship in your ";
                             echo "esteemed organization. Your acceptance of this request ";
                              echo " will encourage them greatly, and help in enhancing their ";
-                              echo "academic performance.<br><br>";
+                              echo "academic performance.<br>";
                               echo "<br>1.";
 				    if($row["Gender"]=='Male')
 				      echo 'Mr.';
