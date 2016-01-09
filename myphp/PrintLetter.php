@@ -41,7 +41,7 @@ div.margin{
 <div align="center">Aum Amriteswaryai Namah</div>
 <?php
 
-echo "<div align=right>";
+echo "<br><div align=right>";
 $id=$_POST['letter_id'];
 //$now = new DateTime();
 print date("d-m-Y <br>", time());
