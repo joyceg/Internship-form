@@ -106,6 +106,15 @@ if($contact == '')
 $contact='0';
 if($emailid== '')
 $emailid='--';
+if($nameoforganisation== '')
+$nameoforganisation='--';
+if($fullnameoforganisation== '')
+$fullnameoforganisation='--';
+if($designation== '')
+$designation='--';
+if($addressoforganisation== '')
+$addressoforganisation='--';
+
 	$Duration = (1+(strtotime($end)- strtotime($start))/24/3600) ." days";
 
 		$sql = "INSERT INTO RegistrationForm(Registration_Id,Name,Gender,Date_of_Registration,Enrollment,School,Course,Specialization,Semester, Batch, Phone, Email, Nature,

@@ -52,22 +52,39 @@ if ($conn->connect_error) {
     header('Location: '.'failure.html');
    return false;
 }
-else
+
 $sql = "SELECT * FROM RegistrationForm WHERE Registration_Id=$id";
 $result = $conn->query($sql);
     while($row = $result->fetch_assoc()) {
-        echo "<br>".$row["Full_name_of_the_official_addresse"];
-                echo "<br>".$row["Designation"];
-                echo '<br>'.$row['Name_of_organisation'].'<br>';
-                $str = $row['Address_of_organisation'];
-$strlen = strlen( $str );
-for( $i = 0; $i <= $strlen; $i++ ) {
-    $char = substr( $str, $i, 1 );
-    if($char == ',')
-    echo "<br>";
-    else
-    echo $char;
+    if(($row["Full_name_of_the_official_addresse"]=="--")&&($row["Designation"]=="--")&&($row['Name_of_organisation']=="--"))
+		  {
+			      echo "<div align='center'>To whomsoever concerned</div>";
+					   
+			}
+
+else
+//
+
+{
+      if(($row["Full_name_of_the_official_addresse"]!='--'))
+				{echo "<br>".$row["Full_name_of_the_official_addresse"];}
+			  if($row["Designation"]!='--')
+				{echo "<br>".$row["Designation"];}
+			 if($row["Name_of_organisation"]!='--')
+			  {echo '<br>'.$row['Name_of_organisation'].'<br>';}
+			  $str = $row['Address_of_organisation'];
+			  echo "<br>";
+	  $strlen = strlen( $str );
+	  for( $i = 0; $i <= $strlen; $i++ ) {
+	      $char = substr( $str, $i, 1 );
+	      if($char == ',')
+	      echo "<br>";
+	      else
+	      echo $char;
     // $char contains the current character, so do your processing here
+					    }
+					    
+
 }
 
                 echo "<br><br><strong>Subject:-Request for ".$row['Nature']." for ".$row['Course'];

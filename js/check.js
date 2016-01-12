@@ -88,7 +88,7 @@ function validateForm() {
             return false;
           }
         //to check name of organisation
-        var x = document.myForm.nameoforganisation.value;
+      /*  var x = document.myForm.nameoforganisation.value;
         var ideal = /^[A-Z a-z ]{3,30}$/;
         if (x == null || x == '' || (ideal.test(x)==false))
           {  alert("Enter a valid organisation name");
@@ -145,7 +145,7 @@ function validateForm() {
                           }
                         }
                       }
-
+*/
                         //to check start date
                         var x = document.myForm.start.value;
                         var y = document.myForm.start.value;

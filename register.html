@@ -37,6 +37,28 @@
 			<link rel="stylesheet" href="css/style-wide.css" />
 		</noscript>
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+		
+		 <script type="text/javascript" >  
+    
+     function disableMyText(){  
+          if(document.getElementById("checkMe").checked == true){  
+              document.getElementById("myText").disabled = true;
+              document.getElementById("address").disabled = true;
+              document.getElementById("fullname").disabled = true;
+              document.getElementById("designation").disabled = true;
+              document.getElementById("contact").disabled = true;
+              document.getElementById("emailid").disabled = true;
+          }else{
+            document.getElementById("myText").disabled = false;
+            document.getElementById("address").disabled = false;
+              document.getElementById("fullname").disabled = false;
+              document.getElementById("designation").disabled = false;
+              document.getElementById("contact").disabled = false;
+              document.getElementById("emailid").disabled = false;
+          }  
+     }  
+     </script> 
+      
         <style>
             #keyinfo {
                 text-align: center;
@@ -300,6 +322,7 @@
 						</div>
 
 						<div class="6u 12u(mobilep)">
+						<br>
 						<label class="description" for="nature">Nature of training: </label>
 
 						<input type="radio" name="nature"   value="Internship">Internship<br>
@@ -309,10 +332,15 @@
 						<input type="radio" name="nature" value="Any other">Any other
 
 					</div>
+					<div>
+Tick here for whomsoever concerned
+<input type="checkbox" id="checkMe" name="checkMe" onclick="disableMyText()"/>
+<br><div onclick="alert('Tick the box if this application is not directly directed to any official of  the industry');return true;">[Need info?]</div>
+</div>
 
 					<div class="6u 12u(mobilep)">
 						<label class="description" for="nameoforganisation">Name of the organization: </label>
-							<input id="nameoforganisation" name="nameoforganisation" class="element text medium" type="text" maxlength="255" value=""   placeholder="Enter name of the organization"/>
+							<input id="myText" name="nameoforganisation" class="element text medium" type="text"   maxlength="255" value=""   placeholder="Enter name of the organization"/>
 						</div>
 					<div class="6u 12u(mobilep)">
 						<label class="description" for="address">Address of the organization: </label>
