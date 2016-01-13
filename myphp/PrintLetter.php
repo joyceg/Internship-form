@@ -71,7 +71,7 @@ else
 			  if($row["Designation"]!='--')
 				{echo "<br>".$row["Designation"];}
 			 if($row["Name_of_organisation"]!='--')
-			  {echo '<br>'.$row['Name_of_organisation'].'<br>';}
+			  {echo '<br>'.$row['Name_of_organisation'];}
 			  $str = $row['Address_of_organisation'];
 			  echo "<br>";
 	  $strlen = strlen( $str );
