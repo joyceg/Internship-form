@@ -161,7 +161,7 @@ if(!($_SESSION["newsession"])){
 <!--				<IMG STYLE="position:absolute; TOP:35px; LEFT:170px; WIDTH:100px; HEIGHT:110px" SRC="images/logo.png">-->
 
 				<div STYLE="position:absolute; TOP:55px; LEFT:190px; WIDTH:1000px; HEIGHT:110px"><font size='7' color="green"> <div style="text-shadow: 2px 2px 8px #FFFFFF ">Online Internship Registration Portal</div></font></div>
-						<div STYLE="position:absolute; TOP:55px; LEFT:1070px; WIDTH:200px; HEIGHT:210px"><font face="catull" size="3"color="#180000  "><div style="text-shadow: 2px 2px 8px #996666 ">Corporate & Industry Relations(CIR),Amritapuri</div>
+						<div STYLE="position:absolute; TOP:105px; LEFT:530px;  HEIGHT:450px"><font face="catull" size="3"color="#180000  "><div style="text-shadow: 2px 2px 8px #996666 ">Corporate & Industry Relations(CIR),Amritapuri</div>
 				</font></div>
 			</div>
 			<header id="application">
