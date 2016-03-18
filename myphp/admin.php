@@ -1,4 +1,3 @@
-//testing
 <?PHP
 
 $user_name = "root";
