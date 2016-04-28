@@ -148,21 +148,25 @@ function validateForm() {
 */
                         //to check start date
                         var x = document.myForm.start.value;
-                        var y = document.myForm.start.value;
                         if (x == null || (x == '') )
                           {  alert("Enter a valid starting date");
                             document.myForm.start.focus();
                             return false;
                           }
                           //to check end date
-                          var x = document.myForm.end.value;
-                          if (x == null || (x == '') )
+                          var y = document.myForm.end.value;
+                          if (y == null || (y == '') )
                             {  alert("Enter a valid ending date");
                               document.myForm.end.focus();
                               return false;
                             }
-                            if(y>x){ alert("Enter valid starting and  ending date of the internship");
+                            if (x > y) {
+                              alert("Choose valid dates!");
+                                document.myForm.start.focus();
+                                return false;
+}
+                            /*if(y>x){ alert("Enter valid starting and  ending date of the internship");
                               document.myForm.start.focus();
                               return false;
-                          }
+                          }*/
 }

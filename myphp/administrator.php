@@ -55,26 +55,26 @@ if(!($_SESSION["newsession"])){
 			<link rel="stylesheet" href="js/jqueryCalendar.css">
 			<script>
 			                jQuery(function() {
-			                $("#start").datepicker({ dateFormat: 'dd-mm-yy' });
+			                $("#start").datepicker({ dateFormat: 'yy-mm-dd' });
 			                                jQuery( "#start" ).datepicker();
 			                });
 			                </script>
 			                <script>
 			                jQuery(function() {
-			                $("#end").datepicker({ dateFormat: 'dd-mm-yy' });
+			                $("#end").datepicker({ dateFormat: 'yy-mm-dd' });
 			                                jQuery( "#end" ).datepicker();
 			                });
 			                </script>
 
 				<script>
 												jQuery(function() {
-												$("#from").datepicker({ dateFormat: 'dd-mm-yy' });
+												$("#from").datepicker({ dateFormat: 'yy-mm-dd' });
 																				jQuery( "#from" ).datepicker();
 												});
 												</script>
 												<script>
 												jQuery(function() {
-												$("#to").datepicker({ dateFormat: 'dd-mm-yy' });
+												$("#to").datepicker({ dateFormat: 'yy-mm-dd' });
 																				jQuery( "#to" ).datepicker();
 												});
 												</script>

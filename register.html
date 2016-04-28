@@ -37,11 +37,11 @@
 			<link rel="stylesheet" href="css/style-wide.css" />
 		</noscript>
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
-		
-		 <script type="text/javascript" >  
-    
-     function disableMyText(){  
-          if(document.getElementById("checkMe").checked == true){  
+
+		 <script type="text/javascript" >
+
+     function disableMyText(){
+          if(document.getElementById("checkMe").checked == true){
               document.getElementById("myText").disabled = true;
               document.getElementById("address").disabled = true;
               document.getElementById("fullname").disabled = true;
@@ -55,10 +55,10 @@
               document.getElementById("designation").disabled = false;
               document.getElementById("contact").disabled = false;
               document.getElementById("emailid").disabled = false;
-          }  
-     }  
-     </script> 
-      
+          }
+     }
+     </script>
+
         <style>
             #keyinfo {
                 text-align: center;
@@ -70,13 +70,13 @@
 			<link rel="stylesheet" href="js/jqueryCalendar.css">
 			<script>
 			                jQuery(function() {
-			                $("#start").datepicker({ dateFormat: 'dd-mm-yy' });
+			                $("#start").datepicker({ dateFormat: 'yy-mm-dd' });
 			                                jQuery( "#start" ).datepicker();
 			                });
 			                </script>
 			                <script>
 			                jQuery(function() {
-			                $("#end").datepicker({ dateFormat: 'dd-mm-yy' });
+			                $("#end").datepicker({ dateFormat: 'yy-mm-dd' });
 			                                jQuery( "#end" ).datepicker();
 			                });
 			                </script>
@@ -342,10 +342,22 @@ Tick here for whomsoever concerned
 						<label class="description" for="nameoforganisation">Name of the organization: </label>
 							<input id="myText" name="nameoforganisation" class="element text medium" type="text"   maxlength="255" value=""   placeholder="Enter name of the organization"/>
 						</div>
-					<div class="6u 12u(mobilep)">
-						<label class="description" for="address">Address of the organization: </label>
-							<textarea id="address" name="address" class="element textarea medium"  placeholder="Enter the complete address of the organisation,Separate by commas"></textarea>
-						</div>
+
+						<div class="6u 12u(mobilep)">
+							<label class="description" for="address1">Address line 1: </label>
+								<input id="myText" name="address1" class="element text medium" type="text"   maxlength="255" value=""   placeholder="Enter name of the organization"/>
+
+								<label class="description" for="address2">Address line 2: </label>
+									<input id="myText" name="address2" class="element text medium" type="text"   maxlength="255" value=""   placeholder="Enter name of the organization"/>
+
+									<label class="description" for="address3">Address line 3: </label>
+										<input id="myText" name="address3" class="element text medium" type="text"   maxlength="255" value=""   placeholder="Enter name of the organization"/>
+
+										<label class="description" for="address4">Address line 4: </label>
+											<input id="myText" name="address4" class="element text medium" type="text"   maxlength="255" value=""   placeholder="Enter name of the organization"/>
+
+							</div>
+
 
 						<div class="6u 12u(mobilep)">
 						<label class="description" for="fullname">Full name of the Official Addresse: </label>
@@ -368,12 +380,12 @@ Tick here for whomsoever concerned
 						<div class="6u 12u(mobilep)">
 
 						<label class="description" for="start">Start Date </label>
-						<input class="text" id="start" name="start"  placeholder="Enter starting Date"/>
+						<input type	="date" id="start" name="start"  placeholder="Enter starting Date"/>
 
 					</div>
 					<div class="6u 12u(mobilep)">
 						<label class="description" for="end">End Date </label>
-						<input class="text"  id="end" name="end" placeholder="Enter ending date"/>
+						<input type="date"  id="end" name="end" placeholder="Enter ending date"/>
 						</div>
 
 <div>
