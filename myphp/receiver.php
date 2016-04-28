@@ -93,10 +93,10 @@ function insertIntoDatabase( $conn ) {
 	$emailid = $conn->real_escape_string( $_POST['emailid'] );
 	$start = $conn->real_escape_string( $_POST['start'] );
 	$end = $conn->real_escape_string( $_POST['end'] );
-	$Address1 = $conn->real_escape_string( $_POST['address1'] );
-	$Address2 = $conn->real_escape_string( $_POST['address2'] );
-	$Address3 = $conn->real_escape_string( $_POST['address3'] );
-	$Address4 = $conn->real_escape_string( $_POST['address4'] );
+	$address1 = $conn->real_escape_string( $_POST['address1'] );
+	$address2 = $conn->real_escape_string( $_POST['address2'] );
+	$address3 = $conn->real_escape_string( $_POST['address3'] );
+	$address4 = $conn->real_escape_string( $_POST['address4'] );
 	$member2=$conn->real_escape_string( $_POST['member2'] );
 	$Gender2=$conn->real_escape_string( $_POST['Gender2'] );
         $member3=$conn->real_escape_string( $_POST['member3'] );
@@ -118,13 +118,21 @@ if($fullnameoforganisation== '')
 $fullnameoforganisation='--';
 if($designation== '')
 $designation='--';
-if($addressoforganisation== '')
-$addressoforganisation='--';
+if($address1== '')
+$address1='--';
+if($address2== '')
+$address1='--';
+if($address3== '')
+$address3='--';
+if($address4== '')
+$address4='--';
+//if($addressoforganisation== '')
+//$addressoforganisation='--';
 
 	$Duration = (1+(strtotime($end)- strtotime($start))/24/3600) ." days";
 
 		$sql = "INSERT INTO RegistrationForm(Registration_Id,Name,Gender,Date_of_Registration,Enrollment,School,Course,Specialization,Semester, Batch, Phone, Email, Nature,
- 	Name_of_organisation, Full_name_of_the_official_addresse, Address1,Address2,,Address3,,Address4,Designation, Contact,
+ 	Name_of_organisation, Full_name_of_the_official_addresse, Address1,Address2,Address3,Address4,Designation, Contact,
  	Email_id,Start_date, End_date,Duration,member2,Gender2,member3,Gender3,member4,Gender4,member5,Gender5) VALUES (\"$Registration_Id\",\"$name\",\"$Gender\",\"$DateAdded\",\"$enrollment\",\"$school\",\"$course\",\"$specialization\",$semester,
  	\"$batch\",\"$phone\",\"$email\",\"$nature\",\"$nameoforganisation\",\"$fullnameoforganisation\",
  	\"$address1\",\"$address2\",\"$address3\",\"$address4\",\"$designation\",$contact,\"$emailid\",\"$start\",\"$end\",\"$Duration\",\"$member2\",\"$Gender2\",\"$member3\",\"$Gender3\",\"$member4\",\"$Gender4\",\"$member5\",\"$Gender5\")";

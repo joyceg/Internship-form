@@ -126,8 +126,23 @@ $result = $conn->query($sql);
 
 
         echo "<tr class=alt>";
-	echo "<td>Address of organisation:</td><td> " . $row["Address_of_organisation"]."</td>";
+	echo "<td>Address line 1:</td><td> " . $row["Address1"]."</td>";
 	echo "</tr>";
+
+
+  echo "<tr>";
+  echo "<td>Address line 2:</td><td> " . $row["Address2"]."</td>";
+  echo "</tr>";
+
+
+    echo "<tr>";
+    echo "<td>Address line 3:</td><td> " . $row["Address3"]."</td>";
+    echo "</tr>";
+
+
+      echo "<tr>";
+      echo "<td>Address line 4:</td><td> " . $row["Address4"]."</td>";
+      echo "</tr>";
 
 	  echo "<tr>";
 
