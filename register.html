@@ -43,14 +43,20 @@
      function disableMyText(){
           if(document.getElementById("checkMe").checked == true){
               document.getElementById("myText").disabled = true;
-              document.getElementById("address").disabled = true;
+              document.getElementById("address1").disabled = true;
+							document.getElementById("address2").disabled = true;
+							document.getElementById("address3").disabled = true;
+							document.getElementById("address4").disabled = true;
               document.getElementById("fullname").disabled = true;
               document.getElementById("designation").disabled = true;
               document.getElementById("contact").disabled = true;
               document.getElementById("emailid").disabled = true;
           }else{
             document.getElementById("myText").disabled = false;
-            document.getElementById("address").disabled = false;
+						document.getElementById("address1").disabled = false;
+						document.getElementById("address2").disabled = false;
+						document.getElementById("address3").disabled = false;
+						document.getElementById("address4").disabled = false;
               document.getElementById("fullname").disabled = false;
               document.getElementById("designation").disabled = false;
               document.getElementById("contact").disabled = false;
@@ -346,16 +352,16 @@ Tick here for whomsoever concerned
 						<div class="6u 12u(mobilep)">
 							<label class="description" for="address1">Address of the organisation: </label>
 							<label class="description" for="address1">Address line 1: </label>
-								<input id="myText" name="address1" class="element text medium" type="text"   maxlength="255" value=""   placeholder="Enter name of the organization"/>
+								<input id="address1" name="address1" class="element text medium" type="text"   maxlength="255" value=""   placeholder="Enter name of the organization"/>
 
 								<label class="description" for="address2">Address line 2: </label>
-									<input id="myText" name="address2" class="element text medium" type="text"   maxlength="255" value=""   placeholder="Enter name of the organization"/>
+									<input id="address2" name="address2" class="element text medium" type="text"   maxlength="255" value=""   placeholder="Enter name of the organization"/>
 
 									<label class="description" for="address3">Address line 3: </label>
-										<input id="myText" name="address3" class="element text medium" type="text"   maxlength="255" value=""   placeholder="Enter name of the organization"/>
+										<input id="address3" name="address3" class="element text medium" type="text"   maxlength="255" value=""   placeholder="Enter name of the organization"/>
 
 										<label class="description" for="address4">Address line 4: </label>
-											<input id="myText" name="address4" class="element text medium" type="text"   maxlength="255" value=""   placeholder="Enter name of the organization"/>
+											<input id="address4" name="address4" class="element text medium" type="text"   maxlength="255" value=""   placeholder="Enter name of the organization"/>
 
 							</div>
 
@@ -389,6 +395,10 @@ Tick here for whomsoever concerned
 						<input type="date"  id="end" name="end" placeholder="Enter ending date"/>
 						</div>
 
+						<div class="6u 12u(mobilep)">
+							<label class="description" for="count">Number of members in the team</label>
+							<input type="text"  id="count" name="count" placeholder="Enter the number of people attending"/>
+							</div>
 <div>
 
 						Add Team member 2

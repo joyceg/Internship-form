@@ -165,8 +165,20 @@ function validateForm() {
                                 document.myForm.start.focus();
                                 return false;
 }
-                            /*if(y>x){ alert("Enter valid starting and  ending date of the internship");
-                              document.myForm.start.focus();
-                              return false;
-                          }*/
+var count = document.myForm.count.value;
+
+if (count == null || (count == '')|| (count == '0') )
+  {  alert("Enter a valid number of team members");
+    document.myForm.count.focus();
+    return false;
+  }
+  if(count>1)
+    {
+      var mem2=document.myForm.member2.value;
+      if (mem2 == null || (mem2 == '') )
+        {  alert("Enter team member details");
+          document.myForm.member2.focus();
+          return false;
+        }
+    }
 }
