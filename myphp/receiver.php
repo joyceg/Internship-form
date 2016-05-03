@@ -121,7 +121,7 @@ $designation='--';
 if($address1== '')
 $address1='--';
 if($address2== '')
-$address1='--';
+$address2='--';
 if($address3== '')
 $address3='--';
 if($address4== '')
