@@ -75,8 +75,10 @@ function checkIfInValidPost() {
 function insertIntoDatabase( $conn ) {
 
 	$name= $conn->real_escape_string( $_POST['name'] );
+	$name=ucwords(strtolower($name));
 	$Gender= $conn->real_escape_string( $_POST['Gender'] );
 	$enrollment= $conn->real_escape_string( $_POST['enrollment'] );
+	$enrollment=strtoupper($enrollment);
 	$school= $conn->real_escape_string( $_POST['school'] );
 	$course= $conn->real_escape_string( $_POST['course'] );
 	$specialization= $conn->real_escape_string( $_POST['specialization'] );
@@ -85,26 +87,39 @@ function insertIntoDatabase( $conn ) {
 	$phone= $conn->real_escape_string( $_POST['phone'] );
 	//$mobile= $conn->real_escape_string( $_POST['mobile'] );
 	$email = $conn->real_escape_string( $_POST['email'] );
+	$email=strtolower($email);
 	$nature = $conn->real_escape_string( $_POST['nature'] );
 	$nameoforganisation = $conn->real_escape_string( $_POST['nameoforganisation'] );
+	$nameoforganisation=ucwords(strtolower($nameoforganisation));
 	$fullnameoforganisation = $conn->real_escape_string( $_POST['fullname'] );
+	$fullnameoforganisation=ucwords(strtolower($fullnameoforganisation));
 	$designation= $conn->real_escape_string( $_POST['designation'] );
+	$designation=ucwords(strtolower($designation));
 	$contact = $conn->real_escape_string( $_POST['contact'] );
 	$emailid = $conn->real_escape_string( $_POST['emailid'] );
+	$emailid=strtolower($emailid);
 	$start = $conn->real_escape_string( $_POST['start'] );
 	$end = $conn->real_escape_string( $_POST['end'] );
 	$address1 = $conn->real_escape_string( $_POST['address1'] );
+	$address1=ucwords(strtolower($address1));
 	$address2 = $conn->real_escape_string( $_POST['address2'] );
+	$address2=ucwords(strtolower($address2));
 	$address3 = $conn->real_escape_string( $_POST['address3'] );
+	$address3=ucwords(strtolower($address3));
 	$address4 = $conn->real_escape_string( $_POST['address4'] );
+	$address4=ucwords(strtolower($address4));
 	$member2=$conn->real_escape_string( $_POST['member2'] );
+	$member2=ucwords(strtolower($member2));
 	$Gender2=$conn->real_escape_string( $_POST['Gender2'] );
         $member3=$conn->real_escape_string( $_POST['member3'] );
 		//		$member2=((is_null($member2))?"lah":$member2);
+		$member3=ucwords(strtolower($member3));
         $Gender3=$conn->real_escape_string( $_POST['Gender3'] );
         $member4=$conn->real_escape_string( $_POST['member4'] );
+				$member4=ucwords(strtolower($member4));
         $Gender4=$conn->real_escape_string( $_POST['Gender4'] );
         $member5=$conn->real_escape_string( $_POST['member5'] );
+				$member5=ucwords(strtolower($member5));
         $Gender5=$conn->real_escape_string( $_POST['Gender5'] );
         $DateAdded = date("Y-m-d");
 
