@@ -65,6 +65,8 @@ if($row)
           {
             echo "<tr><td><b>Name of the organisation</b></td><td><b>      Address      </b></td><td><b>Name of official addresse</b></td><td><b>Designation</td></b><td><b>    Email-Id     </td></b><td><b>Conatact Number</td></b>";
           while($row = $result->fetch_assoc()) {
+						if(($row["Name_of_organisation"])!='--')
+						{
               echo "<tr><td>".$row["Name_of_organisation"]."</td>";
 							$address="";
 							$address1=$row["Address1"];
@@ -72,18 +74,18 @@ if($row)
 								{
 									$address.=$address1;
 								}
-							$address2=$row["Address1"];
+							$address2=$row["Address2"];
 							if($address2!='--')
 								{	$address.=",";
 									$address.=$address2;
 								}
-							$address3=$row["Address1"];
+							$address3=$row["Address3"];
 							if($address3!='--')
 								{	$address.=",";
 									$address.=$address3;
 								}
-							$address4=$row["Address1"];
-							if($address1!='--')
+							$address4=$row["Address4"];
+							if($address4!='--')
 								{	$address.=",";
 									$address.=$address4;
 								}
@@ -99,6 +101,7 @@ if($row)
             }
          	echo "</tr>";
         }
+			}
         else
         {echo "Sorry.No valid data found.";}
 $conn->close();
