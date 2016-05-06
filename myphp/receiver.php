@@ -101,12 +101,19 @@ function insertIntoDatabase( $conn ) {
 	$start = $conn->real_escape_string( $_POST['start'] );
 	$end = $conn->real_escape_string( $_POST['end'] );
 	$address1 = $conn->real_escape_string( $_POST['address1'] );
+	//to give a space after every comma.
+    $substr = ',';
+    $attachment = ' ';
+    $address1 = str_replace($substr, $substr.$attachment, $address1);
 	$address1=ucwords(strtolower($address1));
 	$address2 = $conn->real_escape_string( $_POST['address2'] );
+	$address2 = str_replace($substr, $substr.$attachment, $address2);
 	$address2=ucwords(strtolower($address2));
 	$address3 = $conn->real_escape_string( $_POST['address3'] );
+	$address3 = str_replace($substr, $substr.$attachment, $address3);
 	$address3=ucwords(strtolower($address3));
 	$address4 = $conn->real_escape_string( $_POST['address4'] );
+	$address4 = str_replace($substr, $substr.$attachment, $address4);
 	$address4=ucwords(strtolower($address4));
 	$member2=$conn->real_escape_string( $_POST['member2'] );
 	$member2=ucwords(strtolower($member2));
