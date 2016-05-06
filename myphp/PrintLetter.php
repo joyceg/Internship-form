@@ -50,7 +50,7 @@ div.margin{
 echo "<br><div align=right>";
 $id=$_POST['letter_id'];
 //$now = new DateTime();
-print date("d-m-Y <br>", time());
+print date("Y-m-d <br>", time());
 echo "</div>";
 require_once('admin.php');
 $conn=mysqli_connect($server, $user_name, $password, $database);
@@ -78,17 +78,10 @@ else
 				{echo "<br>".$row["Designation"];}
 			 if($row["Name_of_organisation"]!='--')
 			  {echo '<br>'.$row['Name_of_organisation'];}
-			  $str = $row['Address_of_organisation'];
-			  echo "<br>";
-	  $strlen = strlen( $str );
-	  for( $i = 0; $i <= $strlen; $i++ ) {
-	      $char = substr( $str, $i, 1 );
-	      if($char == ',')
-	      echo "<br>";
-	      else
-	      echo $char;
-    // $char contains the current character, so do your processing here
-					    }
+				echo "<br>".$row['Address1'];
+				echo "<br>".$row['Address2'];
+				echo "<br>".$row['Address3'];
+				echo "<br>".$row['Address4'];
 
 
 }
@@ -179,7 +172,7 @@ else
                           }
                             echo "<br>Course: ".$row["Course"]." Specialization: ".$row["Specialization"]."     Semester: ".$row["Semester"];
                             echo "<br><br>".$row["Nature"]." Duraton: ";
-                            echo $row["Start_date"];
+                            echo $row["Start_da	te"];
                             echo " to ";
                             echo $row["End_date"];
 
