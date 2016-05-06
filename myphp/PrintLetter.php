@@ -13,10 +13,10 @@ if(!($_SESSION["newsession"])){
     }
 }
 div.margin{
-	margin-right:2.54cm;
-    margin-left:2.54cm;
-    font-size:13;
-    font-family: Cambria, serif;
+	margin-right:2.0cm;
+    margin-left:1.5cm;
+    font-size:14;
+   font-family: Cambria, serif;
     text-align: justify;
 }
 </style>
@@ -30,6 +30,7 @@ div.margin{
 </div>
 <div class="margin">
 <br>
+
 <br>
 <br>
 <br>
@@ -38,6 +39,11 @@ div.margin{
 <br>
 <br>
 <br>
+<br>
+<br>
+<br>
+<br>
+
 <div align="center">Aum Amriteswaryai Namah</div>
 <?php
 
@@ -58,8 +64,8 @@ $result = $conn->query($sql);
     while($row = $result->fetch_assoc()) {
     if(($row["Full_name_of_the_official_addresse"]=="--")&&($row["Designation"]=="--")&&($row['Name_of_organisation']=="--"))
 		  {
-			      echo "<div align='center'>To whomsoever concerned</div>";
-					   
+			      echo "<div align='center'><b>To whomsoever it may concern</b></div>";
+
 			}
 
 else
@@ -83,7 +89,7 @@ else
 	      echo $char;
     // $char contains the current character, so do your processing here
 					    }
-					    
+
 
 }
 
@@ -92,7 +98,7 @@ else
                 echo " students";
                 else
                 echo " student";
-               
+
                 echo "</strong><br><br>Dear Sir/Madam,<br><br>";
                 if($row["School"]=='Amrita school of Engineering')
                   {
@@ -119,7 +125,7 @@ else
                             if($row["Gender"]=="Male")
                             echo 'Mr. ';
                             else
-                            echo 'Mrs. ';
+                            echo 'Ms. ';
                             echo $row["Name"]." wishes to do internship in your esteemed organization.";
                             echo " Your acceptance of this";
                             echo " request will encourage him greatly, and help in enhancing his";
@@ -135,21 +141,21 @@ else
 				    if($row["Gender"]=='Male')
 				      echo 'Mr.';
 				      else
-				      echo 'Mrs.';
+				      echo 'Ms.';
 					echo $row["Name"];
 
                               echo "<br>2.";
 				    if($row["Gender2"]=='Male')
 				      echo 'Mr.';
 				      else
-				      echo 'Mrs.';
+				      echo 'Ms.';
 					echo $row["member2"];
                               if($row["member3"]!='')
                                { echo "<br>3.";
 				    if($row["Gender3"]=='Male')
 				      echo 'Mr.';
 				      else
-				      echo 'Mrs.';
+				      echo 'Ms.';
 					echo $row["member3"];
 					}
                                 if($row["member4"]!='')
@@ -157,7 +163,7 @@ else
 				    if($row["Gender4"]=='Male')
 				      echo 'Mr.';
 				      else
-				      echo 'Mrs.';
+				      echo 'Ms.';
 					echo $row["member4"];
 					}
                                   if($row["member5"]!='')
@@ -166,10 +172,10 @@ else
 				    if($row["Gender5"]=='Male')
 				      echo 'Mr.';
 				      else
-				      echo 'Mrs.';
+				      echo 'Ms.';
 					echo $row["member5"];
 					}
-			echo "<br>";		
+			echo "<br>";
                           }
                             echo "<br>Course: ".$row["Course"]." Specialization: ".$row["Specialization"]."     Semester: ".$row["Semester"];
                             echo "<br><br>".$row["Nature"]." Duraton: ";
