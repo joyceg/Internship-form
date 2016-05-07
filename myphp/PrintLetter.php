@@ -78,11 +78,20 @@ else
 				{echo "<br>".$row["Designation"];}
 			 if($row["Name_of_organisation"]!='--')
 			  {echo '<br>'.$row['Name_of_organisation'];}
-				echo "<br>".$row['Address1'];
-				echo "<br>".$row['Address2'];
-				echo "<br>".$row['Address3'];
-				echo "<br>".$row['Address4'];
+				if($row['Address_of_organisation']!='--')
+				{
+					$str = $row['Address_of_organisation'];
+			$strlen = strlen( $str );
+			for( $i = 0; $i <= $strlen; $i++ ) {
+					$char = substr( $str, $i, 1 );
+					if($char == '$')
+					echo "<br>";
+					else
+					echo $char;
+			// $char contains the current character, so do your processing here
+								}
 
+				}
 
 }
 

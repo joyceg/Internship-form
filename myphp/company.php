@@ -68,28 +68,27 @@ if($row)
 						if(($row["Name_of_organisation"])!='--')
 						{
               echo "<tr><td>".$row["Name_of_organisation"]."</td>";
-							$address="";
-							$address1=$row["Address1"];
-							if($address1!='--')
-								{
-									$address.=$address1;
-								}
-							$address2=$row["Address2"];
-							if($address2!='--')
-								{	$address.=",";
-									$address.=$address2;
-								}
-							$address3=$row["Address3"];
-							if($address3!='--')
-								{	$address.=",";
-									$address.=$address3;
-								}
-							$address4=$row["Address4"];
-							if($address4!='--')
-								{	$address.=",";
-									$address.=$address4;
-								}
-              echo "<td>".$address."</td>";
+
+						echo "<td>";
+							if(($row['Address_of_organisation']=='--'))
+								  {
+				          echo $row['Address_of_organisation'];
+				         }
+							  else
+							  {
+							  $str = $row['Address_of_organisation'];
+					  $strlen = strlen( $str );
+					  for( $i = 0; $i <= $strlen; $i++ ) {
+					      $char = substr( $str, $i, 1 );
+					      if($char == '$')
+					      echo ", ";
+					      else
+					      echo $char;
+				    // $char contains the current character, so do your processing here
+									    }
+
+				}
+							echo "</td>";
               echo "<td>".$row["Full_name_of_the_official_addresse"]."</td>";
               echo  "<td>".$row["Designation"]."</td>";
               echo  "<td>".$row["Email_id"]."</td>";

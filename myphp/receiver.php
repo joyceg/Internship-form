@@ -29,10 +29,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 		Nature varchar(255)  NOT NULL,
 		Name_of_organisation varchar( 400 ) NOT NULL,
 		Full_name_of_the_official_addresse varchar( 400 ) NOT NULL,
-		Address1 varchar( 200 )  NOT NULL,
-		Address2 varchar( 200 )  NOT NULL,
-		Address3 varchar( 200 )  NOT NULL,
-		Address4 varchar( 200 )  NOT NULL,
+		Address_of_organisation varchar( 200 )  NOT NULL,
 		Designation varchar( 50 )  NOT NULL,
 		Contact varchar( 25 )   NULL,
 		Email_id varchar( 50 ) NULL,
@@ -140,24 +137,33 @@ if($fullnameoforganisation== '')
 $fullnameoforganisation='--';
 if($designation== '')
 $designation='--';
-if($address1== '')
-$address1='--';
-if($address2== '')
-$address2='--';
-if($address3== '')
-$address3='--';
-if($address4== '')
-$address4='--';
-//if($addressoforganisation== '')
-//$addressoforganisation='--';
-
+if(($address1== '')&&($address2== '')&&($address3== '')&&($address4== ''))
+	{
+		$addressoforganisation='--';
+	}
+	if(($address1)!= '')
+	{
+		$addressoforganisation.=$address1;
+	}
+	if(($address2)!= '')
+	{	$addressoforganisation.="$";
+		$addressoforganisation.=$address2;
+	}
+	if(($address3)!= '')
+	{	$addressoforganisation.="$";
+		$addressoforganisation.=$address3;
+	}
+	if(($address4)!= '')
+	{	$addressoforganisation.="$";
+		$addressoforganisation.=$address4;
+	}
 	$Duration = (1+(strtotime($end)- strtotime($start))/24/3600) ." days";
 
 		$sql = "INSERT INTO RegistrationForm(Registration_Id,Name,Gender,Date_of_Registration,Enrollment,School,Course,Specialization,Semester, Batch, Phone, Email, Nature,
- 	Name_of_organisation, Full_name_of_the_official_addresse, Address1,Address2,Address3,Address4,Designation, Contact,
+ 	Name_of_organisation, Full_name_of_the_official_addresse,Address_of_organisation,Designation, Contact,
  	Email_id,Start_date, End_date,Duration,member2,Gender2,member3,Gender3,member4,Gender4,member5,Gender5) VALUES (\"$Registration_Id\",\"$name\",\"$Gender\",\"$DateAdded\",\"$enrollment\",\"$school\",\"$course\",\"$specialization\",$semester,
  	\"$batch\",\"$phone\",\"$email\",\"$nature\",\"$nameoforganisation\",\"$fullnameoforganisation\",
- 	\"$address1\",\"$address2\",\"$address3\",\"$address4\",\"$designation\",$contact,\"$emailid\",\"$start\",\"$end\",\"$Duration\",\"$member2\",\"$Gender2\",\"$member3\",\"$Gender3\",\"$member4\",\"$Gender4\",\"$member5\",\"$Gender5\")";
+ 	\"$addressoforganisation\",\"$designation\",$contact,\"$emailid\",\"$start\",\"$end\",\"$Duration\",\"$member2\",\"$Gender2\",\"$member3\",\"$Gender3\",\"$member4\",\"$Gender4\",\"$member5\",\"$Gender5\")";
 
 	if ( mysqli_query( $conn, $sql ) == false ) {
 		header('Location: '.'failure.html');

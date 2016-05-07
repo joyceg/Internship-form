@@ -131,26 +131,30 @@ if(!($_SESSION["newsession"])){
  	echo "<td>Full name of the official addresse:</td><td> " . $row["Full_name_of_the_official_addresse"]."</td>";
  	echo "</tr>";
 
+	echo "<tr class=alt>";
+  	echo "<td>Address of organisation:</td><td> ";
 
+      if(($row['Address_of_organisation']=='--'))
+				  {
+          echo $row['Address_of_organisation'];
+         }
+			  else
+			  {
+			  $str = $row['Address_of_organisation'];
+	  $strlen = strlen( $str );
+	  for( $i = 0; $i <= $strlen; $i++ ) {
+	      $char = substr( $str, $i, 1 );
+	      if($char == '$')
+	      echo ", ";
+	      else
+	      echo $char;
+    // $char contains the current character, so do your processing here
+					    }
 
-					echo "<tr class=alt>";
-	 echo "<td>Address line 1:</td><td> " . $row["Address1"]."</td>";
-	 echo "</tr>";
+}
 
-
-		echo "<tr>";
-		echo "<td>Address line 2:</td><td> " . $row["Address2"]."</td>";
-		echo "</tr>";
-
-
-			echo "<tr>";
-			echo "<td>Address line 3:</td><td> " . $row["Address3"]."</td>";
-			echo "</tr>";
-
-
-				echo "<tr>";
-				echo "<td>Address line 4:</td><td> " . $row["Address4"]."</td>";
-				echo "</tr>";
+echo "</td>";
+echo "</tr>";
 
 
  	  echo "<tr>";
