@@ -139,42 +139,42 @@ else
                             echo "esteemed organization. Your acceptance of this request ";
                              echo " will encourage them greatly, and help in enhancing their ";
                               echo "academic performance.<br>";
-                              echo "<br>1.";
+                              echo "<br>1. ";
 				    if($row["Gender"]=='Male')
-				      echo 'Mr.';
+				      echo 'Mr. ';
 				      else
-				      echo 'Ms.';
+				      echo 'Ms. ';
 					echo $row["Name"];
-
-                              echo "<br>2.";
+					
+                              echo "<br>	2. ";
 				    if($row["Gender2"]=='Male')
-				      echo 'Mr.';
+				      echo 'Mr. ';
 				      else
-				      echo 'Ms.';
+				      echo 'Ms. ';
 					echo $row["member2"];
                               if($row["member3"]!='')
-                               { echo "<br>3.";
+                               { echo "<br>3. ";
 				    if($row["Gender3"]=='Male')
-				      echo 'Mr.';
+				      echo 'Mr. ';
 				      else
-				      echo 'Ms.';
+				      echo 'Ms. ';
 					echo $row["member3"];
 					}
                                 if($row["member4"]!='')
-                                 { echo "<br>4.";
+                                 { echo "<br>4. ";
 				    if($row["Gender4"]=='Male')
-				      echo 'Mr.';
+				      echo 'Mr. ';
 				      else
-				      echo 'Ms.';
+				      echo 'Ms. ';
 					echo $row["member4"];
 					}
                                   if($row["member5"]!='')
                                     {
-                                    echo "<br>5.";
+                                    echo "<br>5. ";
 				    if($row["Gender5"]=='Male')
-				      echo 'Mr.';
+				      echo 'Mr. ';
 				      else
-				      echo 'Ms.';
+				      echo 'Ms. ';
 					echo $row["member5"];
 					}
 			echo "<br>";

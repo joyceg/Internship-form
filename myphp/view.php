@@ -190,11 +190,11 @@ echo "</tr>";
 	echo "<tr>";
 	echo "<h3><td>Other team Members</td><td>". $row["member2"];
 	if(($row["member3"])!="")
-	echo ",".$row["member3"];
+	echo ", ".$row["member3"];
 	if(($row["member4"])!="")
-	echo ",".$row["member4"];
+	echo ", ".$row["member4"];
 	if(($row["member5"])!="")
-	echo ",".$row["member5"];
+	echo ", ".$row["member5"];
 	echo "</td></h3></tr></tr>";}
       }
 
