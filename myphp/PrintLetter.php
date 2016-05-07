@@ -77,7 +77,7 @@ else
 			  if($row["Designation"]!='--')
 				{echo "<br>".$row["Designation"];}
 			 if($row["Name_of_organisation"]!='--')
-			  {echo '<br>'.$row['Name_of_organisation'];}
+			  {echo '<br>'.$row['Name_of_organisation'].'<br>';}
 				if($row['Address_of_organisation']!='--')
 				{
 					$str = $row['Address_of_organisation'];
@@ -145,7 +145,7 @@ else
 				      else
 				      echo 'Ms. ';
 					echo $row["Name"];
-					
+
                               echo "<br>	2. ";
 				    if($row["Gender2"]=='Male')
 				      echo 'Mr. ';
