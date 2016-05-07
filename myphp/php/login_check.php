@@ -19,11 +19,11 @@ if($UserName == $test1)
 
 		}
 		else {
-			header("Location:LoginFailure.html");
+			header("Location:../html/LoginFailure.html");
 		}
 	}
 	else {
-		header("Location:LoginFailure.html");
+		header("Location:../html/LoginFailure.html");
 	}
 }
 

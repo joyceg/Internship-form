@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!($_SESSION["newsession"])){
-	header("location:../login.html");
+	header("location:../../login.html");
 	exit;
 }
 ?>
@@ -56,7 +56,7 @@ $end=$_POST['to'];
 require_once('admin.php');
 $conn=mysqli_connect($server, $user_name, $password, $database);
 if ($conn->connect_error) {
-    header('Location: '.'failure.html');
+    header('Location: ../index.html');
 		return false;
 }
 $sql="select * from RegistrationForm where Course like '$course' and specialization like '$specialization' and (Date_of_Registration >= '$start' && Date_of_Registration <= '$end') ";

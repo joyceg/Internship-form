@@ -1,7 +1,7 @@
 `<?php
 if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 	if ( checkIfInValidPost() ) {
-		header('Location: '.'failure.html');
+		header('Location: ../index.html');
 		return;
 	}
 	if ( !require_once('admin.php') ) {
@@ -9,7 +9,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 	}
 	$conn=mysqli_connect($server, $user_name, $password, $database);
 	if ( !$conn ) {
-		header('Location: '.'failure.html');
+		header('Location: ../index.html');
 		return false;
 	}
 
@@ -46,7 +46,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 		Gender5 varchar(8) NULL
 	)";
 	if ( $conn->query($sql) === false ) {
-		header('Location: '.'failure.html');
+		header('Location: ../index.html');
 		return false;
 	}
 
@@ -166,10 +166,10 @@ if(($address1== '')&&($address2== '')&&($address3== '')&&($address4== ''))
  	\"$addressoforganisation\",\"$designation\",$contact,\"$emailid\",\"$start\",\"$end\",\"$Duration\",\"$member2\",\"$Gender2\",\"$member3\",\"$Gender3\",\"$member4\",\"$Gender4\",\"$member5\",\"$Gender5\")";
 
 	if ( mysqli_query( $conn, $sql ) == false ) {
-		header('Location: '.'failure.html');
+		header('Location: ../index.html');
 		return false;
 	} else {
-		header('Location: '.'success.html');
+		header('Location: ../html/success.html');
 		return true;
 	}
 }

@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!($_SESSION["newsession"])){
-	header("location:../login.html");
+	header("location:../../login.html");
 	exit;
 }
 ?>
@@ -55,7 +55,7 @@ $test_reg= $_POST['test_reg'];
 require_once('admin.php');
 $conn=mysqli_connect($server, $user_name, $password, $database);
 if ($conn->connect_error) {
-    header('Location: '.'failure.html');
+    header('Location: ../index.html');
 		return false;
 }
 $s = "SELECT Registration_Id FROM RegistrationForm WHERE Registration_Id=(SELECT max(Registration_Id) FROM RegistrationForm)";
@@ -65,7 +65,7 @@ $result = $conn->query($s);
         }
 if($check>$test_reg)
 {
-  header('Location: '.'failure.html');
+  header('Location: ../index.html');
   return false;
 }
 else

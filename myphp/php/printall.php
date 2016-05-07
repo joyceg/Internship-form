@@ -1,10 +1,10 @@
 <?php
 session_start();
 if(!($_SESSION["newsession"])){
-	header("location:../login.html");
+	header("location:../../login.html");
 	exit;
 }
-?> 
+?>
 <html>
 <title>Application for Internship/Industrial training</title>
 <head>
@@ -52,7 +52,7 @@ padding:0.8%;
 require_once('admin.php');
 $conn=mysqli_connect($server, $user_name, $password, $database);
 if ($conn->connect_error) {
-    header('Location: '.'failure.html');
+    header('Location: ../html/failure.html');
 		return false;
 }
 $sql = "SELECT * FROM `RegistrationForm";

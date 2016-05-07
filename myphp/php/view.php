@@ -1,13 +1,6 @@
-<?php
-session_start();
-if(!($_SESSION["newsession"])){
-	header("location:../login.html");
-	exit;
-}
-?>
 <html>
-<title>Application for Internship/Industrial training</title>
 <head>
+<title>Application for Internship/Industrial training</title>
 <style>
 table, td, th {
     border: 1px solid black;
@@ -26,19 +19,37 @@ padding:0.8%;
 }
 
 </style>
+<style >
+@media print {
+    #printbtn {
+        display :  none;
+    }
+}
+</style>
 </head>
 <body>
-
+<div id="Content" align="center">
+<img src="../images/header.png"  style="width:1000px;height:140px;"  align="center;" />
+</div>
+<hr>
+<div id="printbtn">
+<a href="../../index.html" style="text-decoration:none"><button>Home</button></a>
+</div>
 <br>
+<h2 align="center">Application for Internship/Industrial training</h2>
+<br>
+<div align="right"><input id ="printbtn" type="button" value="Print this page" onclick="window.print()" >
+</div>
 <table id="customers" border="5" style="width:80%" align="center">
 <?php
+
 require_once('admin.php');
 $conn=mysqli_connect($server, $user_name, $password, $database);
 if ($conn->connect_error) {
-    header('Location: '.'failure.html');
+    header('Location: ../index.html');
 		return false;
 }
-$sql = "SELECT * FROM RegistrationForm ";
+$sql = "SELECT * FROM RegistrationForm WHERE Registration_Id=(SELECT max(Registration_Id) FROM RegistrationForm)";
 $result = $conn->query($sql);
     while($row = $result->fetch_assoc()) {
         echo "<h3><tr class=alt><td>Registration Id:</td>"."<td>" . $row["Registration_Id"]."</td>";
@@ -104,7 +115,7 @@ $result = $conn->query($sql);
 
 
         echo "<tr class=alt>";
-        echo "<td>Nature of the  organisation:</td><td> " . $row["Nature_of_organisation"]."</td>";
+        echo "<td>Name of the  organisation:</td><td> " . $row["Name_of_organisation"]."</td>";
 	echo "</tr>";
 
 	  echo "<tr>";
@@ -113,10 +124,33 @@ $result = $conn->query($sql);
 	echo "<td>Full name of the official addresse:</td><td> " . $row["Full_name_of_the_official_addresse"]."</td>";
 	echo "</tr>";
 
+  echo "<tr class=alt>";
+  	echo "<td>Address of organisation:</td><td> ";
 
-        echo "<tr class=alt>";
-	echo "<td>Address of organisation:</td><td> " . $row["Address_of_organisation"]."</td>";
-	echo "</tr>";
+      if(($row['Address_of_organisation']=='--'))
+				  {
+          echo $row['Address_of_organisation'];
+         }
+			  else
+			  {
+			  $str = $row['Address_of_organisation'];
+	  $strlen = strlen( $str );
+	  for( $i = 0; $i <= $strlen; $i++ ) {
+	      $char = substr( $str, $i, 1 );
+	      if($char == '$')
+	      echo ", ";
+	      else
+	      echo $char;
+    // $char contains the current character, so do your processing here
+					    }
+
+}
+
+echo "</td>";
+echo "</tr>";
+
+
+
 
 	  echo "<tr>";
 
@@ -125,7 +159,10 @@ $result = $conn->query($sql);
 
 
         echo "<tr class=alt>";
-	echo "<td>Contact:</td><td> " . $row["Contact"]."</td>";
+          if($row["Contact"]==0)
+	{echo "<td>Contact:</td><td> --</td>";}
+  else
+    {echo "<td>Contact:</td><td> " . $row["Contact"]."</td>";}
 	echo "</tr>";
 
 	  echo "<tr>";
@@ -153,21 +190,28 @@ $result = $conn->query($sql);
 	echo "<tr>";
 	echo "<h3><td>Other team Members</td><td>". $row["member2"];
 	if(($row["member3"])!="")
-	echo ",".$row["member3"];
+	echo ", ".$row["member3"];
 	if(($row["member4"])!="")
-	echo ",".$row["member4"];
+	echo ", ".$row["member4"];
 	if(($row["member5"])!="")
-	echo ",".$row["member5"];
-	echo "</td></h3></tr></tr>";
-
-}
-
+	echo ", ".$row["member5"];
+	echo "</td></h3></tr></tr>";}
       }
 
 
 $conn->close();
 ?>
+<tr class=table_size>
+    <td>Signature of student:</td><td></td>
+</tr>
 
+<tr class=table_size >
+    <td>Signature of HOD:</td><td></td>
+</tr>
+
+<tr class=table_size  >
+    <td>Signature of Head-CIR:</td><td></td>
+</tr>
 </table>
 </body>
 </html>

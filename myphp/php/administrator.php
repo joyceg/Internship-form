@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!($_SESSION["newsession"])){
-	header("location:../login.html");
+	header("location:../../login.html");
 	exit;
 }
 ?>
@@ -12,19 +12,19 @@ if(!($_SESSION["newsession"])){
 		<title>CIR Internship</title>
 
 
-		<link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
-		<link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
-		<link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
-		<link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
-		<link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
-		<link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
-		<link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
-		<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
-		<link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+		<link rel="apple-touch-icon" sizes="57x57" href="../images/favicon/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="../images/favicon/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="../images/favicon/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="../images/favicon/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="../images/favicon/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="../images/favicon/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="../images/favicon/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="../images/favicon/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="../images/favicon/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="../images/favicon/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png">
 		<link rel="manifest" href="/manifest.json">
 		<meta name="msapplication-TileColor" content="#ffffff">
 		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
@@ -34,14 +34,14 @@ if(!($_SESSION["newsession"])){
 		<meta name="description" content="" />
 		<meta name="keywords" content="CIR" />
 		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-		<script type=text/javascript src="js/check.js"></script>
-		<script src="js/jquery.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/init.js"></script>
+		<script type=text/javascript src="../js/check.js"></script>
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/skel.min.js"></script>
+		<script src="../js/init.js"></script>
 		<noscript>
-			<link rel="stylesheet" href="css/skel.css" />
-			<link rel="stylesheet" href="css/style.css" />
-			<link rel="stylesheet" href="css/style-wide.css" />
+			<link rel="stylesheet" href="../css/skel.css" />
+			<link rel="stylesheet" href="../css/style.css" />
+			<link rel="stylesheet" href="../css/style-wide.css" />
 		</noscript>
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
         <style>
@@ -49,10 +49,10 @@ if(!($_SESSION["newsession"])){
                 text-align: center;
             }
 	    </style>
-			<script type="text/javascript" src="js/calendar.js"></script>
-			<script src="js/jquery-1.6.2.min.js"></script>
-			<script src="js/jquery-ui-1.8.15.custom.min.js"></script>
-			<link rel="stylesheet" href="js/jqueryCalendar.css">
+			<script type="text/javascript" src="../js/calendar.js"></script>
+			<script src="../js/jquery-1.6.2.min.js"></script>
+			<script src="../js/jquery-ui-1.8.15.custom.min.js"></script>
+			<link rel="stylesheet" href="../js/jqueryCalendar.css">
 			<script>
 			                jQuery(function() {
 			                $("#start").datepicker({ dateFormat: 'yy-mm-dd' });
@@ -103,23 +103,23 @@ if(!($_SESSION["newsession"])){
 				    display: block;
 				  }
 				</style>
-				<link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
-				<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+				<link rel="stylesheet" type="text/css" href="../fonts/font-awesome/css/font-awesome.css">
+				<link rel="stylesheet" type="text/css"  href="../css/bootstrap.css">
 
 				<!-- Slider
 				================================================== -->
-				<link href="css/owl.carousel.css" rel="stylesheet" media="screen">
-				<link href="css/owl.theme.css" rel="stylesheet" media="screen">
+				<link href="../css/owl.carousel.css" rel="stylesheet" media="screen">
+				<link href="../css/owl.theme.css" rel="stylesheet" media="screen">
 
 				<!-- Stylesheet
 				================================================== -->
-				<link rel="stylesheet" type="text/css"  href="css/style.css">
-				<link rel="stylesheet" type="text/css" href="css/responsive.css">
+				<link rel="stylesheet" type="text/css"  href="../css/style.css">
+				<link rel="stylesheet" type="text/css" href="../css/responsive.css">
 
 				<link href='https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
 				<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400' rel='stylesheet' type='text/css'>
 
-				<script type="text/javascript" src="js/modernizr.custom.js"></script>
+				<script type="text/javascript" src="../js/modernizr.custom.js"></script>
 	</head>
 	<body>
 		<nav id="tf-menu" class="navbar navbar-default navbar-fixed-top">
@@ -132,7 +132,7 @@ if(!($_SESSION["newsession"])){
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-					<IMG STYLE="position:absolute; TOP:3px; LEFT:30px; WIDTH:40px; HEIGHT:40px" SRC="images/logo.png">
+					<IMG STYLE="position:absolute; TOP:3px; LEFT:30px; WIDTH:40px; HEIGHT:40px" SRC="../images/logo.png">
           <a class="navbar-brand" data-scroll href="#">Home<span class="color"></span></a>
         </div>
 
