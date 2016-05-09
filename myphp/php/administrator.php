@@ -132,7 +132,7 @@ if(!($_SESSION["newsession"])){
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-					<IMG STYLE="position:absolute; TOP:3px; LEFT:30px; WIDTH:40px; HEIGHT:40px" SRC="../images/logo.png">
+					<IMG STYLE="position:absolute; TOP:3px; LEFT:15px; WIDTH:40px; HEIGHT:40px" SRC="../images/logo.png">
           <a class="navbar-brand" data-scroll href="#">Home<span class="color"></span></a>
         </div>
 
