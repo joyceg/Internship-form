@@ -55,7 +55,7 @@ $test_reg= $_POST['test_reg'];
 require_once('admin.php');
 $conn=mysqli_connect($server, $user_name, $password, $database);
 if ($conn->connect_error) {
-    header('Location: ../index.html');
+    header('Location: failure.html');
 		return false;
 }
 $s = "SELECT Registration_Id FROM RegistrationForm WHERE Registration_Id=(SELECT max(Registration_Id) FROM RegistrationForm)";
@@ -65,7 +65,7 @@ $result = $conn->query($s);
         }
 if($check>$test_reg)
 {
-  header('Location: ../index.html');
+  header('Location: failure.html');
   return false;
 }
 else

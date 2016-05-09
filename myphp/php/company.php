@@ -54,7 +54,7 @@ $end=$_POST['end1'];
 require_once('admin.php');
 $conn=mysqli_connect($server, $user_name, $password, $database);
 if ($conn->connect_error) {
-    header('Location: ../index.html');
+    header('Location: failure.html');
 		return false;
 }
 echo "$start to  $end<br><br><br>";
