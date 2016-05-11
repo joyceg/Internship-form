@@ -181,7 +181,7 @@ else
                           }
                             echo "<br>Course: ".$row["Course"]." Specialization: ".$row["Specialization"]."     Semester: ".$row["Semester"];
                             echo "<br><br>".$row["Nature"]." Duraton: ";
-                            echo $row["Start_da	te"];
+                            echo $row["Start_date"];
                             echo " to ";
                             echo $row["End_date"];
 
