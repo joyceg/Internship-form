@@ -146,12 +146,12 @@ else
 				      echo 'Ms. ';
 					echo $row["Name"];
 
-                              echo "	2. ";
+                              echo "<br> 2. ";
 				    if($row["Gender2"]=='Male')
 				      echo 'Mr. ';
 				      else
 				      echo 'Ms. ';
-					echo str_pad($row["member2"],  60, " ");
+					echo $row["member2"];
                               if($row["member3"]!='')
                                { echo "<br>3. ";
 				    if($row["Gender3"]=='Male')
