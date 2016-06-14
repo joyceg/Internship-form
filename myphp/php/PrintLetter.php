@@ -36,13 +36,6 @@ div.margin{
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
 <div align="center">Aum Amriteswaryai Namah</div>
 <?php
@@ -50,7 +43,7 @@ div.margin{
 echo "<br><div align=right>";
 $id=$_POST['letter_id'];
 //$now = new DateTime();
-print date("Y-m-d <br>", time());
+print date("d-m-Y <br>", time());
 echo "</div>";
 require_once('admin.php');
 $conn=mysqli_connect($server, $user_name, $password, $database);
@@ -181,9 +174,14 @@ else
                           }
                             echo "<br>Course: ".$row["Course"]." Specialization: ".$row["Specialization"]."     Semester: ".$row["Semester"];
                             echo "<br><br>".$row["Nature"]." Duraton: ";
-                            echo $row["Start_date"];
+                            
+                            $originalDate = $row["Start_date"];
+                            $startDate = date("d-m-Y", strtotime($originalDate));
+                            echo $startDate;
+                            $originalDate = $row["End_date"];
+                            $endDate = date("d-m-Y", strtotime($originalDate));
                             echo " to ";
-                            echo $row["End_date"];
+                            echo $endDate;
 
 
                     echo"<br><br>Thanking you,<br>";
