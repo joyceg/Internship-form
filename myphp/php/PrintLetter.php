@@ -70,9 +70,11 @@ else
 			  if($row["Designation"]!='--')
 				{echo "<br>".$row["Designation"];}
 			 if($row["Name_of_organisation"]!='--')
-			  {echo '<br>'.$row['Name_of_organisation'];}
+			  {echo '<br>'.$row['Name_of_organisation'].'<br>';}
 				if($row['Address_of_organisation']!='--')
-				{echo '<br>';
+				{
+     echo $row['Address_of_organisation'];
+     /*echo '<br>';
 					$str = $row['Address_of_organisation'];
 			$strlen = strlen( $str );
 			for( $i = 0; $i <= $strlen; $i++ ) {
@@ -82,7 +84,7 @@ else
 					else
 					echo $char;
 			// $char contains the current character, so do your processing here
-								}
+								}*/
 
 				}
 

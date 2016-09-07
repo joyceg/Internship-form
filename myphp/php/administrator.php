@@ -141,6 +141,7 @@ if(!($_SESSION["newsession"])){
           <ul class="nav navbar-nav navbar-right">
 
 						<a class="navbar-brand" data-scroll href="#application">Application<span class="color"></span></a>
+											<a class="navbar-brand" data-scroll href="#edit">Edit Application<span class="color"></span></a>
 						<a class="navbar-brand" data-scroll href="#printApplication">Print Application<span class="color"></span></a>
 						<a class="navbar-brand" data-scroll href="#printLetter">Letter<span class="color"></span></a>
 						<a class="navbar-brand"  href="printall.php">Condensed Report<span class="color"></span></a>
@@ -227,6 +228,48 @@ if(!($_SESSION["newsession"])){
 
 		</section>
 </div>
+
+
+
+
+
+
+
+		<div class="container box">
+			<section>
+				<header id="edit">
+				</header>
+
+				<h3>	Edit	Application</h3>
+
+				<form id="form_1003621" class="appnitro"  method="post" action="edit.php">
+					<div class="form_description">
+
+						<ul >
+
+							<div class="row">
+
+								<div class="6u 12u(mobilep)">
+
+									<input type="text" name="application_id" value="" required placeholder="Enter registraion Id"/><br>
+									<br><input type="submit" value="Submit">
+
+								</div>
+							</div>
+					</div>
+					</ul>
+				</form>
+
+
+
+			</section>
+		</div>
+
+
+
+
+
+
 
 
 

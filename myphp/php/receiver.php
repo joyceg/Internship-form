@@ -103,7 +103,7 @@ function insertIntoDatabase( $conn ) {
     $attachment = ' ';
     $address1 = str_replace($substr, $substr.$attachment, $address1);
 	$address1=ucwords(strtolower($address1));
-	$address2 = $conn->real_escape_string( $_POST['address2'] );
+	/*$address2 = $conn->real_escape_string( $_POST['address2'] );
 	$address2 = str_replace($substr, $substr.$attachment, $address2);
 	$address2=ucwords(strtolower($address2));
 	$address3 = $conn->real_escape_string( $_POST['address3'] );
@@ -112,6 +112,7 @@ function insertIntoDatabase( $conn ) {
 	$address4 = $conn->real_escape_string( $_POST['address4'] );
 	$address4 = str_replace($substr, $substr.$attachment, $address4);
 	$address4=ucwords(strtolower($address4));
+	*/
 	$member2=$conn->real_escape_string( $_POST['member2'] );
 	$member2=ucwords(strtolower($member2));
 	$Gender2=$conn->real_escape_string( $_POST['Gender2'] );
@@ -137,14 +138,14 @@ if($fullnameoforganisation== '')
 $fullnameoforganisation='--';
 if($designation== '')
 $designation='--';
-if(($address1== '')&&($address2== '')&&($address3== '')&&($address4== ''))
+if(($address1== '')/*&&($address2== '')&&($address3== '')&&($address4== '')*/)
 	{
 		$addressoforganisation='--';
 	}
 	if(($address1)!= '')
 	{
 		$addressoforganisation.=$address1;
-	}
+	}/*
 	if(($address2)!= '')
 	{	$addressoforganisation.="$";
 		$addressoforganisation.=$address2;
@@ -156,7 +157,7 @@ if(($address1== '')&&($address2== '')&&($address3== '')&&($address4== ''))
 	if(($address4)!= '')
 	{	$addressoforganisation.="$";
 		$addressoforganisation.=$address4;
-	}
+	}*/
 	$Duration = (1+(strtotime($end)- strtotime($start))/24/3600) ." days";
 
 		$sql = "INSERT INTO RegistrationForm(Registration_Id,Name,Gender,Date_of_Registration,Enrollment,School,Course,Specialization,Semester, Batch, Phone, Email, Nature,
